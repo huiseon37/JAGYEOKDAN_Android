@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NicknameActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_congrat_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:src="@drawable/pollen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_congrat_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/right_idea"
+                        android:text="자격단"
+                        android:textColor="@color/main_color"
+                        android:textSize="24sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:text="회원가입을"
+                        android:textColor="@color/main_color"
+                        android:textSize="21sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="진심으로 축하드립니다!"
+                    android:textColor="@color/main_color"
+                    android:textSize="21sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/a_title_gothic1"
+                    android:text="자격증 취득 통합 서비스를 경험해보세요."
+                    android:textColor="@color/gray_color"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:src="@drawable/leaf2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_set_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="43dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout_congrat_nickname">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/icon" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/box" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:lineSpacingExtra="7dp"
+            android:text="자격단에서 사용할\n닉네임을 설정해주세요"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_id_membership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_title_gothic2"
+                android:hint="닉네임을 입력하세요"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/background_button_white"
+                android:fontFamily="@font/a_title_gothic2"
+                android:text="중복확인"
+                android:textSize="10sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_signin_nickname"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/background_membership_btn"
+        android:fontFamily="@font/a_title_gothic3"
+        android:text="자격단 가입하기"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
