@@ -1,3 +1,9 @@
-<resources>
+<?xml version="1.0"?>
+
+    <resources>
+
     <string name="app_name">happylife</string>
+
+    <string name="menu_string"> \u00EC\u009E\u0090\u00EA\u00B2\u00A9\u00EC\u00A6\u009D </string>
+
 </resources>

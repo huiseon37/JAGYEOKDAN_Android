@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/home_icon"
+        android:enabled="true"
+        android:title="자격홈"/>
+    <item
+        android:id="@+id/action_license_info"
+        android:icon="@drawable/licence_info_icon"
+        android:enabled="true"
+        android:title="자격증정보"/>
+    <item
+        android:id="@+id/action_community"
+        android:icon="@drawable/commu_icon"
+        android:enabled="true"
+        android:title="커뮤니티"/>
+    <item
+        android:id="@+id/action_mypage"
+        android:icon="@drawable/my_page_icon"
+        android:enabled="true"
+        android:title="마이페이지"/>
+</menu>
