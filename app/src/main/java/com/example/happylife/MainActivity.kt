@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.action_mypage -> {
                 var myPageFragment = MyPageFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_screen_panel, myPageFragment).commit()
+                    .replace(R.id.top_bar_and_main_screen, myPageFragment).commit()
                 return true
             }
         }
