@@ -47,6 +47,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_id"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic1"
@@ -89,6 +90,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
+            android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/a_title_gothic1"
@@ -113,6 +115,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
+            android:id="@+id/et_pwd_check"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/a_title_gothic1"
@@ -137,6 +140,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
+            android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/a_title_gothic1"
@@ -166,6 +170,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_phone"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic1"
@@ -208,6 +213,7 @@
             tools:ignore="HardcodedText" />
 
         <EditText
+            android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
@@ -223,8 +229,9 @@
 
     <Button
         android:id="@+id/btn_signin_membership"
-        android:layout_width="248dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginHorizontal="56dp"
         android:layout_marginBottom="67dp"
         android:background="@drawable/background_membership_btn"
         android:fontFamily="@font/a_title_gothic3"

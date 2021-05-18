@@ -25,4 +25,6 @@
     <color name="box_color_lightblue">#E2F1F9</color>
     <color name="gray_search_bar">#F4F4F4</color>
     <color name="gray"> #999999 </color>
+    <color name="gray_underbar">#E3E3E3</color>
+    <color name="logo_darkblue"></color>
 </resources>

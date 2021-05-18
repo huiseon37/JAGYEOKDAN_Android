@@ -133,6 +133,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_nickname"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic1"
