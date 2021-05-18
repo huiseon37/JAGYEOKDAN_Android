@@ -1,0 +1,16 @@
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:width="320dp"
+android:height="90dp"
+android:viewportWidth="320"
+android:viewportHeight="90">
+<group>
+    <clip-path
+        android:pathData="M4 0H316C318.209 0 320 1.79086 320 4V86C320 88.2091 318.209 90 316 90H4C1.79086 90 0 88.2091 0 86V4C0 1.79086 1.79086 0 4 0Z"
+        />
+    <path
+        android:pathData="M0 0V90H320V0"
+        android:fillColor="@color/gray_search_bar"
+        />
+</group>
+</vector>

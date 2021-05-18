@@ -13,7 +13,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".JobActivity" />
         <activity android:name=".NicknameActivity" />
-        <activity android:name=".MembershipActivity">
+        <activity android:name=".MembershipActivity"/>
+        <activity android:name=".MypageActivity"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
