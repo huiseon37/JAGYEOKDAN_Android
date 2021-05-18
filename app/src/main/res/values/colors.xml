@@ -13,4 +13,6 @@
     <color name="box_color_yellow">#FFF4D7</color>
     <color name="box_color_green">#EAF5D8</color>
     <color name="box_color_lightblue">#E2F1F9</color>
+    <color name="gray_search_bar">#F4F4F4</color>
+    <color name="gray"> #999999 </color>
 </resources>

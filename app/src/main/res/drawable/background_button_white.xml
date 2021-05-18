@@ -5,7 +5,7 @@
     <!--배경색-->
     <solid android:color="@color/white"/>
 
-    <corners android:radius="25dp"/>
+    <corners android:radius="10dp"/>
 
     <!--선색-->
     <stroke
