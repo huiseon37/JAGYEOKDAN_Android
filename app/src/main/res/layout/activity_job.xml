@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/right_idea"
-                android:text="자격단"
+                android:text="육회한 인생"
                 android:textColor="@color/main_color"
                 android:textSize="24sp"
                 tools:ignore="HardcodedText" />
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic1"
-                android:text="에서 사용할"
+                android:text="님이 관심있는"
                 android:textColor="@color/main_color"
                 android:textSize="21sp"
                 tools:ignore="HardcodedText" />
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/a_title_gothic2"
-            android:text="관심 직무를 선택해주세요!"
+            android:text="직무를 알려주세요!"
             android:textColor="@color/main_color"
             android:textSize="21sp"
             tools:ignore="HardcodedText" />
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/a_title_gothic1"
-            android:text="준비 중인 직무를 모두 선택해주세요."
+            android:text="중복 선택이 가능합니다."
             android:textColor="@color/gray_color"
             android:textSize="10sp"
             tools:ignore="HardcodedText" />
@@ -284,7 +284,7 @@
         android:layout_marginBottom="67dp"
         android:background="@drawable/background_membership_btn"
         android:fontFamily="@font/a_title_gothic3"
-        android:text="자격홈 가기"
+        android:text="다음"
         android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"

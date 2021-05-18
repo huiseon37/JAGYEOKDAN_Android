@@ -15,48 +15,6 @@
         android:src="@drawable/logo_all"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:id="@+id/constraintlayout_logo_membership"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="60dp"-->
-    <!--        app:layout_constraintTop_toTopOf="parent">-->
-
-    <!--        <ImageView-->
-    <!--            android:id="@+id/img_logo_membership"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:src="@drawable/logo"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--        <ImageView-->
-    <!--            android:id="@+id/img_certificate_membership"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginTop="6dp"-->
-    <!--            android:src="@drawable/certificate"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@+id/img_logo_membership" />-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="55dp"-->
-    <!--            android:layout_height="55dp"-->
-    <!--            android:src="@drawable/leaf1"-->
-    <!--            app:layout_constraintRight_toLeftOf="@+id/img_certificate_membership"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="55dp"-->
-    <!--            android:layout_height="55dp"-->
-    <!--            android:src="@drawable/leaf2"-->
-    <!--            app:layout_constraintLeft_toRightOf="@+id/img_certificate_membership"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
     <LinearLayout
         android:id="@+id/linearlayout_form_membership"
         android:layout_width="match_parent"
@@ -91,7 +49,7 @@
             <EditText
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/a_title_gothic2"
+                android:fontFamily="@font/a_title_gothic1"
                 android:hint="아이디를 입력하세요"
                 android:importantForAutofill="no"
                 android:inputType="text"
@@ -111,7 +69,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="3dp"
                 android:background="@drawable/background_button_white"
-                android:fontFamily="@font/a_title_gothic2"
+                android:fontFamily="@font/a_title_gothic1"
                 android:text="중복확인"
                 android:textSize="11sp"
                 tools:ignore="HardcodedText" />
@@ -133,7 +91,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/a_title_gothic2"
+            android:fontFamily="@font/a_title_gothic1"
             android:hint="8자리 이상 (영어, 숫자, 특수문자 조합)"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -157,7 +115,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/a_title_gothic2"
+            android:fontFamily="@font/a_title_gothic1"
             android:hint="비밀번호를 입력하세요"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -181,7 +139,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/a_title_gothic2"
+            android:fontFamily="@font/a_title_gothic1"
             android:hint="실명을 입력하세요"
             android:importantForAutofill="no"
             android:inputType="text"
@@ -210,7 +168,7 @@
             <EditText
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/a_title_gothic2"
+                android:fontFamily="@font/a_title_gothic1"
                 android:hint="‘-’ 구분없이 입력"
                 android:importantForAutofill="no"
                 android:inputType="text"
@@ -230,7 +188,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="3dp"
                 android:background="@drawable/background_button_white"
-                android:fontFamily="@font/a_title_gothic2"
+                android:fontFamily="@font/a_title_gothic1"
                 android:text="인증번호 전송"
                 android:textSize="11sp"
                 tools:ignore="HardcodedText" />
@@ -253,7 +211,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:fontFamily="@font/a_title_gothic2"
+            android:fontFamily="@font/a_title_gothic1"
             android:hint="인증번호를 입력하세요"
             android:inputType="text"
             android:paddingBottom="15dp"
