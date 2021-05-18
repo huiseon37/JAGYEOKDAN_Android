@@ -1,54 +1,69 @@
 package com.example.happylife
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.MenuItem
-import androidx.core.app.ActivityCompat
+import com.example.happylife.databinding.ActivityMainBinding
 import com.example.happylife.navigation.CommunityFragment
-import com.example.happylife.navigation.DetailViewFragment
+import com.example.happylife.navigation.HomeViewFragment
 import com.example.happylife.navigation.LicenceInfoFragment
 import com.example.happylife.navigation.MyPageFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bottom_navigation.setOnNavigationItemSelectedListener(this)
-    }
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
-        when(p0.itemId) {
-            R.id.action_home ->{
-                var mainViewFragment = DetailViewFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,mainViewFragment).commit()
+        when (p0.itemId) {
+            R.id.action_home -> {
+                var homeViewFragment = HomeViewFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_screen_panel, homeViewFragment).commit()
                 return true
             }
-            R.id.action_license_info ->{
+            R.id.action_license_info -> {
                 var licenseInfoFragment = LicenceInfoFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,licenseInfoFragment).commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
                 return true
             }
 
-            R.id.action_community ->{
+            R.id.action_community -> {
                 var communitiyFragment = CommunityFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,communitiyFragment).commit()
-            return true
-        }
-            R.id.action_mypage ->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_screen_panel, communitiyFragment).commit()
+                return true
+            }
+            R.id.action_mypage -> {
                 var myPageFragment = MyPageFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,myPageFragment).commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_screen_panel, myPageFragment).commit()
                 return true
             }
         }
         return false
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView((R.layout.activity_main))
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.watchAlarmButton.setOnClickListener {
+            val intent = Intent(this, AlarmActivity::class.java)
+            startActivity(intent)
+        }
+
+        var homeViewFragment = HomeViewFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
+            .commit()
         bottom_navigation.setOnNavigationItemSelectedListener(this)
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)
+        bottom_navigation.menu.getItem(0).isChecked = true
     }
 }

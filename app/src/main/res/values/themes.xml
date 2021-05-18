@@ -51,8 +51,9 @@
 </style>
 
     -<style name="navTextInactive">
-        <item name = "android:textSize"> 10sp </item>
+    <item name = "android:textSize"> 10sp </item>
         <item name = "android:textColor"> @color/gray</item>
+
     </style>
 
     -<style name="navTextActive">

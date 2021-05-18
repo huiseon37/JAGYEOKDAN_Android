@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.happylife.R
 
-class DetailViewFragment : Fragment() {
+class HomeViewFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_licence_info,container,false)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_home,container,false)
         return view
     }
 }

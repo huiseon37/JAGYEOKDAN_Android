@@ -4,7 +4,8 @@
         android:id="@+id/action_home"
         android:icon="@drawable/home_icon"
         android:enabled="true"
-        android:title="자격홈"/>
+        android:title="자격홈"
+        />
     <item
         android:id="@+id/action_license_info"
         android:icon="@drawable/licence_info_icon"
@@ -12,7 +13,7 @@
         android:title="자격증정보"/>
     <item
         android:id="@+id/action_community"
-        android:icon="@drawable/commu_icon"
+        android:icon="@drawable/community_icon"
         android:enabled="true"
         android:title="커뮤니티"/>
     <item
