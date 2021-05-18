@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MembershipActivity">
+
+    <ImageView
+        android:id="@+id/img_logo_membership"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="47dp"
+        android:src="@drawable/logo_all"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_form_membership"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="42dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin_membership"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_membership">
+
+        <!--아이디-->
+        <TextView
+            android:id="@+id/tv_id_membership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="아이디"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout_id_membership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_title_gothic1"
+                android:hint="아이디를 입력하세요"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/background_button_white"
+                android:fontFamily="@font/a_title_gothic1"
+                android:text="중복확인"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <!--비밀번호-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="비밀번호"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_title_gothic1"
+            android:hint="8자리 이상 (영어, 숫자, 특수문자 조합)"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+
+        <!--비밀번호 확인-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="비밀번호 확인"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_title_gothic1"
+            android:hint="비밀번호를 입력하세요"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+
+        <!--이름-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="이름"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_title_gothic1"
+            android:hint="실명을 입력하세요"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+
+        <!--휴대폰 번호-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="휴대폰 번호"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_title_gothic1"
+                android:hint="‘-’ 구분없이 입력"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingBottom="15dp"
+                android:singleLine="true"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/background_button_white"
+                android:fontFamily="@font/a_title_gothic1"
+                android:text="인증번호 전송"
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <!--인증번호-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a_title_gothic2"
+            android:paddingStart="2dp"
+            android:text="인증번호"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:fontFamily="@font/a_title_gothic1"
+            android:hint="인증번호를 입력하세요"
+            android:inputType="text"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_signin_membership"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/background_membership_btn"
+        android:fontFamily="@font/a_title_gothic3"
+        android:text="자격단 가입하기"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

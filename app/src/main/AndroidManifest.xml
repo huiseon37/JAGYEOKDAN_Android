@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Happylife">
+
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".JobActivity" />
+        <activity android:name=".NicknameActivity" />
+        <activity android:name=".MembershipActivity">
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
