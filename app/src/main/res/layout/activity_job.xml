@@ -24,6 +24,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_nickname_job"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -81,6 +82,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_management"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
@@ -92,6 +94,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_marketing"
                 android:layout_width="94dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -105,6 +108,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_it"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -117,6 +121,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_design"
                 android:layout_width="46dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -137,6 +142,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_trade"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
@@ -148,6 +154,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_sales"
                 android:layout_width="79dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -161,6 +168,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_service"
                 android:layout_width="46dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -174,6 +182,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_research"
                 android:layout_width="79dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -195,6 +204,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_produce"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
@@ -206,6 +216,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_teaching"
                 android:layout_width="37dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -219,6 +230,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_construction"
                 android:layout_width="37dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -232,6 +244,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_medical"
                 android:layout_width="37dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -253,6 +266,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_media"
                 android:layout_width="46dp"
                 android:layout_height="25dp"
                 android:background="@drawable/btn_jobs"
@@ -263,6 +277,7 @@
                 tools:ignore="HardcodedText" />
 
             <Button
+                android:id="@+id/btn_special"
                 android:layout_width="69dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="9dp"
@@ -279,8 +294,9 @@
 
     <Button
         android:id="@+id/btn_go_home_job"
-        android:layout_width="248dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginHorizontal="56dp"
         android:layout_marginBottom="67dp"
         android:background="@drawable/background_membership_btn"
         android:fontFamily="@font/a_title_gothic3"
