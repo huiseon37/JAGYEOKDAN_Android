@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="36dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_go_home_job"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next_job"
         app:layout_constraintTop_toBottomOf="@+id/linearlayout_jobs_job">
 
         <LinearLayout
@@ -293,7 +293,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_go_home_job"
+        android:id="@+id/btn_next_job"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginHorizontal="56dp"

@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(view)
 
         binding.watchAlarmButton.setOnClickListener {
-//            val intent = Intent(this, AlarmActivity::class.java)
+            val intent = Intent(this, AlarmActivity::class.java)
             startActivity(intent)
         }
 

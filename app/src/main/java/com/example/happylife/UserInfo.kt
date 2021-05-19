@@ -5,5 +5,6 @@ data class UserInfo(
     var pwd: String?,
     var name: String?,
     var phone: String?,
-    var nickname: String?
+    var nickname: String?,
+    var jobs: String?
 )

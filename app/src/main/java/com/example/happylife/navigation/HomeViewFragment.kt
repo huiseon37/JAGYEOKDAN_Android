@@ -10,7 +10,6 @@ import com.example.happylife.R
 class HomeViewFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_home,container,false)
-        return view
+        return LayoutInflater.from(activity).inflate(R.layout.fragment_home,container,false)
     }
 }

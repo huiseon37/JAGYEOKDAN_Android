@@ -22,30 +22,27 @@ class NicknameActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.btnSigninNickname.setOnClickListener {
-            if(binding.etNickname.text.toString().trim().isNotEmpty()) {
+            if (binding.etNickname.text.toString().trim().isNotEmpty()) {
 
-                databaseReference =
-                    firebaseDatabase.getReference("users") // DB 테이블 연결
+                databaseReference = firebaseDatabase.getReference("users") // DB 테이블 연결
 
                 val userInfo = UserInfo(
                     intent.getStringExtra("id"),
                     intent.getStringExtra("pwd"),
                     intent.getStringExtra("name"),
                     intent.getStringExtra("phone"),
-                    binding.etNickname.text.toString()
+                    binding.etNickname.text.toString(),
+                    null
                 )
-                databaseReference.child(binding.etNickname.text.toString())
-                    .setValue(userInfo) // 랜덤한 문자열을 key로 할당 후, 목록 생성
+                databaseReference.child(binding.etNickname.text.toString()).setValue(userInfo)
 
                 val intent = Intent(this, JobActivity::class.java)
 
                 // 다음 액티비티에 사용자 이름 넘겨줌
                 intent.putExtra("nickname", binding.etNickname.text.toString())
                 startActivity(intent)
-            }
-            else {
-                Toast.makeText(applicationContext, "닉네임을 입력해주세요", Toast.LENGTH_SHORT)
-                    .show()
+            } else {
+                Toast.makeText(applicationContext, "닉네임을 입력해주세요", Toast.LENGTH_SHORT).show()
             }
         }
     }

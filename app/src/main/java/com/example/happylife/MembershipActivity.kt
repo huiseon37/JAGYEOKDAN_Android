@@ -23,7 +23,7 @@ class MembershipActivity : AppCompatActivity() {
                         if (binding.etName.text.toString().trim().isNotEmpty()) {
                             if (binding.etPhone.text.toString().trim().isNotEmpty()) {
 
-                                val intent = Intent(this, MainActivity::class.java)
+                                val intent = Intent(this, NicknameActivity::class.java)
                                 intent.putExtra("id", binding.etId.text.toString())
                                 intent.putExtra("pwd", binding.etPwd.text.toString())
                                 intent.putExtra("name", binding.etName.text.toString())
