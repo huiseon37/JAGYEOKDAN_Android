@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Happylife">
+
         <activity android:name=".RegisterActivity" />
         <activity android:name=".JobActivity" />
         <activity android:name=".NicknameActivity" />
@@ -16,20 +17,16 @@
         <activity android:name=".MypageActivity" />
         <activity android:name=".SplashActivity">
 
-        </activity>
-        <!--            <intent-filter>-->
-        <!--                <action android:name="android.intent.action.MAIN" />-->
-
-        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-        <!--            </intent-filter>-->
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
+        </activity>
+
     </application>
 
 </manifest>
