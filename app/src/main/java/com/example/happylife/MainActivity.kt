@@ -19,28 +19,28 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
         when (p0.itemId) {
             R.id.action_home -> {
-                var homeViewFragment = HomeViewFragment()
+                val homeViewFragment = HomeViewFragment()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_screen_panel, homeViewFragment).commit()
                 return true
             }
             R.id.action_license_info -> {
-                var licenseInfoFragment = LicenceInfoFragment()
+                val licenseInfoFragment = LicenceInfoFragment()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
                 return true
             }
 
             R.id.action_community -> {
-                var communitiyFragment = CommunityFragment()
+                val communitiyFragment = CommunityFragment()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_screen_panel, communitiyFragment).commit()
                 return true
             }
             R.id.action_mypage -> {
-                var myPageFragment = MyPageFragment()
+                val myPageFragment = MyPageFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.top_bar_and_main_screen, myPageFragment).commit()
+                    .replace(R.id.main_screen_panel, myPageFragment).commit()
                 return true
             }
         }
@@ -56,11 +56,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(view)
 
         binding.watchAlarmButton.setOnClickListener {
-            val intent = Intent(this, AlarmActivity::class.java)
+//            val intent = Intent(this, AlarmActivity::class.java)
             startActivity(intent)
         }
 
-        var homeViewFragment = HomeViewFragment()
+        val homeViewFragment = HomeViewFragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
             .commit()
         bottom_navigation.setOnNavigationItemSelectedListener(this)
