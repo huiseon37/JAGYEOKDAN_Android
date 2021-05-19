@@ -1,0 +1,1245 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <androidx.appcompat.widget.Toolbar\n        android:id=\"@+id/topPanel\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_alignParentLeft=\"true\"\n        android:layout_alignParentRight=\"true\"\n        android:layout_marginRight=\"0dp\"\n        android:background=\"@drawable/container_design\">\n\n        <RelativeLayout\n            android:id=\"@+id/top_container\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"30dp\">\n\n            <ImageView\n                android:id=\"@+id/top_Small_logo\"\n                android:layout_width=\"59dp\"\n                android:layout_height=\"24dp\"\n                android:layout_alignParentStart=\"true\"\n                android:layout_centerVertical=\"true\"\n                android:layout_marginTop=\"12dp\"\n                android:src=\"@drawable/small_logo\" />\n\n            <RelativeLayout\n                android:id=\"@id/search_bar\"\n                android:layout_width=\"240dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_centerInParent=\"true\"\n                android:layout_centerVertical=\"true\">\n\n                <EditText\n                    android:id=\"@+id/search_keyword\"\n                    android:layout_width=\"260dp\"\n                    android:layout_height=\"match_parent\"\n                    android:background=\"@drawable/search_bar\" />\n\n                <Button\n                    android:id=\"@+id/top_search_button\"\n                    android:layout_width=\"15dp\"\n                    android:layout_height=\"15dp\"\n                    android:layout_alignParentEnd=\"true\"\n                    android:layout_centerVertical=\"true\"\n                    android:layout_marginRight=\"10dp\"\n                    android:background=\"@drawable/search_icon\" />\n            </RelativeLayout>\n\n            <Button\n                android:layout_width=\"25dp\"\n                android:layout_height=\"match_parent\"\n                android:layout_alignParentEnd=\"true\"\n                android:layout_centerVertical=\"true\"\n                android:layout_marginRight=\"15dp\"\n                android:background=\"@drawable/alarm_icon\" />\n        </RelativeLayout>\n    </androidx.appcompat.widget.Toolbar>\n\n    <FrameLayout\n        android:id=\"@+id/main_screen_panel\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"wrap_content\"\n        android:layout_below=\"@+id/topPanel\">\n\n        <LinearLayout\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"match_parent\"\n            android:orientation=\"vertical\">\n\n            <RelativeLayout\n                android:id=\"@+id/container_Dday_licesnse\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"183dp\"\n                android:background=\"@color/design_default_color_background\">\n\n                <RelativeLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_marginHorizontal=\"20dp\">\n\n                    <RelativeLayout\n                        android:id=\"@+id/text_dday_licesnce\"\n                        android:layout_width=\"wrap_content\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_marginTop=\"12dp\">\n\n                        <!--                아래 폰트처리필요-->\n                        <TextView\n                            android:id=\"@+id/text_license\"\n                            android:layout_width=\"wrap_content\"\n                            android:layout_height=\"wrap_content\"\n                            android:fontFamily=\"sans-serif\"\n                            android:text=\"My 자격증  \"\n                            android:textColor=\"@color/black\"\n                            android:textStyle=\"bold\" />\n\n                        <ImageView\n                            android:layout_width=\"50dp\"\n                            android:layout_height=\"25dp\"\n                            android:layout_toRightOf=\"@id/text_license\"\n                            android:src=\"@drawable/dday_icon\" />\n                    </RelativeLayout>\n\n                    <RelativeLayout\n                        android:layout_width=\"match_parent\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_below=\"@id/text_dday_licesnce\"\n                        android:layout_marginTop=\"10dp\"\n                        android:layout_marginBottom=\"15dp\">\n\n                        <RelativeLayout\n                            android:id=\"@+id/dday_licensebox_yellow\"\n                            android:layout_width=\"100dp\"\n                            android:layout_height=\"120dp\"\n                            android:layout_alignParentStart=\"true\"\n                            android:background=\"@color/box_color_yellow\">\n\n                            <TextView\n                                android:id=\"@+id/yellow_box_license_text\"\n                                android:layout_width=\"match_parent\"\n                                android:layout_height=\"75dp\"\n                                android:layout_marginHorizontal=\"3dp\"\n                                android:layout_marginTop=\"3dp\"\n                                android:text=\"한국사 능력 검정시험\"\n                                android:textColor=\"@color/black\" />\n\n                            <TextView\n                                android:id=\"@+id/text_Dnext_to_date_yellow\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:layout_toLeftOf=\"@+id/D_date_left_yellow\"\n                                android:text=\"D - \"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n\n                            <TextView\n                                android:id=\"@+id/D_date_left_yellow\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentEnd=\"true\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginRight=\"4dp\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:text=\"50\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n                        </RelativeLayout>\n\n                        <RelativeLayout\n                            android:id=\"@+id/dday_licensebox_green\"\n                            android:layout_width=\"100dp\"\n                            android:layout_height=\"120dp\"\n                            android:layout_centerInParent=\"true\"\n                            android:background=\"@color/box_color_green\">\n\n                            <TextView\n                                android:id=\"@+id/green_box_license_text\"\n                                android:layout_width=\"match_parent\"\n                                android:layout_height=\"75dp\"\n                                android:layout_marginHorizontal=\"3dp\"\n                                android:layout_marginTop=\"3dp\"\n                                android:text=\"한국사 능력 검정시험\"\n                                android:textColor=\"@color/black\" />\n\n                            <TextView\n                                android:id=\"@+id/text_Dnext_to_date_green\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:layout_toLeftOf=\"@+id/D_date_left_green\"\n                                android:text=\"D - \"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n\n                            <TextView\n                                android:id=\"@+id/D_date_left_green\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentEnd=\"true\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginRight=\"4dp\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:text=\"50\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n                        </RelativeLayout>\n\n                        <RelativeLayout\n                            android:id=\"@+id/dday_licensebox_lightblue\"\n                            android:layout_width=\"100dp\"\n                            android:layout_height=\"120dp\"\n                            android:layout_alignParentEnd=\"true\"\n                            android:background=\"@color/box_color_lightblue\">\n\n                            <TextView\n                                android:id=\"@+id/lightblue_box_license_text\"\n                                android:layout_width=\"match_parent\"\n                                android:layout_height=\"75dp\"\n                                android:layout_marginHorizontal=\"3dp\"\n                                android:layout_marginTop=\"3dp\"\n                                android:text=\"한국사 능력 검정시험\"\n                                android:textColor=\"@color/black\" />\n\n                            <TextView\n                                android:id=\"@+id/text_Dnext_to_date_lightblue\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:layout_toLeftOf=\"@+id/D_date_left_lightblue\"\n                                android:text=\"D - \"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n\n                            <TextView\n                                android:id=\"@+id/D_date_left_lightblue\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentEnd=\"true\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_marginRight=\"4dp\"\n                                android:layout_marginBottom=\"4dp\"\n                                android:text=\"50\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"25dp\" />\n                        </RelativeLayout>\n                    </RelativeLayout>\n                </RelativeLayout>\n            </RelativeLayout>\n\n            <RelativeLayout\n                android:id=\"@+id/container_recommandation_license\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"274dp\"\n                android:layout_below=\"@+id/container_Dday_licesnse\"\n                android:background=\"@drawable/container_design\">\n\n                <RelativeLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_marginHorizontal=\"20dp\">\n\n                    <TextView\n                        android:id=\"@+id/text_recommand\"\n                        android:layout_width=\"wrap_content\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_marginTop=\"18dp\"\n                        android:fontFamily=\"sans-serif\"\n                        android:text=\"추천 자격증\"\n                        android:textAlignment=\"center\"\n                        android:textColor=\"@color/black\"\n                        android:textStyle=\"bold\" />\n\n                    <RelativeLayout\n                        android:layout_width=\"match_parent\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_below=\"@id/text_recommand\"\n                        android:layout_centerVertical=\"true\"\n                        android:layout_marginTop=\"5dp\"\n                        android:layout_marginBottom=\"22dp\"\n                        android:background=\"@drawable/container_for_boxtype\"\n                        android:paddingHorizontal=\"5dp\"\n                        android:paddingVertical=\"8dp\">\n\n                        <RelativeLayout\n                            android:id=\"@+id/recommand_license_bundle\"\n                            android:layout_width=\"match_parent\"\n                            android:layout_height=\"35dp\"\n                            android:layout_marginHorizontal=\"3dp\">\n\n                            <RelativeLayout\n                                android:layout_width=\"300dp\"\n                                android:layout_height=\"1dp\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_centerHorizontal=\"true\"\n                                android:background=\"@drawable/grey_underline\" />\n\n                            <ImageView\n                                android:id=\"@+id/list_dot\"\n                                android:layout_width=\"6dp\"\n                                android:layout_height=\"6dp\"\n                                android:layout_alignParentStart=\"true\"\n                                android:layout_centerVertical=\"true\"\n                                android:layout_marginStart=\"8dp\"\n                                android:src=\"@drawable/left_dot_forlist\" />\n\n                            <TextView\n                                android:id=\"@+id/recommand_license_name\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginStart=\"10dp\"\n                                android:layout_toRightOf=\"@+id/list_dot\"\n                                android:text=\"전산회계운용사\"\n                                android:textColor=\"@color/black\" />\n\n                            <TextView\n                                android:id=\"@+id/text_Dnext_to_date_recommand\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_toLeftOf=\"@+id/D_date_left_recommand\"\n                                android:text=\"D - \"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"15dp\" />\n\n                            <TextView\n                                android:id=\"@+id/D_date_left_recommand\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentEnd=\"true\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginRight=\"25dp\"\n                                android:text=\"50\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"15dp\" />\n\n                            <Button\n                                android:id=\"@+id/apply_click_btn\"\n                                android:layout_width=\"18dp\"\n                                android:layout_height=\"13dp\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginRight=\"12dp\"\n                                android:layout_toLeftOf=\"@id/text_Dnext_to_date_recommand\"\n                                android:background=\"@drawable/apply_btn\" />\n                        </RelativeLayout>\n\n                        <RelativeLayout\n                            android:id=\"@+id/recommand_license_bundle2\"\n                            android:layout_width=\"match_parent\"\n                            android:layout_height=\"35dp\"\n                            android:layout_below=\"@+id/recommand_license_bundle\"\n                            android:layout_marginHorizontal=\"3dp\">\n\n                            <RelativeLayout\n                                android:layout_width=\"300dp\"\n                                android:layout_height=\"1dp\"\n                                android:layout_alignParentBottom=\"true\"\n                                android:layout_centerHorizontal=\"true\"\n                                android:background=\"@drawable/grey_underline\" />\n\n                            <ImageView\n                                android:id=\"@+id/list_dot2\"\n                                android:layout_width=\"6dp\"\n                                android:layout_height=\"6dp\"\n                                android:layout_alignParentStart=\"true\"\n                                android:layout_centerVertical=\"true\"\n                                android:layout_marginStart=\"8dp\"\n                                android:src=\"@drawable/left_dot_forlist\" />\n\n                            <TextView\n                                android:id=\"@+id/recommand_license_name2\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginStart=\"10dp\"\n                                android:layout_toRightOf=\"@+id/list_dot2\"\n                                android:text=\"워드프로세서\"\n                                android:textColor=\"@color/black\" />\n\n                            <TextView\n                                android:id=\"@+id/text_Dnext_to_date_recommand2\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_toLeftOf=\"@+id/D_date_left_recommand2\"\n                                android:text=\"D - \"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"15dp\" />\n\n                            <TextView\n                                android:id=\"@+id/D_date_left_recommand2\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentEnd=\"true\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginRight=\"25dp\"\n                                android:text=\"39\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"15dp\" />\n\n                            <Button\n                                android:id=\"@+id/apply_click_btn2\"\n                                android:layout_width=\"18dp\"\n                                android:layout_height=\"13dp\"\n                                android:layout_centerInParent=\"true\"\n                                android:layout_marginRight=\"18dp\"\n                                android:layout_toLeftOf=\"@id/text_Dnext_to_date_recommand2\"\n                                android:background=\"@drawable/apply_btn\" />\n                        </RelativeLayout>\n\n                        <Button\n                            android:layout_width=\"wrap_content\"\n                            android:layout_height=\"12dp\"\n                            android:layout_below=\"@id/recommand_license_bundle2\"\n                            android:layout_centerHorizontal=\"true\"\n                            android:layout_marginTop=\"5dp\"\n                            android:background=\"@color/white\"\n                            android:text=\"더 보기  ▽\"\n                            android:textSize=\"10dp\" />\n                    </RelativeLayout>\n                </RelativeLayout>\n            </RelativeLayout>\n\n            <RelativeLayout\n                android:id=\"@+id/container_Hot_post_onair\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"wrap_content\"\n                android:layout_below=\"@+id/container_recommandation_license\"\n                android:background=\"@color/design_default_color_background\">\n\n                <RelativeLayout\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"wrap_content\"\n                    android:layout_marginHorizontal=\"20dp\">\n\n                    <TextView\n                        android:id=\"@+id/title_Hot_post_onair\"\n                        android:layout_width=\"wrap_content\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_marginTop=\"12dp\"\n                        android:fontFamily=\"sans-serif\"\n                        android:text=\"실시간 인기 게시글\"\n                        android:textAlignment=\"center\"\n                        android:textColor=\"@color/black\"\n                        android:textStyle=\"bold\" />\n\n                    <RelativeLayout\n                        android:layout_width=\"match_parent\"\n                        android:layout_height=\"wrap_content\"\n                        android:layout_below=\"@+id/title_Hot_post_onair\"\n                        android:layout_marginTop=\"6dp\">\n\n                        <RelativeLayout\n                            android:id=\"@+id/container_1st_post_onAir\"\n                            android:layout_width=\"match_parent\"\n                            android:layout_height=\"56dp\"\n                            android:background=\"@drawable/darkblue_circular_rectangle\"\n                            android:padding=\"10dp\">\n\n                            <TextView\n                                android:id=\"@+id/number_1st\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentStart=\"true\"\n                                android:layout_centerVertical=\"true\"\n                                android:text=\"1\"\n                                android:textColor=\"@color/white\"\n                                android:textSize=\"24dp\"\n                                android:textStyle=\"bold\" />\n\n                            <RelativeLayout\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerVertical=\"true\"\n                                android:layout_marginLeft=\"10dp\"\n                                android:layout_toRightOf=\"@id/number_1st\">\n\n                                <TextView\n                                    android:id=\"@+id/hottest_post_text\"\n                                    android:layout_width=\"match_parent\"\n                                    android:layout_height=\"wrap_content\"\n                                    android:layout_alignParentTop=\"true\"\n                                    android:text=\"[한능컴] 단기간에 준비 했는데 ... \"\n                                    android:textColor=\"@color/white\"\n                                    android:textSize=\"15dp\"\n                                    android:textStyle=\"bold\" />\n\n                                <RelativeLayout\n                                    android:layout_width=\"wrap_content\"\n                                    android:layout_height=\"wrap_content\"\n                                    android:layout_marginBottom=\"2dp\">\n\n                                    <ImageView\n                                        android:id=\"@+id/like_icon_at_1st_post\"\n                                        android:layout_width=\"10dp\"\n                                        android:layout_height=\"10dp\"\n                                        android:layout_alignParentBottom=\"true\"\n                                        android:layout_marginLeft=\"5dp\"\n                                        android:src=\"@drawable/icon_heart\" />\n\n                                    <TextView\n                                        android:id=\"@+id/number_of_like_at_1st_post\"\n                                        android:layout_width=\"wrap_content\"\n                                        android:layout_height=\"12dp\"\n                                        android:layout_alignParentBottom=\"true\"\n                                        android:layout_marginHorizontal=\"15dp\"\n                                        android:layout_toRightOf=\"@id/like_icon_at_1st_post\"\n                                        android:text=\"33\"\n                                        android:textColor=\"@color/white\"\n                                        android:textSize=\"10dp\"\n                                        android:textStyle=\"bold\" />\n\n                                    <ImageView\n                                        android:id=\"@+id/comment_icon_at_1st_post\"\n                                        android:layout_width=\"10dp\"\n                                        android:layout_height=\"10dp\"\n                                        android:layout_alignParentBottom=\"true\"\n                                        android:layout_marginLeft=\"5dp\"\n                                        android:layout_toRightOf=\"@id/number_of_like_at_1st_post\"\n                                        android:src=\"@drawable/icon_comment\" />\n\n                                    <TextView\n                                        android:id=\"@+id/number_of_commnet_at_1st_post\"\n                                        android:layout_width=\"wrap_content\"\n                                        android:layout_height=\"12dp\"\n                                        android:layout_alignParentBottom=\"true\"\n                                        android:layout_marginLeft=\"15dp\"\n                                        android:layout_toRightOf=\"@id/comment_icon_at_1st_post\"\n                                        android:text=\"10\"\n                                        android:textColor=\"@color/white\"\n                                        android:textSize=\"10dp\"\n                                        android:textStyle=\"bold\" />\n                                </RelativeLayout>\n\n                                <Button\n                                    android:layout_width=\"25dp\"\n                                    android:layout_height=\"25dp\"\n                                    android:layout_alignParentEnd=\"true\"\n                                    android:layout_centerVertical=\"true\"\n                                    android:layout_marginHorizontal=\"10dp\"\n                                    android:background=\"@drawable/watch_more_btn\" />\n                            </RelativeLayout>\n                        </RelativeLayout>\n\n                        <RelativeLayout\n                            android:id=\"@+id/container_2nd_post_onAir\"\n                            android:layout_width=\"match_parent\"\n                            android:layout_height=\"30dp\"\n                            android:layout_below=\"@+id/container_1st_post_onAir\"\n                            android:layout_marginTop=\"8dp\">\n\n                            <TextView\n                                android:id=\"@+id/number_2nd\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentStart=\"true\"\n                                android:layout_centerVertical=\"true\"\n                                android:text=\"2\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"20dp\"\n                                android:textStyle=\"bold\" />\n\n                            <RelativeLayout\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerVertical=\"true\"\n                                android:layout_marginLeft=\"10dp\"\n                                android:layout_toRightOf=\"@id/number_2nd\">\n\n                                <TextView\n                                    android:id=\"@+id/hot_2nd_post_text\"\n                                    android:layout_width=\"match_parent\"\n                                    android:layout_height=\"wrap_content\"\n                                    android:layout_alignParentTop=\"true\"\n                                    android:text=\"[장터] 단기간에 준비 했는데 ... \"\n                                    android:textColor=\"@color/black\"\n                                    android:textSize=\"12dp\" />\n                            </RelativeLayout>\n                        </RelativeLayout>\n\n                        <RelativeLayout\n                            android:id=\"@+id/container_3nd_post_onAir\"\n                            android:layout_width=\"match_parent\"\n                            android:layout_height=\"30dp\"\n                            android:layout_below=\"@+id/container_2nd_post_onAir\">\n\n                            <TextView\n                                android:id=\"@+id/number_3rd\"\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_alignParentStart=\"true\"\n                                android:layout_centerVertical=\"true\"\n                                android:text=\"3\"\n                                android:textColor=\"@color/black\"\n                                android:textSize=\"20dp\"\n                                android:textStyle=\"bold\" />\n\n                            <RelativeLayout\n                                android:layout_width=\"wrap_content\"\n                                android:layout_height=\"wrap_content\"\n                                android:layout_centerVertical=\"true\"\n                                android:layout_marginLeft=\"10dp\"\n                                android:layout_toRightOf=\"@id/number_3rd\">\n\n                                <TextView\n                                    android:id=\"@+id/hot_3rd_post_text\"\n                                    android:layout_width=\"match_parent\"\n                                    android:layout_height=\"wrap_content\"\n                                    android:layout_alignParentTop=\"true\"\n                                    android:text=\"[정보] 기획 직무 자격증 정보 공유\"\n                                    android:textColor=\"@color/black\"\n                                    android:textSize=\"12dp\" />\n                            </RelativeLayout>\n                        </RelativeLayout>\n                    </RelativeLayout>\n                </RelativeLayout>\n            </RelativeLayout>\n        </LinearLayout>\n    </FrameLayout>\n    <com.google.android.material.bottomnavigation.BottomNavigationView\n        android:id=\"@+id/bottom_navigation\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"56dp\"\n        android:layout_alignParentBottom=\"true\"\n        android:background=\"@color/white\"\n        app:itemTextAppearanceInactive=\"@style/navTextInactive\"\n        app:itemTextAppearanceActive=\"@style/navTextActive\"\n        app:labelVisibilityMode=\"labeled\"\n        app:menu=\"@menu/bottom_navigation_main\"></com.google.android.material.bottomnavigation.BottomNavigationView>\n</RelativeLayout>\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/layout/activity_main.xml	(date 1621365790000)
+@@ -27,20 +27,22 @@
+                 android:layout_alignParentStart="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginTop="12dp"
+-                android:src="@drawable/small_logo" />
++                android:src="@drawable/small_logo"/>
+ 
+             <RelativeLayout
+                 android:id="@id/search_bar"
+-                android:layout_width="240dp"
++                android:layout_width="260dp"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+-                android:layout_centerVertical="true">
++                android:layout_centerVertical="true"
++                android:background="@drawable/search_bar">
+ 
+                 <EditText
+                     android:id="@+id/search_keyword"
+-                    android:layout_width="260dp"
++                    android:layout_width="240dp"
++                    android:layout_marginStart="10dp"
+                     android:layout_height="match_parent"
+-                    android:background="@drawable/search_bar" />
++                    android:background="@drawable/search_bar"/>
+ 
+                 <Button
+                     android:id="@+id/top_search_button"
+@@ -53,560 +55,26 @@
+             </RelativeLayout>
+ 
+             <Button
++                android:id="@+id/watch_alarm_button"
+                 android:layout_width="25dp"
+                 android:layout_height="match_parent"
+                 android:layout_alignParentEnd="true"
+                 android:layout_centerVertical="true"
+-                android:layout_marginRight="15dp"
+-                android:background="@drawable/alarm_icon" />
++                android:layout_marginRight="20dp"
++                android:background="@drawable/alarm_icon"/>
+         </RelativeLayout>
+     </androidx.appcompat.widget.Toolbar>
+ 
++
+     <FrameLayout
+         android:id="@+id/main_screen_panel"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_below="@+id/topPanel">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <RelativeLayout
+-                android:id="@+id/container_Dday_licesnse"
+-                android:layout_width="match_parent"
+-                android:layout_height="183dp"
+-                android:background="@color/design_default_color_background">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginHorizontal="20dp">
+-
+-                    <RelativeLayout
+-                        android:id="@+id/text_dday_licesnce"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_marginTop="12dp">
+-
+-                        <!--                아래 폰트처리필요-->
+-                        <TextView
+-                            android:id="@+id/text_license"
+-                            android:layout_width="wrap_content"
+-                            android:layout_height="wrap_content"
+-                            android:fontFamily="sans-serif"
+-                            android:text="My 자격증  "
+-                            android:textColor="@color/black"
+-                            android:textStyle="bold" />
+-
+-                        <ImageView
+-                            android:layout_width="50dp"
+-                            android:layout_height="25dp"
+-                            android:layout_toRightOf="@id/text_license"
+-                            android:src="@drawable/dday_icon" />
+-                    </RelativeLayout>
+-
+-                    <RelativeLayout
+-                        android:layout_width="match_parent"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/text_dday_licesnce"
+-                        android:layout_marginTop="10dp"
+-                        android:layout_marginBottom="15dp">
+-
+-                        <RelativeLayout
+-                            android:id="@+id/dday_licensebox_yellow"
+-                            android:layout_width="100dp"
+-                            android:layout_height="120dp"
+-                            android:layout_alignParentStart="true"
+-                            android:background="@color/box_color_yellow">
+-
+-                            <TextView
+-                                android:id="@+id/yellow_box_license_text"
+-                                android:layout_width="match_parent"
+-                                android:layout_height="75dp"
+-                                android:layout_marginHorizontal="3dp"
+-                                android:layout_marginTop="3dp"
+-                                android:text="한국사 능력 검정시험"
+-                                android:textColor="@color/black" />
+-
+-                            <TextView
+-                                android:id="@+id/text_Dnext_to_date_yellow"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginBottom="4dp"
+-                                android:layout_toLeftOf="@+id/D_date_left_yellow"
+-                                android:text="D - "
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-
+-                            <TextView
+-                                android:id="@+id/D_date_left_yellow"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentEnd="true"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginRight="4dp"
+-                                android:layout_marginBottom="4dp"
+-                                android:text="50"
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-                        </RelativeLayout>
+-
+-                        <RelativeLayout
+-                            android:id="@+id/dday_licensebox_green"
+-                            android:layout_width="100dp"
+-                            android:layout_height="120dp"
+-                            android:layout_centerInParent="true"
+-                            android:background="@color/box_color_green">
+-
+-                            <TextView
+-                                android:id="@+id/green_box_license_text"
+-                                android:layout_width="match_parent"
+-                                android:layout_height="75dp"
+-                                android:layout_marginHorizontal="3dp"
+-                                android:layout_marginTop="3dp"
+-                                android:text="한국사 능력 검정시험"
+-                                android:textColor="@color/black" />
+-
+-                            <TextView
+-                                android:id="@+id/text_Dnext_to_date_green"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginBottom="4dp"
+-                                android:layout_toLeftOf="@+id/D_date_left_green"
+-                                android:text="D - "
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-
+-                            <TextView
+-                                android:id="@+id/D_date_left_green"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentEnd="true"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginRight="4dp"
+-                                android:layout_marginBottom="4dp"
+-                                android:text="50"
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-                        </RelativeLayout>
+-
+-                        <RelativeLayout
+-                            android:id="@+id/dday_licensebox_lightblue"
+-                            android:layout_width="100dp"
+-                            android:layout_height="120dp"
+-                            android:layout_alignParentEnd="true"
+-                            android:background="@color/box_color_lightblue">
+-
+-                            <TextView
+-                                android:id="@+id/lightblue_box_license_text"
+-                                android:layout_width="match_parent"
+-                                android:layout_height="75dp"
+-                                android:layout_marginHorizontal="3dp"
+-                                android:layout_marginTop="3dp"
+-                                android:text="한국사 능력 검정시험"
+-                                android:textColor="@color/black" />
+-
+-                            <TextView
+-                                android:id="@+id/text_Dnext_to_date_lightblue"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginBottom="4dp"
+-                                android:layout_toLeftOf="@+id/D_date_left_lightblue"
+-                                android:text="D - "
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-
+-                            <TextView
+-                                android:id="@+id/D_date_left_lightblue"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentEnd="true"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_marginRight="4dp"
+-                                android:layout_marginBottom="4dp"
+-                                android:text="50"
+-                                android:textColor="@color/black"
+-                                android:textSize="25dp" />
+-                        </RelativeLayout>
+-                    </RelativeLayout>
+-                </RelativeLayout>
+-            </RelativeLayout>
+-
+-            <RelativeLayout
+-                android:id="@+id/container_recommandation_license"
+-                android:layout_width="match_parent"
+-                android:layout_height="274dp"
+-                android:layout_below="@+id/container_Dday_licesnse"
+-                android:background="@drawable/container_design">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginHorizontal="20dp">
+-
+-                    <TextView
+-                        android:id="@+id/text_recommand"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_marginTop="18dp"
+-                        android:fontFamily="sans-serif"
+-                        android:text="추천 자격증"
+-                        android:textAlignment="center"
+-                        android:textColor="@color/black"
+-                        android:textStyle="bold" />
+-
+-                    <RelativeLayout
+-                        android:layout_width="match_parent"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/text_recommand"
+-                        android:layout_centerVertical="true"
+-                        android:layout_marginTop="5dp"
+-                        android:layout_marginBottom="22dp"
+-                        android:background="@drawable/container_for_boxtype"
+-                        android:paddingHorizontal="5dp"
+-                        android:paddingVertical="8dp">
+-
+-                        <RelativeLayout
+-                            android:id="@+id/recommand_license_bundle"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="35dp"
+-                            android:layout_marginHorizontal="3dp">
+-
+-                            <RelativeLayout
+-                                android:layout_width="300dp"
+-                                android:layout_height="1dp"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_centerHorizontal="true"
+-                                android:background="@drawable/grey_underline" />
+-
+-                            <ImageView
+-                                android:id="@+id/list_dot"
+-                                android:layout_width="6dp"
+-                                android:layout_height="6dp"
+-                                android:layout_alignParentStart="true"
+-                                android:layout_centerVertical="true"
+-                                android:layout_marginStart="8dp"
+-                                android:src="@drawable/left_dot_forlist" />
+-
+-                            <TextView
+-                                android:id="@+id/recommand_license_name"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginStart="10dp"
+-                                android:layout_toRightOf="@+id/list_dot"
+-                                android:text="전산회계운용사"
+-                                android:textColor="@color/black" />
+-
+-                            <TextView
+-                                android:id="@+id/text_Dnext_to_date_recommand"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerInParent="true"
+-                                android:layout_toLeftOf="@+id/D_date_left_recommand"
+-                                android:text="D - "
+-                                android:textColor="@color/black"
+-                                android:textSize="15dp" />
+-
+-                            <TextView
+-                                android:id="@+id/D_date_left_recommand"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentEnd="true"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginRight="25dp"
+-                                android:text="50"
+-                                android:textColor="@color/black"
+-                                android:textSize="15dp" />
+-
+-                            <Button
+-                                android:id="@+id/apply_click_btn"
+-                                android:layout_width="18dp"
+-                                android:layout_height="13dp"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginRight="12dp"
+-                                android:layout_toLeftOf="@id/text_Dnext_to_date_recommand"
+-                                android:background="@drawable/apply_btn" />
+-                        </RelativeLayout>
+-
+-                        <RelativeLayout
+-                            android:id="@+id/recommand_license_bundle2"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="35dp"
+-                            android:layout_below="@+id/recommand_license_bundle"
+-                            android:layout_marginHorizontal="3dp">
+-
+-                            <RelativeLayout
+-                                android:layout_width="300dp"
+-                                android:layout_height="1dp"
+-                                android:layout_alignParentBottom="true"
+-                                android:layout_centerHorizontal="true"
+-                                android:background="@drawable/grey_underline" />
+-
+-                            <ImageView
+-                                android:id="@+id/list_dot2"
+-                                android:layout_width="6dp"
+-                                android:layout_height="6dp"
+-                                android:layout_alignParentStart="true"
+-                                android:layout_centerVertical="true"
+-                                android:layout_marginStart="8dp"
+-                                android:src="@drawable/left_dot_forlist" />
+-
+-                            <TextView
+-                                android:id="@+id/recommand_license_name2"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginStart="10dp"
+-                                android:layout_toRightOf="@+id/list_dot2"
+-                                android:text="워드프로세서"
+-                                android:textColor="@color/black" />
+-
+-                            <TextView
+-                                android:id="@+id/text_Dnext_to_date_recommand2"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerInParent="true"
+-                                android:layout_toLeftOf="@+id/D_date_left_recommand2"
+-                                android:text="D - "
+-                                android:textColor="@color/black"
+-                                android:textSize="15dp" />
+-
+-                            <TextView
+-                                android:id="@+id/D_date_left_recommand2"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentEnd="true"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginRight="25dp"
+-                                android:text="39"
+-                                android:textColor="@color/black"
+-                                android:textSize="15dp" />
+-
+-                            <Button
+-                                android:id="@+id/apply_click_btn2"
+-                                android:layout_width="18dp"
+-                                android:layout_height="13dp"
+-                                android:layout_centerInParent="true"
+-                                android:layout_marginRight="18dp"
+-                                android:layout_toLeftOf="@id/text_Dnext_to_date_recommand2"
+-                                android:background="@drawable/apply_btn" />
+-                        </RelativeLayout>
+-
+-                        <Button
+-                            android:layout_width="wrap_content"
+-                            android:layout_height="12dp"
+-                            android:layout_below="@id/recommand_license_bundle2"
+-                            android:layout_centerHorizontal="true"
+-                            android:layout_marginTop="5dp"
+-                            android:background="@color/white"
+-                            android:text="더 보기  ▽"
+-                            android:textSize="10dp" />
+-                    </RelativeLayout>
+-                </RelativeLayout>
+-            </RelativeLayout>
+-
+-            <RelativeLayout
+-                android:id="@+id/container_Hot_post_onair"
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_below="@+id/container_recommandation_license"
+-                android:background="@color/design_default_color_background">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginHorizontal="20dp">
+-
+-                    <TextView
+-                        android:id="@+id/title_Hot_post_onair"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_marginTop="12dp"
+-                        android:fontFamily="sans-serif"
+-                        android:text="실시간 인기 게시글"
+-                        android:textAlignment="center"
+-                        android:textColor="@color/black"
+-                        android:textStyle="bold" />
+-
+-                    <RelativeLayout
+-                        android:layout_width="match_parent"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@+id/title_Hot_post_onair"
+-                        android:layout_marginTop="6dp">
+-
+-                        <RelativeLayout
+-                            android:id="@+id/container_1st_post_onAir"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="56dp"
+-                            android:background="@drawable/darkblue_circular_rectangle"
+-                            android:padding="10dp">
+-
+-                            <TextView
+-                                android:id="@+id/number_1st"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentStart="true"
+-                                android:layout_centerVertical="true"
+-                                android:text="1"
+-                                android:textColor="@color/white"
+-                                android:textSize="24dp"
+-                                android:textStyle="bold" />
+-
+-                            <RelativeLayout
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerVertical="true"
+-                                android:layout_marginLeft="10dp"
+-                                android:layout_toRightOf="@id/number_1st">
+-
+-                                <TextView
+-                                    android:id="@+id/hottest_post_text"
+-                                    android:layout_width="match_parent"
+-                                    android:layout_height="wrap_content"
+-                                    android:layout_alignParentTop="true"
+-                                    android:text="[한능컴] 단기간에 준비 했는데 ... "
+-                                    android:textColor="@color/white"
+-                                    android:textSize="15dp"
+-                                    android:textStyle="bold" />
+-
+-                                <RelativeLayout
+-                                    android:layout_width="wrap_content"
+-                                    android:layout_height="wrap_content"
+-                                    android:layout_marginBottom="2dp">
+-
+-                                    <ImageView
+-                                        android:id="@+id/like_icon_at_1st_post"
+-                                        android:layout_width="10dp"
+-                                        android:layout_height="10dp"
+-                                        android:layout_alignParentBottom="true"
+-                                        android:layout_marginLeft="5dp"
+-                                        android:src="@drawable/icon_heart" />
+-
+-                                    <TextView
+-                                        android:id="@+id/number_of_like_at_1st_post"
+-                                        android:layout_width="wrap_content"
+-                                        android:layout_height="12dp"
+-                                        android:layout_alignParentBottom="true"
+-                                        android:layout_marginHorizontal="15dp"
+-                                        android:layout_toRightOf="@id/like_icon_at_1st_post"
+-                                        android:text="33"
+-                                        android:textColor="@color/white"
+-                                        android:textSize="10dp"
+-                                        android:textStyle="bold" />
+-
+-                                    <ImageView
+-                                        android:id="@+id/comment_icon_at_1st_post"
+-                                        android:layout_width="10dp"
+-                                        android:layout_height="10dp"
+-                                        android:layout_alignParentBottom="true"
+-                                        android:layout_marginLeft="5dp"
+-                                        android:layout_toRightOf="@id/number_of_like_at_1st_post"
+-                                        android:src="@drawable/icon_comment" />
+-
+-                                    <TextView
+-                                        android:id="@+id/number_of_commnet_at_1st_post"
+-                                        android:layout_width="wrap_content"
+-                                        android:layout_height="12dp"
+-                                        android:layout_alignParentBottom="true"
+-                                        android:layout_marginLeft="15dp"
+-                                        android:layout_toRightOf="@id/comment_icon_at_1st_post"
+-                                        android:text="10"
+-                                        android:textColor="@color/white"
+-                                        android:textSize="10dp"
+-                                        android:textStyle="bold" />
+-                                </RelativeLayout>
+-
+-                                <Button
+-                                    android:layout_width="25dp"
+-                                    android:layout_height="25dp"
+-                                    android:layout_alignParentEnd="true"
+-                                    android:layout_centerVertical="true"
+-                                    android:layout_marginHorizontal="10dp"
+-                                    android:background="@drawable/watch_more_btn" />
+-                            </RelativeLayout>
+-                        </RelativeLayout>
+-
+-                        <RelativeLayout
+-                            android:id="@+id/container_2nd_post_onAir"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="30dp"
+-                            android:layout_below="@+id/container_1st_post_onAir"
+-                            android:layout_marginTop="8dp">
+-
+-                            <TextView
+-                                android:id="@+id/number_2nd"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentStart="true"
+-                                android:layout_centerVertical="true"
+-                                android:text="2"
+-                                android:textColor="@color/black"
+-                                android:textSize="20dp"
+-                                android:textStyle="bold" />
+-
+-                            <RelativeLayout
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerVertical="true"
+-                                android:layout_marginLeft="10dp"
+-                                android:layout_toRightOf="@id/number_2nd">
+-
+-                                <TextView
+-                                    android:id="@+id/hot_2nd_post_text"
+-                                    android:layout_width="match_parent"
+-                                    android:layout_height="wrap_content"
+-                                    android:layout_alignParentTop="true"
+-                                    android:text="[장터] 단기간에 준비 했는데 ... "
+-                                    android:textColor="@color/black"
+-                                    android:textSize="12dp" />
+-                            </RelativeLayout>
+-                        </RelativeLayout>
+-
+-                        <RelativeLayout
+-                            android:id="@+id/container_3nd_post_onAir"
+-                            android:layout_width="match_parent"
+-                            android:layout_height="30dp"
+-                            android:layout_below="@+id/container_2nd_post_onAir">
+-
+-                            <TextView
+-                                android:id="@+id/number_3rd"
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_alignParentStart="true"
+-                                android:layout_centerVertical="true"
+-                                android:text="3"
+-                                android:textColor="@color/black"
+-                                android:textSize="20dp"
+-                                android:textStyle="bold" />
+-
+-                            <RelativeLayout
+-                                android:layout_width="wrap_content"
+-                                android:layout_height="wrap_content"
+-                                android:layout_centerVertical="true"
+-                                android:layout_marginLeft="10dp"
+-                                android:layout_toRightOf="@id/number_3rd">
+-
+-                                <TextView
+-                                    android:id="@+id/hot_3rd_post_text"
+-                                    android:layout_width="match_parent"
+-                                    android:layout_height="wrap_content"
+-                                    android:layout_alignParentTop="true"
+-                                    android:text="[정보] 기획 직무 자격증 정보 공유"
+-                                    android:textColor="@color/black"
+-                                    android:textSize="12dp" />
+-                            </RelativeLayout>
+-                        </RelativeLayout>
+-                    </RelativeLayout>
+-                </RelativeLayout>
+-            </RelativeLayout>
+-        </LinearLayout>
++        android:layout_height="match_parent"
++        android:layout_below="@+id/topPanel"
++        android:layout_above="@id/bottom_navigation">
+     </FrameLayout>
++
++
+     <com.google.android.material.bottomnavigation.BottomNavigationView
+         android:id="@+id/bottom_navigation"
+         android:layout_width="match_parent"
+@@ -616,7 +84,10 @@
+         app:itemTextAppearanceInactive="@style/navTextInactive"
+         app:itemTextAppearanceActive="@style/navTextActive"
+         app:labelVisibilityMode="labeled"
+-        app:menu="@menu/bottom_navigation_main"></com.google.android.material.bottomnavigation.BottomNavigationView>
++        app:menu="@menu/bottom_navigation_main"
++        android:fitsSystemWindows="true"
++        app:itemIconTint="@drawable/tab_color"
++        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>
+ </RelativeLayout>
+ 
+ 
+Index: app/src/main/java/com/example/happylife/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.happylife\n\nimport androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\nimport android.os.PersistableBundle\nimport android.view.MenuItem\nimport androidx.core.app.ActivityCompat\nimport com.example.happylife.navigation.CommunityFragment\nimport com.example.happylife.navigation.DetailViewFragment\nimport com.example.happylife.navigation.LicenceInfoFragment\nimport com.example.happylife.navigation.MyPageFragment\nimport com.google.android.material.bottomnavigation.BottomNavigationView\nimport kotlinx.android.synthetic.main.activity_main.*\n\nclass MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContentView(R.layout.activity_main)\n        bottom_navigation.setOnNavigationItemSelectedListener(this)\n    }\n    override fun onNavigationItemSelected(p0: MenuItem): Boolean {\n        when(p0.itemId) {\n            R.id.action_home ->{\n                var mainViewFragment = DetailViewFragment()\n                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,mainViewFragment).commit()\n                return true\n            }\n            R.id.action_license_info ->{\n                var licenseInfoFragment = LicenceInfoFragment()\n                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,licenseInfoFragment).commit()\n                return true\n            }\n\n            R.id.action_community ->{\n                var communitiyFragment = CommunityFragment()\n                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,communitiyFragment).commit()\n            return true\n        }\n            R.id.action_mypage ->{\n                var myPageFragment = MyPageFragment()\n                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,myPageFragment).commit()\n                return true\n            }\n        }\n        return false\n    }\n\n    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {\n        super.onCreate(savedInstanceState, persistentState)\n        setContentView((R.layout.activity_main))\n        bottom_navigation.setOnNavigationItemSelectedListener(this)\n        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/happylife/MainActivity.kt	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/java/com/example/happylife/MainActivity.kt	(date 1621365790000)
+@@ -1,54 +1,69 @@
+ package com.example.happylife
+ 
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
+-import android.os.PersistableBundle
+ import android.view.MenuItem
+-import androidx.core.app.ActivityCompat
++import com.example.happylife.databinding.ActivityMainBinding
+ import com.example.happylife.navigation.CommunityFragment
+-import com.example.happylife.navigation.DetailViewFragment
++import com.example.happylife.navigation.HomeViewFragment
+ import com.example.happylife.navigation.LicenceInfoFragment
+ import com.example.happylife.navigation.MyPageFragment
+ import com.google.android.material.bottomnavigation.BottomNavigationView
+ import kotlinx.android.synthetic.main.activity_main.*
+ 
+ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+-    override fun onCreate(savedInstanceState: Bundle?) {
+-        super.onCreate(savedInstanceState)
+-        setContentView(R.layout.activity_main)
+-        bottom_navigation.setOnNavigationItemSelectedListener(this)
+-    }
++
++    private lateinit var binding: ActivityMainBinding
++
+     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+-        when(p0.itemId) {
+-            R.id.action_home ->{
+-                var mainViewFragment = DetailViewFragment()
+-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,mainViewFragment).commit()
++        when (p0.itemId) {
++            R.id.action_home -> {
++                var homeViewFragment = HomeViewFragment()
++                supportFragmentManager.beginTransaction()
++                    .replace(R.id.main_screen_panel, homeViewFragment).commit()
+                 return true
+             }
+-            R.id.action_license_info ->{
++            R.id.action_license_info -> {
+                 var licenseInfoFragment = LicenceInfoFragment()
+-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,licenseInfoFragment).commit()
++                supportFragmentManager.beginTransaction()
++                    .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
+                 return true
+             }
+ 
+-            R.id.action_community ->{
++            R.id.action_community -> {
+                 var communitiyFragment = CommunityFragment()
+-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,communitiyFragment).commit()
+-            return true
+-        }
+-            R.id.action_mypage ->{
++                supportFragmentManager.beginTransaction()
++                    .replace(R.id.main_screen_panel, communitiyFragment).commit()
++                return true
++            }
++            R.id.action_mypage -> {
+                 var myPageFragment = MyPageFragment()
+-                supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel,myPageFragment).commit()
++                supportFragmentManager.beginTransaction()
++                    .replace(R.id.main_screen_panel, myPageFragment).commit()
+                 return true
+             }
+         }
+         return false
+     }
+ 
+-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+-        super.onCreate(savedInstanceState, persistentState)
+-        setContentView((R.layout.activity_main))
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++
++        binding = ActivityMainBinding.inflate(layoutInflater)
++        val view = binding.root
++        setContentView(view)
++
++        binding.watchAlarmButton.setOnClickListener {
++            val intent = Intent(this, AlarmActivity::class.java)
++            startActivity(intent)
++        }
++
++        var homeViewFragment = HomeViewFragment()
++        supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
++            .commit()
+         bottom_navigation.setOnNavigationItemSelectedListener(this)
+-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)
++        bottom_navigation.menu.getItem(0).isChecked = true
+     }
+-}
+\ No newline at end of file
++}
+Index: .idea/.gitignore
+===================================================================
+--- .idea/.gitignore	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ .idea/.gitignore	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/encodings.xml
+===================================================================
+--- .idea/encodings.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ .idea/encodings.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
+@@ -1,4 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+-</project>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_grid.xml
+===================================================================
+--- app/src/main/res/layout/fragment_grid.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/layout/fragment_grid.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_mypage.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\" android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"@color/white\">\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_mypage.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/layout/fragment_mypage.xml	(date 1621356967000)
+@@ -2,6 +2,8 @@
+ <androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="@color/white">
++    android:background="@color/box_color_lightblue"
++    >
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_commu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\" android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"@color/logo_darkblue\">\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_commu.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/layout/fragment_commu.xml	(date 1621344576000)
+@@ -1,7 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="@color/logo_darkblue">
++    android:background="@color/main_color">
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/happylife/navigation/CommunityFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.happylife.navigation\n\nimport android.os.Bundle\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.fragment.app.Fragment\nimport com.example.happylife.R\n\nclass CommunityFragment : Fragment() {\n\n    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {\n        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_commu,container,false)\n        return super.onCreateView(inflater, container, savedInstanceState)\n        return view\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/happylife/navigation/CommunityFragment.kt	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/java/com/example/happylife/navigation/CommunityFragment.kt	(date 1621356221000)
+@@ -11,7 +11,6 @@
+ 
+     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+         var view = LayoutInflater.from(activity).inflate(R.layout.fragment_commu,container,false)
+-        return super.onCreateView(inflater, container, savedInstanceState)
+         return view
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_licence_info.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"@color/grey\">\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_licence_info.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/layout/fragment_licence_info.xml	(date 1621344576000)
+@@ -3,6 +3,6 @@
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="@color/grey">
++    android:background="@color/gray">
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n        <option name=\"useQualifiedModuleNames\" value=\"true\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ .idea/gradle.xml	(date 1621358910000)
+@@ -7,6 +7,7 @@
+         <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="1.8" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    id 'com.android.application'\n    id 'kotlin-android'\n    id 'com.google.gms.google-services'\n    id 'kotlin-android-extensions'\n}\n\nandroid {\n    compileSdkVersion 30\n    buildToolsVersion \"30.0.2\"\n\n        buildFeatures {\n            viewBinding true\n        }\n\n        defaultConfig {\n            applicationId \"com.example.happylife\"\n            minSdkVersion 23\n            targetSdkVersion 30\n            versionCode 1\n            versionName \"1.0\"\n\n            testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n        }\n\n        buildTypes {\n            release {\n                minifyEnabled false\n                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n            }\n        }\n        compileOptions {\n            sourceCompatibility JavaVersion.VERSION_1_8\n            targetCompatibility JavaVersion.VERSION_1_8\n        }\n        kotlinOptions {\n            jvmTarget = '1.8'\n        }\n    }\n\n    dependencies {\n\n    implementation \"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version\"\n    implementation 'androidx.core:core-ktx:1.3.2'\n    implementation 'androidx.appcompat:appcompat:1.2.0'\n    implementation 'com.google.android.material:material:1.3.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'\n    implementation 'com.google.firebase:firebase-auth:20.0.4'\n    implementation 'com.google.android.gms:play-services-auth:19.0.0'\n    testImplementation 'junit:junit:4.+'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/build.gradle	(date 1621353217000)
+@@ -47,6 +47,7 @@
+     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+     implementation 'com.google.firebase:firebase-auth:20.0.4'
+     implementation 'com.google.android.gms:play-services-auth:19.0.0'
++    implementation 'com.google.android.material:material:1.0.0'
+     testImplementation 'junit:junit:4.+'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+Index: app/src/main/res/menu/bottom_navigation_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\n    <item\n        android:id=\"@+id/action_home\"\n        android:icon=\"@drawable/home_icon\"\n        android:enabled=\"true\"\n        android:title=\"자격홈\"/>\n    <item\n        android:id=\"@+id/action_license_info\"\n        android:icon=\"@drawable/licence_info_icon\"\n        android:enabled=\"true\"\n        android:title=\"자격증정보\"/>\n    <item\n        android:id=\"@+id/action_community\"\n        android:icon=\"@drawable/commu_icon\"\n        android:enabled=\"true\"\n        android:title=\"커뮤니티\"/>\n    <item\n        android:id=\"@+id/action_mypage\"\n        android:icon=\"@drawable/my_page_icon\"\n        android:enabled=\"true\"\n        android:title=\"마이페이지\"/>\n</menu>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/menu/bottom_navigation_main.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/menu/bottom_navigation_main.xml	(date 1621361634000)
+@@ -4,7 +4,8 @@
+         android:id="@+id/action_home"
+         android:icon="@drawable/home_icon"
+         android:enabled="true"
+-        android:title="자격홈"/>
++        android:title="자격홈"
++        />
+     <item
+         android:id="@+id/action_license_info"
+         android:icon="@drawable/licence_info_icon"
+@@ -12,7 +13,7 @@
+         android:title="자격증정보"/>
+     <item
+         android:id="@+id/action_community"
+-        android:icon="@drawable/commu_icon"
++        android:icon="@drawable/community_icon"
+         android:enabled="true"
+         android:title="커뮤니티"/>
+     <item
+Index: app/src/main/java/com/example/happylife/navigation/DetailViewFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.happylife.navigation\n\nimport android.os.Bundle\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.fragment.app.Fragment\nimport com.example.happylife.R\n\nclass DetailViewFragment : Fragment() {\n\n    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {\n        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_licence_info,container,false)\n        return super.onCreateView(inflater, container, savedInstanceState)\n        return view\n    }\n}
+===================================================================
+--- app/src/main/java/com/example/happylife/navigation/DetailViewFragment.kt	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/java/com/example/happylife/navigation/HomeViewFragment.kt	(date 1621356758000)
+@@ -7,11 +7,10 @@
+ import androidx.fragment.app.Fragment
+ import com.example.happylife.R
+ 
+-class DetailViewFragment : Fragment() {
++class HomeViewFragment : Fragment() {
+ 
+     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+-        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_licence_info,container,false)
+-        return super.onCreateView(inflater, container, savedInstanceState)
++        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_home,container,false)
+         return view
+     }
+ }
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(date 1621358001000)
++++ .idea/codeStyles/Project.xml	(date 1621358001000)
+@@ -0,0 +1,139 @@
++<component name="ProjectCodeStyleConfiguration">
++  <code_scheme name="Project" version="173">
++    <JetCodeStyleSettings>
++      <option name="PACKAGES_TO_USE_STAR_IMPORTS">
++        <value>
++          <package name="java.util" alias="false" withSubpackages="false" />
++          <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
++          <package name="io.ktor" alias="false" withSubpackages="true" />
++        </value>
++      </option>
++      <option name="PACKAGES_IMPORT_LAYOUT">
++        <value>
++          <package name="" alias="false" withSubpackages="true" />
++          <package name="java" alias="false" withSubpackages="true" />
++          <package name="javax" alias="false" withSubpackages="true" />
++          <package name="kotlin" alias="false" withSubpackages="true" />
++          <package name="" alias="true" withSubpackages="true" />
++        </value>
++      </option>
++      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
++    </JetCodeStyleSettings>
++    <codeStyleSettings language="XML">
++      <option name="FORCE_REARRANGE_MODE" value="1" />
++      <indentOptions>
++        <option name="CONTINUATION_INDENT_SIZE" value="4" />
++      </indentOptions>
++      <arrangement>
++        <rules>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>xmlns:android</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>xmlns:.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*:id</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*:name</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>name</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>style</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>^$</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>ANDROID_ATTRIBUTE_ORDER</order>
++            </rule>
++          </section>
++          <section>
++            <rule>
++              <match>
++                <AND>
++                  <NAME>.*</NAME>
++                  <XML_ATTRIBUTE />
++                  <XML_NAMESPACE>.*</XML_NAMESPACE>
++                </AND>
++              </match>
++              <order>BY_NAME</order>
++            </rule>
++          </section>
++        </rules>
++      </arrangement>
++    </codeStyleSettings>
++    <codeStyleSettings language="kotlin">
++      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
++    </codeStyleSettings>
++  </code_scheme>
++</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ .idea/vcs.xml	(date 1621344577000)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/codeStyleConfig.xml	(date 1621358001000)
++++ .idea/codeStyles/codeStyleConfig.xml	(date 1621358001000)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
++  </state>
++</component>
+\ No newline at end of file
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\"?>\n\n    <resources xmlns:tools=\"http://schemas.android.com/tools\">\n\n    <!-- Base application theme. -->\n\n\n\n    -<style parent=\"Theme.AppCompat.Light\" name=\"Theme.Happylife\">\n    <item name=\"windowActionBar\">false</item>\n    <item name=\"windowNoTitle\">true</item>\n\n    <!-- Primary brand color. -->\n\n\n    <item name=\"colorPrimary\">@color/purple_500</item>\n\n    <item name=\"colorPrimaryVariant\">@color/purple_700</item>\n\n    <item name=\"colorOnPrimary\">@color/white</item>\n\n    <!-- Secondary brand color. -->\n\n\n    <item name=\"colorSecondary\">@color/teal_200</item>\n\n    <item name=\"colorSecondaryVariant\">@color/teal_700</item>\n\n    <item name=\"colorOnSecondary\">@color/black</item>\n\n    <!-- Status bar color. -->\n\n\n    <item name=\"android:statusBarColor\" tools:targetApi=\"l\">?attr/colorPrimaryVariant</item>\n\n</style>\n\n\n    -<style name=\"menu_strings\">\n\n    <item name=\"android:textSize\"> 14sp </item>\n\n    <item name=\"android:letterSpacing\"> 0.07 </item>\n\n    <item name=\"android:textColor\"> #000000 </item>\n\n\n    <!-- Customize your theme here. -->\n\n\n</style>\n\n    -<style name=\"navTextInactive\">\n        <item name = \"android:textSize\"> 10sp </item>\n        <item name = \"android:textColor\"> @color/gray</item>\n    </style>\n\n    -<style name=\"navTextActive\">\n        <item name = \"android:textSize\"> 12sp </item>\n        <item name = \"android:textStyle\"> bold </item>\n        <item name = \"android:textColor\"> @color/main_color</item>\n    </style>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/themes.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/values/themes.xml	(date 1621355014000)
+@@ -51,8 +51,9 @@
+ </style>
+ 
+     -<style name="navTextInactive">
+-        <item name = "android:textSize"> 10sp </item>
++    <item name = "android:textSize"> 10sp </item>
+         <item name = "android:textColor"> @color/gray</item>
++
+     </style>
+ 
+     -<style name="navTextActive">
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\"?>\n\n    <resources>\n\n    <string name=\"app_name\">happylife</string>\n\n    <string name=\"menu_string\"> \\u00EC\\u009E\\u0090\\u00EA\\u00B2\\u00A9\\u00EC\\u00A6\\u009D </string>\n\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/values/strings.xml	(date 1621365779000)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0"?>
+ 
+-    <resources>
++<resources>
+ 
+     <string name="app_name">happylife</string>
+ 
+Index: app/src/main/java/com/example/happylife/navigation/MyPageFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.happylife.navigation\n\nimport android.os.Bundle\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.fragment.app.Fragment\nimport com.example.happylife.R\n\nclass MyPageFragment : Fragment() {\n\n    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {\n        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_mypage,container,false)\n        return super.onCreateView(inflater, container, savedInstanceState)\n        return view\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/happylife/navigation/MyPageFragment.kt	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/java/com/example/happylife/navigation/MyPageFragment.kt	(date 1621356221000)
+@@ -11,7 +11,6 @@
+ 
+     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+         var view = LayoutInflater.from(activity).inflate(R.layout.fragment_mypage,container,false)
+-        return super.onCreateView(inflater, container, savedInstanceState)
+         return view
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/happylife/navigation/LicenceInfoFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.happylife.navigation\n\nimport android.os.Bundle\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport androidx.fragment.app.Fragment\nimport com.example.happylife.R\n\nclass LicenceInfoFragment : Fragment() {\n\n    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {\n        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_licence_info,container,false)\n        return super.onCreateView(inflater, container, savedInstanceState)\n        return view\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/happylife/navigation/LicenceInfoFragment.kt	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/java/com/example/happylife/navigation/LicenceInfoFragment.kt	(date 1621356221000)
+@@ -11,7 +11,6 @@
+ 
+     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+         var view = LayoutInflater.from(activity).inflate(R.layout.fragment_licence_info,container,false)
+-        return super.onCreateView(inflater, container, savedInstanceState)
+         return view
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.example.happylife\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.Happylife\">\n\n        <activity android:name=\".RegisterActivity\" />\n        <activity android:name=\".JobActivity\" />\n        <activity android:name=\".NicknameActivity\" />\n        <activity android:name=\".MembershipActivity\">\n        <activity android:name=\".SplashActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n        <activity android:name=\".LoginActivity\" />\n        <activity android:name=\".MainActivity\">\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/AndroidManifest.xml	(date 1621365779000)
+@@ -9,20 +9,19 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.Happylife">
+-
++        <activity android:name=".AlarmActivity"></activity>
+         <activity android:name=".RegisterActivity" />
+         <activity android:name=".JobActivity" />
+         <activity android:name=".NicknameActivity" />
+-        <activity android:name=".MembershipActivity">
+-        <activity android:name=".SplashActivity">
++        <activity android:name=".MembershipActivity" />
++        <activity android:name=".SplashActivity"></activity>
++        <activity android:name=".LoginActivity" />
++        <activity android:name=".MainActivity">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+-        </activity>
+-        <activity android:name=".LoginActivity" />
+-        <activity android:name=".MainActivity">
+         </activity>
+     </application>
+ 
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n    <color name=\"purple_200\">#FFBB86FC</color>\n    <color name=\"purple_500\">#FF6200EE</color>\n    <color name=\"purple_700\">#FF3700B3</color>\n    <color name=\"teal_200\">#FF03DAC5</color>\n    <color name=\"teal_700\">#FF018786</color>\n    <color name=\"black\">#FF000000</color>\n    <color name=\"white\">#FFFFFFFF</color>\n    <color name=\"main_color\">#393778</color>\n    <color name=\"gray_color\">#919191</color>\n    <color name=\"dark_blue\">#5A5A5A</color>\n    <color name=\"box_color_yellow\">#FFF4D7</color>\n    <color name=\"box_color_green\">#EAF5D8</color>\n    <color name=\"box_color_lightblue\">#E2F1F9</color>\n    <color name=\"gray_search_bar\">#F4F4F4</color>\n    <color name=\"gray\"> #999999 </color>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision c299076ab49e5a559d6473ef7d4978bbaf068871)
++++ app/src/main/res/values/colors.xml	(date 1621344577000)
+@@ -1,17 +1,27 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
++<?xml version="1.0" encoding="UTF-8"?>
++
++    <resources>
++
+     <color name="purple_200">#FFBB86FC</color>
++
+     <color name="purple_500">#FF6200EE</color>
++
+     <color name="purple_700">#FF3700B3</color>
++
+     <color name="teal_200">#FF03DAC5</color>
++
+     <color name="teal_700">#FF018786</color>
++
+     <color name="black">#FF000000</color>
++
+     <color name="white">#FFFFFFFF</color>
+     <color name="main_color">#393778</color>
+     <color name="gray_color">#919191</color>
+     <color name="dark_blue">#5A5A5A</color>
+     <color name="box_color_yellow">#FFF4D7</color>
++
+     <color name="box_color_green">#EAF5D8</color>
++
+     <color name="box_color_lightblue">#E2F1F9</color>
+     <color name="gray_search_bar">#F4F4F4</color>
+     <color name="gray"> #999999 </color>
+diff --git app/src/main/res/drawable-v24/grey_underline.xml app/src/main/res/drawable-v24/gray_underline.xml
+rename from app/src/main/res/drawable-v24/grey_underline.xml
+rename to app/src/main/res/drawable-v24/gray_underline.xml
