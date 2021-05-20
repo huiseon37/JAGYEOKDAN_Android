@@ -28,15 +28,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp">
 
-                    <!--                아래 폰트처리필요-->
                     <TextView
                         android:id="@+id/text_license"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="My 자격증  "
+                        android:layout_height="25dp"
+                        android:fontFamily="@font/a_title_gothic3"
+                        android:text="자격증 "
+                        android:gravity="center_vertical"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                         />
 
                     <ImageView
                         android:layout_width="50dp"
@@ -57,70 +57,74 @@
                         android:layout_width="100dp"
                         android:layout_height="120dp"
                         android:layout_alignParentStart="true"
-                        android:background="@color/box_color_yellow">
+                        android:background="@color/box_color_light_purple">
 
                         <TextView
-                            android:id="@+id/yellow_box_license_text"
+                            android:id="@+id/first_box_license_text"
                             android:layout_width="match_parent"
                             android:layout_height="75dp"
-                            android:layout_marginHorizontal="3dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:layout_marginTop="5dp"
                             android:text="한국사 능력 검정시험"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/black"
+                            />
 
                         <TextView
-                            android:id="@+id/text_Dnext_to_date_yellow"
+                            android:id="@+id/text_Dnext_to_date_first"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_yellow"
-                            android:text="D - "
+                            android:layout_toLeftOf="@+id/D_date_left_first"
+                            android:fontFamily="@font/a_title_gothic2"
+                            android:text="D- "
                             android:textColor="@color/black"
                             android:textSize="25dp" />
 
                         <TextView
-                            android:id="@+id/D_date_left_yellow"
+                            android:id="@+id/D_date_left_first"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
                             android:layout_marginRight="4dp"
                             android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/a_title_gothic2"
                             android:text="50"
                             android:textColor="@color/black"
                             android:textSize="25dp" />
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/dday_licensebox_green"
+                        android:id="@+id/dday_licensebox_second"
                         android:layout_width="100dp"
                         android:layout_height="120dp"
                         android:layout_centerInParent="true"
-                        android:background="@color/box_color_green">
+                        android:background="@color/box_color_lightblue">
 
                         <TextView
-                            android:id="@+id/green_box_license_text"
+                            android:id="@+id/second_box_license_text"
                             android:layout_width="match_parent"
                             android:layout_height="75dp"
-                            android:layout_marginHorizontal="3dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:text="한국사 능력 검정시험"
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/text_Dnext_to_date_green"
+                            android:id="@+id/text_Dnext_to_date_second"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_green"
+                            android:layout_toLeftOf="@+id/D_date_left_second"
                             android:text="D - "
                             android:textColor="@color/black"
                             android:textSize="25dp" />
 
                         <TextView
-                            android:id="@+id/D_date_left_green"
+                            android:id="@+id/D_date_left_second"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -133,34 +137,35 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/dday_licensebox_lightblue"
+                        android:id="@+id/dday_licensebox_third"
                         android:layout_width="100dp"
                         android:layout_height="120dp"
                         android:layout_alignParentEnd="true"
-                        android:background="@color/box_color_lightblue">
+                        android:background="@color/box_color_light_purple">
 
                         <TextView
-                            android:id="@+id/lightblue_box_license_text"
+                            android:id="@+id/third_box_license_text"
                             android:layout_width="match_parent"
                             android:layout_height="75dp"
-                            android:layout_marginHorizontal="3dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:text="한국사 능력 검정시험"
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/text_Dnext_to_date_lightblue"
+                            android:id="@+id/text_Dnext_to_date_third"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_lightblue"
+                            android:layout_toLeftOf="@+id/D_date_left_third"
                             android:text="D - "
                             android:textColor="@color/black"
                             android:textSize="25dp" />
 
                         <TextView
-                            android:id="@+id/D_date_left_lightblue"
+                            android:id="@+id/D_date_left_third"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -192,11 +197,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/a_title_gothic3"
                     android:text="추천 자격증"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                     />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -216,7 +221,7 @@
                         android:layout_marginHorizontal="3dp">
 
                         <RelativeLayout
-                            android:layout_width="300dp"
+                            android:layout_width="340dp"
                             android:layout_height="1dp"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
@@ -238,6 +243,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toRightOf="@+id/list_dot"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:text="전산회계운용사"
                             android:textColor="@color/black" />
 
@@ -248,6 +254,7 @@
                             android:layout_centerInParent="true"
                             android:layout_toLeftOf="@+id/D_date_left_recommand"
                             android:text="D - "
+                            android:fontFamily="@font/a_title_gothic1"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
 
@@ -258,6 +265,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerInParent="true"
                             android:layout_marginRight="25dp"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:text="50"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
@@ -280,7 +288,7 @@
                         android:layout_marginHorizontal="3dp">
 
                         <RelativeLayout
-                            android:layout_width="300dp"
+                            android:layout_width="340dp"
                             android:layout_height="1dp"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
@@ -302,6 +310,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toRightOf="@+id/list_dot2"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:text="워드프로세서"
                             android:textColor="@color/black" />
 
@@ -312,6 +321,7 @@
                             android:layout_centerInParent="true"
                             android:layout_toLeftOf="@+id/D_date_left_recommand2"
                             android:text="D - "
+                            android:fontFamily="@font/a_title_gothic1"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
 
@@ -323,6 +333,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginRight="25dp"
                             android:text="39"
+                            android:fontFamily="@font/a_title_gothic1"
                             android:textColor="@color/black"
                             android:textSize="15dp" />
 
@@ -367,11 +378,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/a_title_gothic3"
                     android:text="실시간 인기 게시글"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -409,6 +420,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
+                                android:fontFamily="@font/a_title_gothic1"
                                 android:text="[한능컴] 단기간에 준비 했는데 ... "
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
@@ -501,6 +513,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
+                                android:fontFamily="@font/a_title_gothic1"
                                 android:text="[장터] 단기간에 준비 했는데 ... "
                                 android:textColor="@color/black"
                                 android:textSize="12dp" />
@@ -508,7 +521,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/container_3nd_post_onAir"
+                        android:id="@+id/container_3rd_post_onAir"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:layout_below="@+id/container_2nd_post_onAir">
@@ -536,10 +549,82 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
+                                android:fontFamily="@font/a_title_gothic1"
                                 android:text="[정보] 기획 직무 자격증 정보 공유"
                                 android:textColor="@color/black"
                                 android:textSize="12dp" />
                         </RelativeLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/container_4th_post_onAir"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/container_3rd_post_onAir">
+
+                        <TextView
+                            android:id="@+id/number_4th"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/number_4th">
+
+                            <TextView
+                                android:id="@+id/hot_4th_post_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:fontFamily="@font/a_title_gothic1"
+                                android:text="[동아리] 큐시즘 23기 하면서 좋았던 "
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/container_5th_post_onAir"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/container_4th_post_onAir">
+
+                        <TextView
+                            android:id="@+id/number_5th"
+                            android:layout_width="wrap_content"
+                            android:layout_height="27dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="0dp"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/number_5th">
+                            <TextView
+                                android:id="@+id/hot_5th_post_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:fontFamily="@font/a_title_gothic1"
+                                android:text="[개발] 살려줘.."
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
                     </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>
