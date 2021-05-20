@@ -36,6 +36,9 @@ class NicknameActivity : AppCompatActivity() {
                 )
                 databaseReference.child(binding.etNickname.text.toString()).setValue(userInfo)
 
+                // SharedPreference에 nickname 저장
+                MyApplication.prefs.setString("nickname", binding.etNickname.text.toString())
+
                 val intent = Intent(this, JobActivity::class.java)
 
                 // 다음 액티비티에 사용자 이름 넘겨줌

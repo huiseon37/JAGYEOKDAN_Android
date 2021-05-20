@@ -38,9 +38,14 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
             R.id.action_mypage -> {
+                // 마이페이지로 닉네임 전달
+                val bundle = Bundle()
                 val myPageFragment = MyPageFragment()
+                bundle.putString("nickname", intent.getStringExtra("nickname"))
+                myPageFragment.arguments = bundle
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.main_screen_panel, myPageFragment).commit()
+
                 return true
             }
         }
@@ -56,8 +61,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(view)
 
         binding.watchAlarmButton.setOnClickListener {
-            //val intent = Intent(this, AlarmActivity::class.java)
-            //startActivity(intent)
+            val intent = Intent(this, AlarmActivity::class.java)
+            startActivity(intent)
         }
 
         val homeViewFragment = HomeViewFragment()

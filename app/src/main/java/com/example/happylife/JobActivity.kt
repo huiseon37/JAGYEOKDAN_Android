@@ -21,15 +21,17 @@ class JobActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val nickname = intent.getStringExtra("nickname")
+        val nickname = MyApplication.prefs.getString("nickname", "")
 
-        databaseReference = firebaseDatabase.getReference("users/$nickname/jobs") // DB 테이블 연결
+        // DB 테이블 연결
+        databaseReference = firebaseDatabase.getReference("users/$nickname/jobs")
 
         binding.tvNicknameJob.text = nickname
 
         // 다음 버튼 클릭
         binding.btnNextJob.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            intent.putExtra("nickname", nickname)
             startActivity(intent)
         }
 

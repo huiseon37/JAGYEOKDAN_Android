@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MypageActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".MypageActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:background="@drawable/container_design"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,64 +20,73 @@
             android:id="@+id/top_container"
             android:layout_width="match_parent"
             android:layout_height="30dp">
+
             <TextView
                 android:id="@+id/top_Small_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:fontFamily="@font/a_title_gothic3"
                 android:gravity="center_horizontal|center_vertical"
                 android:letterSpacing="0.07"
                 android:text="마이페이지"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
+
             <Button
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
                 android:background="@drawable/alarm_icon" />
+
             <Button
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/settings" />
         </RelativeLayout>
+
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/my_info"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:background="#E0E5F5"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel"
-        android:background="#E0E5F5">
+        app:layout_constraintTop_toBottomOf="@+id/topPanel">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="20dp">
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="15dp"
-                android:src="@drawable/mypage_main_badge"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mypage_main_badge" />
+
             <TextView
                 android:id="@+id/mypage_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/right_idea"
                 android:text="닉넴이다"
-                android:textSize="25sp"
                 android:textColor="@color/main_color"
-                android:fontFamily="@font/right_idea"/>
+                android:textSize="25sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
                 <Button
                     android:layout_width="60dp"
                     android:layout_height="25dp"
@@ -87,270 +96,285 @@
                     android:text="경영·사무"
                     android:textColor="@color/gray_color"
                     android:textSize="10sp"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,SmallSp" />
+
                 <Button
                     android:layout_width="60dp"
                     android:layout_height="25dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="9dp"
+                    android:layout_weight="1"
                     android:background="@drawable/btn_jobs"
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="IT·인터넷"
                     android:textColor="@color/gray_color"
                     android:textSize="10sp"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,SmallSp" />
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:gravity="end"
-            android:layout_weight="1">
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="40dp"
-                android:layout_marginRight="40dp"
-                android:src="@drawable/profile_img"/>
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/profile_img" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="내 프로필"
-                android:gravity="end"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
+                android:fontFamily="@font/a_title_gothic1"
+                android:gravity="end"
+                android:text="내 프로필"
                 android:textColor="#979797"
-                android:textSize="10sp"
-                android:fontFamily="@font/a_title_gothic1"/>
+                android:textSize="10sp" />
+
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/point_info"
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_height="100dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/mypage_round_boxtype"
         android:backgroundTint="@color/main_color"
-        android:layout_marginTop="170dp">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel">
+
         <LinearLayout
             android:id="@+id/my_point"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.8"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/point"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="100P"
-                android:textSize="35sp"
-                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/a_title_gothic3"
                 android:gravity="center"
-                android:layout_marginBottom="10dp"/>
+                android:text="100P"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+
             <TextView
+                android:id="@+id/tv_nickname_mypage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="내 포인트"
-                android:textColor="@color/white"
                 android:fontFamily="@font/a_title_gothic1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="내 포인트"
+                android:textColor="@color/white" />
         </LinearLayout>
+
         <View
             android:layout_width="1dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginVertical="10dp"
-            android:background="@color/white"
-            android:layout_gravity="center">
-        </View>
+            android:background="@color/white" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/white"
-            android:orientation="vertical"
-            android:fontFamily="@font/a_title_gothic1"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/coin_plus_btn"
-                android:layout_marginBottom="10dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="충전하기"
-                android:textColor="@color/white"
-                android:gravity="center">
-            </TextView>
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:background="@color/white"
-            android:layout_gravity="center">
-        </View>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="@color/white"
             android:fontFamily="@font/a_title_gothic1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:textColor="@color/white">
+
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/play_btn"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/coin_plus_btn" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="공짜로 모으기"
-                android:textColor="@color/white"
-                android:gravity="center">
-            </TextView>
+                android:gravity="center"
+                android:text="충전하기"
+                android:textColor="@color/white" />
+
         </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/a_title_gothic1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textColor="@color/white">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/play_btn" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="공짜로 모으기"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <ImageView
         android:id="@+id/advertisement"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/advertisement_img"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/my_info">
-    </ImageView>
+        android:src="@drawable/advertisement_img"
+        app:layout_constraintTop_toBottomOf="@+id/my_info" />
 
     <LinearLayout
         android:id="@+id/submenu_first"
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/mypage_round_boxtype"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/advertisement"
-        android:background="@drawable/mypage_round_boxtype">
+        app:layout_constraintTop_toBottomOf="@id/advertisement">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00000000"
+            android:fontFamily="@font/a_title_gothic1"
             android:text="찜한자격증"
-            android:textColor="@color/black"
-            android:fontFamily="@font/a_title_gothic1">
-        </Button>
+            android:textColor="@color/black" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginVertical="7dp"
-            android:background="@color/gray_search_bar"
-            android:layout_gravity="center">
-        </View>
+            android:background="@color/gray_search_bar" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00000000"
+            android:fontFamily="@font/a_title_gothic1"
             android:text="보유한 자격증"
-            android:textColor="@color/black"
-            android:fontFamily="@font/a_title_gothic1">
-        </Button>
+            android:textColor="@color/black" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/submenu_second"
         android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/submenu_first"
+        android:layout_marginRight="20dp"
         android:background="@drawable/mypage_round_boxtype"
-        >
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/submenu_first">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00000000"
+            android:fontFamily="@font/a_title_gothic1"
             android:text="스크랩한 게시글"
-            android:textColor="@color/black"
-            android:fontFamily="@font/a_title_gothic1">
-        </Button>
+            android:textColor="@color/black" />
+
         <View
             android:layout_width="1dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginVertical="7dp"
-            android:background="@color/gray"
-            android:layout_gravity="center">
-        </View>
+            android:background="@color/gray" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00000000"
+            android:fontFamily="@font/a_title_gothic1"
             android:text="내가 쓴 후기"
-            android:textColor="@color/black"
-            android:fontFamily="@font/a_title_gothic1">
-        </Button>
+            android:textColor="@color/black" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/submenu_second"
         android:layout_marginTop="20dp"
-        >
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/submenu_second">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:text="FAQ"
             android:textColor="#979797"
-            android:gravity="center"
-            android:textSize="10sp"
-            android:layout_marginBottom="5dp">
-        </TextView>
+            android:textSize="10sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:text="문의하기"
             android:textColor="#979797"
-            android:gravity="center"
-            android:textSize="10sp"
-            android:layout_marginBottom="5dp">
-        </TextView>
+            android:textSize="10sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:text="약관 및 정책"
             android:textColor="#979797"
-            android:gravity="center"
-            android:textSize="10sp"
-            android:layout_marginBottom="5dp">
-        </TextView>
+            android:textSize="10sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:text="공지사항"
             android:textColor="#979797"
-            android:gravity="center"
-            android:textSize="10sp"
-            android:layout_marginBottom="5dp">
-        </TextView>
-    </LinearLayout>
+            android:textSize="10sp" />
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
