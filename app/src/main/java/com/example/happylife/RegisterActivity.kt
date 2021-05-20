@@ -9,12 +9,17 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.happylife.databinding.ActivityRegisterBinding
 import com.example.happylife.model.CertificateRegData
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.mancj.materialsearchbar.MaterialSearchBar
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private var certificateList = arrayListOf<CertificateRegData>()
+
+    private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
+    private var databaseReference: DatabaseReference = firebaseDatabase.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,27 +31,32 @@ class RegisterActivity : AppCompatActivity() {
         val certificateAdapter = CertificateRegAdapter(this, certificateList)
         binding.rvCertificateReg.adapter = certificateAdapter
 
-        binding.tvNicknameRegister.text = MyApplication.prefs.getString("nickname", "")
+        val nickname = MyApplication.prefs.getString("nickname", "")
+
+        binding.tvNicknameRegister.text = nickname
+
+        // DB 테이블 연결
+        databaseReference = firebaseDatabase.getReference("users/$nickname/ownCertificate")
 
         // 자격증 리스트
         val jobList = arrayOf(
             "건축구조기술사",
             "경영지도사",
             "공인중개사",
-            "리눅스마스터 1 급",
+            "리눅스마스터 1급",
             "변리사",
             "복어조리기능사",
             "빅데이터분석기사",
             "실내건축기능사",
-            "유통관리사 2 급",
-            "인터넷 정보관리사 1 급",
+            "유통관리사 2급",
+            "인터넷 정보관리사 1급",
             "일식조리기능사",
-            "전산세무회계 1 급",
-            "전자상거래관리사 1 급",
-            "전자상거래운용사 1 급",
+            "전산세무회계 1급",
+            "전자상거래관리사 1급",
+            "전자상거래운용사 1급",
             "정보보안기사",
             "정보처리기사",
-            "SQL개발자(SQLD)"
+            "SQL 개발자(SQLD)"
         )
 
         // 검색 결과 리스트뷰 초기에 안보이게 설정
@@ -108,6 +118,10 @@ class RegisterActivity : AppCompatActivity() {
                 CertificateRegData(adapter.getItem(position)!!.toString())
             )
             binding.rvCertificateReg.adapter?.notifyDataSetChanged()
+
+            // db에 보유한 자격증 정보 저장
+            databaseReference.child(position.toString())
+                .setValue(adapter.getItem(position)!!.toString())
         }
 
         // 시작하기 버튼 클릭
