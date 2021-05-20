@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/top_bar_and_main_screen"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,6 @@
             android:id="@+id/topPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
             android:background="@drawable/container_design">
 
             <RelativeLayout
@@ -28,19 +27,17 @@
 
                 <ImageView
                     android:id="@+id/top_Small_logo"
-                    android:layout_width="59dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentStart="true"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginTop="12dp"
                     android:src="@drawable/small_logo" />
 
                 <RelativeLayout
                     android:id="@id/search_bar"
                     android:layout_width="260dp"
                     android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/top_Small_logo"
+                    android:layout_marginLeft="15dp"
                     android:background="@drawable/search_bar">
 
                     <EditText
@@ -64,9 +61,9 @@
                     android:id="@+id/watch_alarm_button"
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="20dp"
+                    android:layout_toRightOf="@id/search_bar"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
                     android:background="@drawable/alarm_icon" />
 
             </RelativeLayout>
@@ -78,7 +75,7 @@
     <FrameLayout
         android:id="@+id/main_screen_panel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintTop_toBottomOf="@+id/top_bar_and_main_screen" />
 
