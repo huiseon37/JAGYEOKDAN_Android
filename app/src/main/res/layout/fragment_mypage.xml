@@ -281,8 +281,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="7dp"
-            android:background="@color/gray_search_bar" />
-
+            android:background="@color/gray"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -376,5 +375,6 @@
             android:textSize="10sp" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
