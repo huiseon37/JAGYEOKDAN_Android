@@ -75,152 +75,49 @@
         app:layout_constraintBottom_toTopOf="@+id/linearlayout_later_register"
         app:layout_constraintTop_toBottomOf="@+id/linearlayout_jobs_register">
 
-        <EditText
+        <!--SearchBar-->
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/msb_certificate_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="58dp"
-            android:drawableEnd="@drawable/magnifier"
-            android:hint="자격증을 검색하세요"
-            android:paddingBottom="15dp"
-            android:textSize="11sp"
-            tools:ignore="HardcodedText" />
+            android:layout_marginHorizontal="51dp"
+            android:theme="@style/SearchViewStyle"
+            app:mt_hint="자격증을 검색하세요"
+            app:mt_maxSuggestionsCount="5"
+            app:theme="@style/AppTheme.PopupOverlay" />
 
-        <ScrollView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="58dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/background_job_box"
-            android:paddingVertical="12dp">
+            android:layout_marginHorizontal="58dp">
 
-            <LinearLayout
+            <!--사용자 보유 자격증-->
+            <ScrollView
+                android:id="@+id/scv_jobs_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="13dp">
+                android:layout_marginTop="50dp"
+                android:background="@drawable/background_job_box"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="12dp">
 
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_certificate_reg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_gravity="start"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/small_circle" />
+            </ScrollView>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:fontFamily="@font/a_title_gothic1"
-                        android:text="정보처리기사"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+            <!--자격증 리스트-->
+            <ListView
+                android:id="@+id/lv_result_register"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/white" />
 
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/gray_underbar"
-                    tools:ignore="SmallSp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/small_circle" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:fontFamily="@font/a_title_gothic1"
-                        android:text="한자 5급"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/gray_underbar"
-                    tools:ignore="SmallSp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/small_circle" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:fontFamily="@font/a_title_gothic1"
-                        android:text="컴퓨터활용능력 2급"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/gray_underbar"
-                    tools:ignore="SmallSp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/small_circle" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="6dp"
-                        android:fontFamily="@font/a_title_gothic1"
-                        android:text="워드프로세서"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1sp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/gray_underbar"
-                    tools:ignore="SmallSp" />
-
-            </LinearLayout>
-
-        </ScrollView>
+        </FrameLayout>
 
     </LinearLayout>
 
