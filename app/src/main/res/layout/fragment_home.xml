@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/container_Dday_licesnse"
@@ -33,15 +31,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:fontFamily="@font/a_title_gothic3"
-                        android:text="자격증 "
                         android:gravity="center_vertical"
-                        android:textColor="@color/black"
-                         />
+                        android:text="자격증 "
+                        android:textColor="@color/black" />
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="25dp"
-                        android:layout_toRightOf="@id/text_license"
+                        android:layout_toEndOf="@id/text_license"
                         android:src="@drawable/dday_icon" />
                 </RelativeLayout>
 
@@ -62,13 +59,14 @@
                         <TextView
                             android:id="@+id/first_box_license_text"
                             android:layout_width="match_parent"
-                            android:layout_height="75dp"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
                             android:fontFamily="@font/a_title_gothic1"
-                            android:text="한국사 능력 검정시험"
+                            android:lineSpacingExtra="8dp"
+                            android:text="한국사 능력\n검정시험"
                             android:textColor="@color/black"
-                            />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/text_Dnext_to_date_first"
@@ -76,11 +74,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_first"
+                            android:layout_toStartOf="@+id/D_date_left_first"
                             android:fontFamily="@font/a_title_gothic2"
                             android:text="D- "
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
 
                         <TextView
                             android:id="@+id/D_date_left_first"
@@ -88,12 +86,12 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/a_title_gothic2"
                             android:text="50"
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -106,12 +104,14 @@
                         <TextView
                             android:id="@+id/second_box_license_text"
                             android:layout_width="match_parent"
-                            android:layout_height="75dp"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
                             android:fontFamily="@font/a_title_gothic1"
-                            android:text="한국사 능력 검정시험"
-                            android:textColor="@color/black" />
+                            android:lineSpacingExtra="8dp"
+                            android:text="한국사 능력\n검정시험"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/text_Dnext_to_date_second"
@@ -119,10 +119,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_second"
+                            android:layout_toStartOf="@+id/D_date_left_second"
                             android:text="D - "
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
 
                         <TextView
                             android:id="@+id/D_date_left_second"
@@ -130,11 +130,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
                             android:layout_marginBottom="4dp"
                             android:text="50"
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -147,12 +147,14 @@
                         <TextView
                             android:id="@+id/third_box_license_text"
                             android:layout_width="match_parent"
-                            android:layout_height="75dp"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="8dp"
                             android:fontFamily="@font/a_title_gothic1"
-                            android:text="한국사 능력 검정시험"
-                            android:textColor="@color/black" />
+                            android:lineSpacingExtra="8dp"
+                            android:text="한자 4급"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/text_Dnext_to_date_third"
@@ -160,10 +162,10 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="4dp"
-                            android:layout_toLeftOf="@+id/D_date_left_third"
+                            android:layout_toStartOf="@+id/D_date_left_third"
                             android:text="D - "
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
 
                         <TextView
                             android:id="@+id/D_date_left_third"
@@ -171,27 +173,36 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
                             android:layout_marginBottom="4dp"
                             android:text="50"
                             android:textColor="@color/black"
-                            android:textSize="25dp" />
+                            android:textSize="25sp" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
             </RelativeLayout>
+
         </RelativeLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7sp"
+            android:background="@color/gray_underbar" />
+
+        <!--추천 자격증 목록-->
         <RelativeLayout
             android:id="@+id/container_recommandation_license"
             android:layout_width="match_parent"
-            android:layout_height="274dp"
-            android:layout_below="@+id/container_Dday_licesnse"
-            android:background="@drawable/container_design">
+            android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp">
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/text_recommand"
@@ -201,172 +212,266 @@
                     android:fontFamily="@font/a_title_gothic3"
                     android:text="추천 자격증"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                     />
+                    android:textColor="@color/black" />
 
-                <RelativeLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recommend_certificate"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text_recommand"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="22dp"
-                    android:background="@drawable/container_for_boxtype"
-                    android:paddingHorizontal="5dp"
-                    android:paddingVertical="8dp">
+                    android:layout_height="125dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/container_for_boxtype" />
 
-                    <RelativeLayout
-                        android:id="@+id/recommand_license_bundle"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_marginHorizontal="3dp">
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@id/text_recommand"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:layout_marginTop="11dp"-->
+                <!--                    android:layout_marginBottom="22dp"-->
+                <!--                    android:background="@drawable/container_for_boxtype"-->
+                <!--                    android:paddingHorizontal="5dp"-->
+                <!--                    android:paddingVertical="8dp">-->
 
-                        <RelativeLayout
-                            android:layout_width="340dp"
-                            android:layout_height="1dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/gray_underline" />
+                <!--                    <RelativeLayout-->
+                <!--                        android:id="@+id/recommand_license_bundle"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="35dp"-->
+                <!--                        android:layout_marginHorizontal="3dp">-->
 
-                        <ImageView
-                            android:id="@+id/list_dot"
-                            android:layout_width="6dp"
-                            android:layout_height="6dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="8dp"
-                            android:src="@drawable/left_dot_forlist" />
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="340dp"-->
+                <!--                            android:layout_height="1dp"-->
+                <!--                            android:layout_alignParentBottom="true"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:background="@drawable/gray_underline" />-->
 
-                        <TextView
-                            android:id="@+id/recommand_license_name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot"
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:text="전산회계운용사"
-                            android:textColor="@color/black" />
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/list_dot"-->
+                <!--                            android:layout_width="6dp"-->
+                <!--                            android:layout_height="6dp"-->
+                <!--                            android:layout_alignParentStart="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginStart="8dp"-->
+                <!--                            android:src="@drawable/left_dot_forlist" />-->
 
-                        <TextView
-                            android:id="@+id/text_Dnext_to_date_recommand"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_toLeftOf="@+id/D_date_left_recommand"
-                            android:text="D - "
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/recommand_license_name"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginStart="10dp"-->
+                <!--                            android:layout_toEndOf="@+id/list_dot"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="전산회계운용사"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                        <TextView
-                            android:id="@+id/D_date_left_recommand"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="25dp"
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:text="50"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/text_Dnext_to_date_recommand"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_toStartOf="@+id/D_date_left_recommand"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="D - "-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                        <Button
-                            android:id="@+id/apply_click_btn"
-                            android:layout_width="18dp"
-                            android:layout_height="13dp"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="12dp"
-                            android:layout_toLeftOf="@id/text_Dnext_to_date_recommand"
-                            android:background="@drawable/apply_btn" />
-                    </RelativeLayout>
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/D_date_left_recommand"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentEnd="true"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="32dp"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="4"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                    <RelativeLayout
-                        android:id="@+id/recommand_license_bundle2"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_below="@+id/recommand_license_bundle"
-                        android:layout_marginHorizontal="3dp">
+                <!--                        <Button-->
+                <!--                            android:id="@+id/apply_click_btn"-->
+                <!--                            android:layout_width="22dp"-->
+                <!--                            android:layout_height="14dp"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="12dp"-->
+                <!--                            android:layout_toStartOf="@id/text_Dnext_to_date_recommand"-->
+                <!--                            android:background="@drawable/btn_apply"-->
+                <!--                            android:text="신청"-->
+                <!--                            android:textSize="7sp" />-->
+                <!--                    </RelativeLayout>-->
 
-                        <RelativeLayout
-                            android:layout_width="340dp"
-                            android:layout_height="1dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/gray_underline" />
+                <!--                    <RelativeLayout-->
+                <!--                        android:id="@+id/recommand_license_bundle2"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="35dp"-->
+                <!--                        android:layout_below="@+id/recommand_license_bundle"-->
+                <!--                        android:layout_marginHorizontal="3dp">-->
 
-                        <ImageView
-                            android:id="@+id/list_dot2"
-                            android:layout_width="6dp"
-                            android:layout_height="6dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="8dp"
-                            android:src="@drawable/left_dot_forlist" />
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="340dp"-->
+                <!--                            android:layout_height="1dp"-->
+                <!--                            android:layout_alignParentBottom="true"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:background="@drawable/gray_underline" />-->
 
-                        <TextView
-                            android:id="@+id/recommand_license_name2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot2"
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:text="워드프로세서"
-                            android:textColor="@color/black" />
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/list_dot2"-->
+                <!--                            android:layout_width="6dp"-->
+                <!--                            android:layout_height="6dp"-->
+                <!--                            android:layout_alignParentStart="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginStart="8dp"-->
+                <!--                            android:src="@drawable/left_dot_forlist" />-->
 
-                        <TextView
-                            android:id="@+id/text_Dnext_to_date_recommand2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_toLeftOf="@+id/D_date_left_recommand2"
-                            android:text="D - "
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/recommand_license_name2"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginStart="10dp"-->
+                <!--                            android:layout_toEndOf="@+id/list_dot2"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="워드프로세서"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                        <TextView
-                            android:id="@+id/D_date_left_recommand2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="25dp"
-                            android:text="39"
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/text_Dnext_to_date_recommand2"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_toStartOf="@+id/D_date_left_recommand2"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="D - "-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                        <Button
-                            android:id="@+id/apply_click_btn2"
-                            android:layout_width="18dp"
-                            android:layout_height="13dp"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="12dp"
-                            android:layout_toLeftOf="@id/text_Dnext_to_date_recommand2"
-                            android:background="@drawable/apply_btn" />
-                    </RelativeLayout>
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/D_date_left_recommand2"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentEnd="true"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="32dp"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="7"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
 
-                    <Button
-                        android:id="@+id/look_more"
-                        android:layout_width="wrap_content"
-                        android:layout_height="12dp"
-                        android:layout_below="@id/recommand_license_bundle2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/white"
-                        android:text="더 보기  ▽"
-                        android:textSize="10dp" />
-                </RelativeLayout>
-            </RelativeLayout>
+                <!--                        <Button-->
+                <!--                            android:id="@+id/apply_click_btn2"-->
+                <!--                            android:layout_width="22dp"-->
+                <!--                            android:layout_height="14dp"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="12dp"-->
+                <!--                            android:layout_toStartOf="@id/text_Dnext_to_date_recommand2"-->
+                <!--                            android:background="@drawable/btn_apply"-->
+                <!--                            android:text="신청"-->
+                <!--                            android:textSize="7sp" />-->
+                <!--                    </RelativeLayout>-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="35dp"-->
+                <!--                        android:layout_below="@+id/recommand_license_bundle"-->
+                <!--                        android:layout_marginHorizontal="3dp">-->
+
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="340dp"-->
+                <!--                            android:layout_height="1dp"-->
+                <!--                            android:layout_alignParentBottom="true"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:background="@drawable/gray_underline" />-->
+
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/list_dot3"-->
+                <!--                            android:layout_width="6dp"-->
+                <!--                            android:layout_height="6dp"-->
+                <!--                            android:layout_alignParentStart="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginStart="8dp"-->
+                <!--                            android:src="@drawable/left_dot_forlist" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/recommand_license_name3"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginStart="10dp"-->
+                <!--                            android:layout_toEndOf="@+id/list_dot3"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="IT PLUS"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/text_Dnext_to_date_recommand3"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_toStartOf="@+id/D_date_left_recommand3"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="D - "-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/D_date_left_recommand3"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentEnd="true"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="25dp"-->
+                <!--                            android:fontFamily="@font/a_title_gothic1"-->
+                <!--                            android:text="34"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            android:textSize="12sp" />-->
+
+                <!--                        <Button-->
+                <!--                            android:id="@+id/apply_click_btn3"-->
+                <!--                            android:layout_width="22dp"-->
+                <!--                            android:layout_height="14dp"-->
+                <!--                            android:layout_centerInParent="true"-->
+                <!--                            android:layout_marginEnd="12dp"-->
+                <!--                            android:layout_toStartOf="@id/text_Dnext_to_date_recommand3"-->
+                <!--                            android:background="@drawable/btn_apply"-->
+                <!--                            android:text="신청"-->
+                <!--                            android:textSize="7sp" />-->
+                <!--                    </RelativeLayout>-->
+
+                <!--                    &lt;!&ndash;더보기&ndash;&gt;-->
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/look_more"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="25dp"-->
+                <!--                        android:layout_below="@id/recommand_license_bundle2"-->
+                <!--                        android:layout_marginTop="5dp"-->
+                <!--                        android:background="@color/white"-->
+                <!--                        android:fontFamily="@font/golden_plains_demo"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:includeFontPadding="false"-->
+                <!--                        android:text="더 보기  ▽"-->
+                <!--                        android:textAlignment="center"-->
+                <!--                        android:textSize="10sp" />-->
+
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7sp"
+            android:layout_marginTop="18dp"
+            android:background="@color/gray_underbar" />
 
         <RelativeLayout
             android:id="@+id/container_Hot_post_onair"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/container_recommandation_license"
             android:background="@color/design_default_color_background">
 
             <RelativeLayout
@@ -383,7 +488,7 @@
                     android:text="실시간 인기 게시글"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="14sp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -406,15 +511,15 @@
                             android:layout_centerVertical="true"
                             android:text="1"
                             android:textColor="@color/white"
-                            android:textSize="24dp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/number_1st">
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/number_1st">
 
                             <TextView
                                 android:id="@+id/hottest_post_text"
@@ -422,9 +527,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
                                 android:fontFamily="@font/a_title_gothic1"
-                                android:text="[한능컴] 단기간에 준비 했는데 ... "
+                                android:text="[시험 후기] 한능검 단기간에 준비 했는데 ... "
                                 android:textColor="@color/white"
-                                android:textSize="15dp"
+                                android:textSize="13sp"
                                 android:textStyle="bold" />
 
                             <RelativeLayout
@@ -437,7 +542,7 @@
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginStart="5dp"
                                     android:src="@drawable/icon_heart" />
 
                                 <TextView
@@ -445,20 +550,20 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="12dp"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginHorizontal="15dp"
-                                    android:layout_toRightOf="@id/like_icon_at_1st_post"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_toEndOf="@id/like_icon_at_1st_post"
+                                    android:fontFamily="@font/a_title_gothic2"
                                     android:text="33"
                                     android:textColor="@color/white"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10sp" />
 
                                 <ImageView
                                     android:id="@+id/comment_icon_at_1st_post"
                                     android:layout_width="10dp"
                                     android:layout_height="10dp"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_toRightOf="@id/number_of_like_at_1st_post"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@id/number_of_like_at_1st_post"
                                     android:src="@drawable/icon_comment" />
 
                                 <TextView
@@ -466,22 +571,24 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="12dp"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_toRightOf="@id/comment_icon_at_1st_post"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@id/comment_icon_at_1st_post"
+                                    android:fontFamily="@font/a_title_gothic2"
                                     android:text="10"
                                     android:textColor="@color/white"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10sp" />
                             </RelativeLayout>
 
                             <Button
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginHorizontal="10dp"
                                 android:background="@drawable/watch_more_btn" />
+
                         </RelativeLayout>
+
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -499,15 +606,15 @@
                             android:layout_centerVertical="true"
                             android:text="2"
                             android:textColor="@color/black"
-                            android:textSize="20dp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/number_2nd">
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/number_2nd">
 
                             <TextView
                                 android:id="@+id/hot_2nd_post_text"
@@ -517,8 +624,10 @@
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="[장터] 단기간에 준비 했는데 ... "
                                 android:textColor="@color/black"
-                                android:textSize="12dp" />
+                                android:textSize="13sp" />
+
                         </RelativeLayout>
+
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -535,7 +644,7 @@
                             android:layout_centerVertical="true"
                             android:text="3"
                             android:textColor="@color/black"
-                            android:textSize="20dp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <RelativeLayout
@@ -553,9 +662,12 @@
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="[정보] 기획 직무 자격증 정보 공유"
                                 android:textColor="@color/black"
-                                android:textSize="12dp" />
+                                android:textSize="13sp" />
+
                         </RelativeLayout>
+
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/container_4th_post_onAir"
                         android:layout_width="match_parent"
@@ -570,15 +682,15 @@
                             android:layout_centerVertical="true"
                             android:text="4"
                             android:textColor="@color/black"
-                            android:textSize="20dp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/number_4th">
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/number_4th">
 
                             <TextView
                                 android:id="@+id/hot_4th_post_text"
@@ -588,9 +700,12 @@
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="[동아리] 큐시즘 23기 하면서 좋았던 "
                                 android:textColor="@color/black"
-                                android:textSize="12dp" />
+                                android:textSize="13sp" />
+
                         </RelativeLayout>
+
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/container_5th_post_onAir"
                         android:layout_width="match_parent"
@@ -606,15 +721,16 @@
                             android:layout_marginStart="0dp"
                             android:text="5"
                             android:textColor="@color/black"
-                            android:textSize="20dp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/number_5th">
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/number_5th">
+
                             <TextView
                                 android:id="@+id/hot_5th_post_text"
                                 android:layout_width="match_parent"
@@ -623,12 +739,18 @@
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="[개발] 살려줘.."
                                 android:textColor="@color/black"
-                                android:textSize="12dp" />
+                                android:textSize="13sp" />
+
                         </RelativeLayout>
 
                     </RelativeLayout>
+
                 </RelativeLayout>
+
             </RelativeLayout>
+
         </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -73,8 +73,8 @@
                 android:src="@drawable/mypage_main_badge" />
 
             <TextView
-                android:id="@+id/mypage_nickname"
-                android:layout_width="match_parent"
+                android:id="@+id/tv_nickname_mypage"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/right_idea"
                 android:text="닉넴이다"
@@ -175,7 +175,6 @@
                 android:textSize="35sp" />
 
             <TextView
-                android:id="@+id/tv_nickname_mypage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic1"

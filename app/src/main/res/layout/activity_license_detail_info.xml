@@ -309,8 +309,7 @@
                             android:drawablePadding="5dp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/a_title_gothic2"
-                            android:drawableLeft="@drawable/left_circle"
-                            android:drawableRight="30dp">
+                            android:drawableLeft="@drawable/left_circle">
                         </TextView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -332,7 +331,6 @@
                             android:fontFamily="@font/a_title_gothic2"
                             android:drawableLeft="@drawable/left_circle"
                             android:drawablePadding="5dp"
-                            android:drawableRight="30dp"
                             android:layout_marginTop="7dp">
                         </TextView>
                     </LinearLayout>
