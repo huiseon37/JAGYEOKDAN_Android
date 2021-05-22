@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="306dp"
+    android:layout_height="268dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textview_check_revoke_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/a_title_gothic3"
+        android:includeFontPadding="false"
+        android:text="리뷰 조회하기"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/textview_comment_revoke_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_check_revoke_dialog"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/a_title_gothic1"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="10dp"
+        android:text="리뷰를 조회하기 위해\n5포인트가 차감됩니다.\n포인트를 사용하시겠습니까?"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_comment_revoke_dialog"
+        android:layout_marginTop="30sp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel_point_dialog"
+            android:layout_width="114dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/btn_choice_dialog"
+            android:fontFamily="@font/a_title_gothic1"
+            android:gravity="center"
+            android:text="취소하기"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/btn_ok_point_dialog"
+            android:layout_width="114dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/btn_choice_dialog"
+            android:fontFamily="@font/a_title_gothic1"
+            android:gravity="center"
+            android:text="사용하기"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+
+    </LinearLayout>
+
+</RelativeLayout>
