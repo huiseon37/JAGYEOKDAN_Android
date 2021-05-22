@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".AlarmActivity">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/alarm_exist_page"/>
+            android:background="@drawable/alarm_exist_page">
+                <Button
+                    android:id="@+id/btn_backward_at_alarm"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="#00000000" />
+        </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
