@@ -8,6 +8,11 @@
     android:background="@color/white">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
         android:id="@+id/license_name_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,19 +38,19 @@
 
     <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/license_name_bar"
         android:scrollbars="none"
         android:id="@+id/horizontalScroll">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
                 android:id="@+id/rounds_first"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="1회 필기"
@@ -56,7 +61,7 @@
             <Button
                 android:id="@+id/rounds_second"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="1회 실기"
@@ -67,7 +72,7 @@
             <Button
                 android:id="@+id/rounds_third"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="2회 필기"
@@ -78,7 +83,7 @@
             <Button
                 android:id="@+id/rounds_forth"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="2회 실기"
@@ -89,7 +94,7 @@
             <Button
                 android:id="@+id/rounds_fifth"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="3회 필기"
@@ -100,7 +105,7 @@
             <Button
                 android:id="@+id/rounds_sixth"
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:background="@drawable/container_design"
                 android:orientation="vertical"
                 android:text="3회 실기"
@@ -110,11 +115,12 @@
             </Button>
         </LinearLayout>
     </HorizontalScrollView>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScroll">
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,7 +128,7 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
                 <TextView
@@ -449,7 +455,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
                 android:orientation="vertical">
                 <LinearLayout
@@ -465,13 +471,17 @@
                         android:textSize="20sp"
                         android:gravity="center"
                         android:layout_marginStart="30dp"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
                     <LinearLayout
                         android:id="@+id/license_data_classification"
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:orientation="horizontal"
-                        android:layout_gravity="right"
-                        android:background="@drawable/container_for_boxtype">
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/boxtype_for_single_element">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -479,16 +489,437 @@
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:textSize="10sp"
-                            android:fontFamily="@font/a_title_gothic1"/>
+                            android:fontFamily="@font/a_title_gothic1"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
                         <ImageView
-                            android:layout_width="7dp"
-                            android:layout_height="7dp"
-                            android:src="@drawable/watch_more_btn"/>
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:src="@drawable/filter_2"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/purple_info_box"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="15dp">
+                        <ImageView
+                            android:layout_width="95dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/average_preparation_time_icon"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="-13dp">
+                            <TextView
+                                android:id="@+id/average_pre_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/main_color"
+                                android:textSize="25sp"
+                                android:fontFamily="@font/a_title_gothic5"
+                                android:text="24"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" /일"
+                                android:textSize="15sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/a_title_gothic2"/>
+                        </LinearLayout>
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/purple_info_box"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_margin="15dp">
+                        <ImageView
+                            android:layout_width="95dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/average_difficulty_icon"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="-13dp">
+                            <TextView
+                                android:id="@+id/averge_difficulty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/main_color"
+                                android:textSize="25sp"
+                                android:fontFamily="@font/a_title_gothic5"
+                                android:text="4.3"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" /5.0"
+                                android:textSize="15sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/a_title_gothic2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ECECEC"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="자격단원 후기"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/a_title_gothic3"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:layout_marginStart="30dp"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/license_detail_info_round_box"
+                            android:text="후기 작성하기 +5P"
+                            android:fontFamily="@font/a_title_gothic3"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="@color/main_color"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/review_contents_box"
+                                android:orientation="vertical"
+                                android:layout_margin="15dp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_margin="20dp">
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/star_yellow"/>
+                                    <TextView
+                                        android:id="@+id/star_review"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="7dp"
+                                        android:text="4.5"
+                                        android:textColor="#636196"
+                                        android:fontFamily="@font/a_title_gothic3"/>
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/time_icon"/>
+                                    <TextView
+                                        android:id="@+id/time_review"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="7dp"
+                                        android:text="23일"
+                                        android:textColor="#636196"
+                                        android:fontFamily="@font/a_title_gothic3"/>
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1" />
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="더보기>"
+                                        android:background="#00000000"
+                                        android:fontFamily="@font/a_title_gothic1"
+                                        android:textColor="#979797"
+                                        android:layout_gravity="right"
+                                        android:gravity="right"
+                                        android:textSize="13sp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:layout_marginBottom="20dp">
+                                    <Button
+                                        android:layout_width="90dp"
+                                        android:layout_height="25dp"
+                                        android:text="시험장 분위기"
+                                        android:fontFamily="@font/a_title_gothic3"
+                                        android:textColor="@color/main_color"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/license_detail_info_round_box"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                        android:textSize="12sp"
+                                        android:textColor="#767676"
+                                        android:fontFamily="@font/a_title_gothic2"/>
+                                    <Button
+                                        android:layout_width="85dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="15dp"
+                                        android:text="우대 기업"
+                                        android:fontFamily="@font/a_title_gothic3"
+                                        android:textColor="@color/main_color"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/license_detail_info_round_box"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="카카오 삼성 네이버"
+                                        android:textSize="12sp"
+                                        android:textColor="#767676"
+                                        android:fontFamily="@font/a_title_gothic2"/>
+                                    <Button
+                                        android:layout_width="87dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="15dp"
+                                        android:text="자격증 Tip"
+                                        android:fontFamily="@font/a_title_gothic3"
+                                        android:textColor="@color/main_color"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/license_detail_info_round_box"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                        android:textSize="12sp"
+                                        android:textColor="#767676"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/a_title_gothic2"/>
+                                </LinearLayout>
+                        </LinearLayout>
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/review_contents_box"
+                                    android:orientation="vertical"
+                                    android:layout_margin="15dp"
+                                    android:visibility="visible">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_margin="20dp">
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/star_yellow"/>
+                                        <TextView
+                                            android:id="@+id/star_review_secret"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="7dp"
+                                            android:text="4.5"
+                                            android:textColor="#636196"
+                                            android:fontFamily="@font/a_title_gothic3"/>
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="7dp"
+                                            android:src="@drawable/time_icon"/>
+                                        <TextView
+                                            android:id="@+id/time_review_secret"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="7dp"
+                                            android:text="23일"
+                                            android:textColor="#636196"
+                                            android:fontFamily="@font/a_title_gothic3"/>
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="1" />
+                                        <Button
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text="더보기>"
+                                            android:background="#00000000"
+                                            android:fontFamily="@font/a_title_gothic1"
+                                            android:textColor="#979797"
+                                            android:layout_gravity="right"
+                                            android:gravity="right"
+                                            android:textSize="13sp"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginHorizontal="20dp"
+                                        android:layout_marginBottom="20dp">
+                                        <Button
+                                            android:layout_width="120dp"
+                                            android:layout_height="25dp"
+                                            android:text="시험장 분위기"
+                                            android:fontFamily="@font/a_title_gothic3"
+                                            android:textColor="@color/main_color"
+                                            android:textSize="12sp"
+                                            android:background="@drawable/license_detail_info_round_box"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                            android:textSize="12sp"
+                                            android:textColor="#767676"
+                                            android:fontFamily="@font/a_title_gothic2"/>
+                                        <Button
+                                            android:layout_width="85dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginTop="15dp"
+                                            android:text="우대 기업"
+                                            android:fontFamily="@font/a_title_gothic3"
+                                            android:textColor="@color/main_color"
+                                            android:textSize="12sp"
+                                            android:background="@drawable/license_detail_info_round_box"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="카카오 삼성 네이버"
+                                            android:textSize="12sp"
+                                            android:textColor="#767676"
+                                            android:fontFamily="@font/a_title_gothic2"/>
+                                        <Button
+                                            android:layout_width="87dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginTop="15dp"
+                                            android:text="자격증 Tip"
+                                            android:fontFamily="@font/a_title_gothic3"
+                                            android:textColor="@color/main_color"
+                                            android:textSize="12sp"
+                                            android:background="@drawable/license_detail_info_round_box"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                            android:textSize="12sp"
+                                            android:textColor="#767676"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/a_title_gothic2"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <View
+                                    android:id="@+id/shade_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="30dp"
+                                    android:background="#E6FFFFFF"
+                                    android:visibility="visible" />
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="-37dp"
+                                        android:text="이 정보를 읽기 위해            가 차감됩니다."
+                                        android:textAlignment="center"
+                                        android:fontFamily="@font/a_title_gothic2"
+                                        android:textColor="@color/black"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="-37dp"
+                                        android:layout_marginStart="17dp"
+                                        android:text="5포인트"
+                                        android:textAlignment="center"
+                                        android:fontFamily="@font/a_title_gothic2"
+                                        android:textColor="@color/main_color"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="-15dp"
+                                        android:text="1회 차감 후에는 다시 읽을 수 있습니다."
+                                        android:textAlignment="center"
+                                        android:textSize="12sp"
+                                        android:fontFamily="@font/a_title_gothic2"
+                                        android:textColor="@color/black"/>
+                                </FrameLayout>
+                                <Button
+                                    android:id="@+id/use_point"
+                                    android:layout_width="100dp"
+                                    android:layout_height="22dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/license_detail_info_round_box"
+                                    android:text="포인트 사용 -5P"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/main_color"/>
+                            </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
