@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/top_bar_and_main_screen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
