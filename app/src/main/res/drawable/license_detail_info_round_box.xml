@@ -1,24 +1,14 @@
-<vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="49dp"
-    android:height="17dp"
-    android:viewportWidth="49"
-    android:viewportHeight="17"
-    >
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
 
-    <group>
+    <!--배경색-->
+    <solid android:color="#00000000"/>
 
-        <clip-path
-            android:pathData="M8.5 0H40.5C45.1944 0 49 3.80558 49 8.5C49 13.1944 45.1944 17 40.5 17H8.5C3.80558 17 0 13.1944 0 8.5C0 3.80558 3.80558 0 8.5 0Z"
-            />
+    <corners android:radius="25dp"/>
 
-        <path
-            android:pathData="M8.5 0H40.5C45.1944 0 49 3.80558 49 8.5C49 13.1944 45.1944 17 40.5 17H8.5C3.80558 17 0 13.1944 0 8.5C0 3.80558 3.80558 0 8.5 0Z"
-            android:strokeWidth="1.4"
-            android:strokeColor="#393778"
-            />
-
-    </group>
-
-</vector>
+    <!--선색-->
+    <stroke
+        android:width="1dp"
+        android:color="@color/main_color" />
+</shape>

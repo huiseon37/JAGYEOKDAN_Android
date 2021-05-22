@@ -51,6 +51,12 @@ class LicenseDetailInfo : AppCompatActivity() {
         binding.roundsSecond.setOnClickListener {
             changeInfo()
         }
+
+        // 별 클릭
+        // Todo: 사용자가 찜한 자격증 목록에 추가 & 메인 화면에 추가
+        binding.imgStarLicenseDetail.setOnClickListener {
+            binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.star_purple)
+        }
     }
 
     // 리뷰 1개 오픈
@@ -63,6 +69,9 @@ class LicenseDetailInfo : AppCompatActivity() {
 
     // 자격증 정보
     private fun changeInfo() {
+
+        binding.viewUnderbarTab1.visibility = View.INVISIBLE
+        binding.viewUnderbarTab2.visibility = View.VISIBLE
 
         // DB 테이블 연결
         databaseReference = firebaseDatabase.getReference("certificate/it/정보처리기사")
