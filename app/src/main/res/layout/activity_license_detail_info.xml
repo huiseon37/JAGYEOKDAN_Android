@@ -18,24 +18,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/container_design"
+            android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tv_certificate_name_detail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic3"
-                android:gravity="center"
                 android:text="정보처리기사"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:src="@drawable/star_icon" />
         </LinearLayout>
 
         <HorizontalScrollView
@@ -116,6 +111,15 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/star_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -182,7 +186,9 @@
                         android:text="22"
                         android:textColor="#979797"
                         android:textSize="10sp" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -215,9 +221,10 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
                         android:fontFamily="@font/a_title_gothic2"
-                        android:text="2021.07.22. ~ 2021.07.31."
+                        android:text="2021.01.25 ~ 2021.01.28"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <!--시험 일자-->
@@ -244,7 +251,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
                         android:fontFamily="@font/a_title_gothic2"
-                        android:text="2021.09.11."
+                        android:text="2021.03.07"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
@@ -274,7 +281,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
                         android:fontFamily="@font/a_title_gothic2"
-                        android:text="2021.09.11."
+                        android:text="2021.03.19"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -303,7 +310,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
                         android:fontFamily="@font/a_title_gothic2"
-                        android:text="40,000 원"
+                        android:text="19,400 원"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -325,46 +332,17 @@
                         android:textColor="@color/main_color"
                         android:textSize="12sp" />
 
-                    <LinearLayout
-                        android:id="@+id/qualification_for_application"
+                    <TextView
+                        android:id="@+id/apply_qualification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="20dp"
-                        android:orientation="vertical">
+                        android:layout_marginEnd="25dp"
+                        android:text="• 4년제: 졸업 또는 4학년 1학기 이상 재학/휴학/재적(제출서류: 졸업/재학/휴학/수료/제적증명서 중 택1)\n• 3년제: 졸업 후 1년 실무 경력(제출서류: 졸업증명서+경력(재직)증명서)\n• 2년제: 졸업 후 2년 실무 경력 졸업 후 1년 실무 경력(제출서류: 졸업증명서+경력(재직)증명서)"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/a_title_gothic2"
-                            android:text="4년제: 졸업 또는 4학년 1학기 이상 재학/휴학/재적"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            app:drawableLeftCompat="@drawable/left_circle" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/a_title_gothic2"
-                            android:text="3년제: 졸업 후 1년 실무 경력"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            app:drawableLeftCompat="@drawable/left_circle" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7dp"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/a_title_gothic2"
-                            android:text="2년제: 졸업 후 2년 실무 경력 졸업 후 1년 실무 경력"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"
-                            app:drawableLeftCompat="@drawable/left_circle" />
-                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -406,7 +384,9 @@
                         android:text="기출 사이트"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
+
                 </LinearLayout>
+
             </LinearLayout>
 
             <View
@@ -451,6 +431,7 @@
                         android:text=" 직무에 관심있는 자격단원들이"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -476,6 +457,7 @@
                         android:text=" 응시한 자격증"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -542,7 +524,9 @@
                             android:layout_gravity="center"
                             android:layout_marginEnd="5dp"
                             android:src="@drawable/filter_2" />
+
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -589,7 +573,9 @@
                                 android:text=" /일"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -631,8 +617,11 @@
                                 android:text=" /5.0"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <View
@@ -676,6 +665,7 @@
                             android:text="후기 작성하기 +5P"
                             android:textColor="@color/main_color"
                             android:textSize="12sp" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -747,6 +737,7 @@
                                         android:text="더보기>"
                                         android:textColor="#979797"
                                         android:textSize="13sp" />
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -812,7 +803,9 @@
                                         android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
                                         android:textColor="#767676"
                                         android:textSize="12sp" />
+
                                 </LinearLayout>
+
                             </LinearLayout>
 
                             <FrameLayout
@@ -879,6 +872,7 @@
                                             android:text="더보기>"
                                             android:textColor="#979797"
                                             android:textSize="13sp" />
+
                                     </LinearLayout>
 
                                     <LinearLayout
@@ -944,7 +938,9 @@
                                             android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
                                             android:textColor="#767676"
                                             android:textSize="12sp" />
+
                                     </LinearLayout>
+
                                 </LinearLayout>
 
                                 <!--가려진 리뷰-->
@@ -982,6 +978,7 @@
                                         android:textAlignment="center"
                                         android:textColor="@color/black"
                                         android:textSize="12sp" />
+
                                 </FrameLayout>
 
                                 <!--포인트 사용 버튼-->
@@ -995,12 +992,19 @@
                                     android:text="포인트 사용 -5P"
                                     android:textColor="@color/main_color"
                                     android:textSize="12sp" />
+
                             </FrameLayout>
+
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
