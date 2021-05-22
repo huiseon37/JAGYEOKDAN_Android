@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/btn_backward_to_license_info"
                 android:src="@drawable/right1"
                 android:layout_width="23dp"
                 android:layout_height="21dp"

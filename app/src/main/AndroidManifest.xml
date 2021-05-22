@@ -10,11 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Happylife">
-        <activity android:name=".LicenseDetailInfo" />
-        <meta-data android:name="com.google.android.actions" />
-
-        <activity android:name=".WriteReviewActivity" />
+<!--        <meta-data android:name="com.google.android.actions" />-->
+        <activity android:name=".LicenseDetailInfo"/>
         <activity android:name=".LicenseListActivity" />
+        <activity android:name=".WriteReviewActivity"/>
         <activity android:name=".JobActivity" />
         <activity android:name=".NicknameActivity" />
         <activity android:name=".MembershipActivity" />
@@ -31,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    <activity android:name=".AlarmActivity"/>
     </application>
 
 </manifest>
