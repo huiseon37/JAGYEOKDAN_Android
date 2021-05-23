@@ -1,117 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LicenseListActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".LicenseListActivity">
 
     <LinearLayout
         android:id="@+id/license_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/license_list_category"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
                 android:id="@+id/btn_backward_to_license_info"
-                android:src="@drawable/right1"
                 android:layout_width="23dp"
                 android:layout_height="21dp"
-                android:layout_marginTop="12dp"/>
+                android:layout_marginTop="12dp"
+                android:src="@drawable/right1" />
 
             <TextView
                 android:id="@+id/license_list_category_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IT/인터넷"
-                android:textColor="@color/main_color"
-                android:textStyle="bold"
-                android:textSize="14dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="22dp"/>
+                android:layout_marginTop="22dp"
+                android:text="IT·인터넷"
+                android:textColor="@color/main_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/image_of_text_category"
                 android:layout_width="120dp"
                 android:layout_height="20dp"
                 android:layout_below="@id/license_list_category_name"
-                android:src="@drawable/category_name1"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/category_name1" />
 
             <View
                 android:layout_width="80dp"
                 android:layout_height="1dp"
-                android:background="@drawable/gray_underline"
+                android:layout_below="@id/image_of_text_category"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="18dp"
-                android:layout_below="@id/image_of_text_category"/>
+                android:background="@drawable/gray_underline" />
+
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp">
+
             <TextView
                 android:id="@+id/license_ranking_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="자격증 인기 순위"
-                android:gravity="center_vertical"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="자격증 인기 순위"
+                android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textColor="@color/black"/>
+                android:textStyle="bold" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gray_blue_boxtype_background"
                 android:layout_below="@id/license_ranking_title"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="7dp"
-                android:layout_centerInParent="true">
-                <ImageView
-                    android:id="@+id/icon_rank1"
-                    android:layout_width="140dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/rank1_icon"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"/>
-                <TextView
-                    android:id="@+id/name_of_rank1_license"
-                    android:layout_width="wrap_content"
+                android:background="@drawable/gray_blue_boxtype_background">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_name_of_rank1_license"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="인터넷 정보관리사 1급"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/icon_rank1"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:layout_marginTop="8dp"/>
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_rank1"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/rank1_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_name_of_rank1_license"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="인터넷 정보관리사 1급"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
                 <View
                     android:id="@+id/division_rank1_rank2"
                     android:layout_width="320dp"
                     android:layout_height="1dp"
-                    android:background="@drawable/gray_underline"
+                    android:layout_below="@id/linearlayout_name_of_rank1_license"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    android:layout_below="@id/name_of_rank1_license"/>
+                    android:background="@drawable/gray_underline" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/division_rank1_rank2"
                     android:layout_marginHorizontal="16dp"
-                    android:layout_marginVertical="13dp"
+                    android:layout_marginVertical="13dp">
 
-                    >
                     <RelativeLayout
                         android:id="@+id/rank2_container"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        >
+                        android:layout_height="45dp">
 
                         <ImageView
                             android:id="@+id/num2_rank"
@@ -119,116 +131,132 @@
                             android:layout_height="20dp"
                             android:layout_centerVertical="true"
                             android:src="@drawable/number_2" />
+
                         <TextView
                             android:id="@+id/name_of_rank2_license"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@id/num2_rank"
+                            android:layout_toEndOf="@id/num2_rank"
                             android:gravity="center_vertical"
                             android:text="리눅스 마스터"
                             android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
                         <ImageView
                             android:id="@+id/watch_more_rank2"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:id="@+id/rank3_container"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:layout_below="@id/rank2_container"
                         android:layout_marginTop="15dp">
+
                         <ImageView
                             android:id="@+id/num3_rank"
-                            android:layout_centerVertical="true"
                             android:layout_width="13dp"
                             android:layout_height="20dp"
-                            android:src="@drawable/number_3"/>
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/number_3" />
+
                         <TextView
                             android:id="@+id/name_of_rank3_license"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@id/num3_rank"
+                            android:layout_toEndOf="@id/num3_rank"
                             android:gravity="center_vertical"
                             android:text="전자상거래 운용사 1급"
                             android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
                         <ImageView
                             android:id="@+id/watch_more_rank3"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
             </RelativeLayout>
+
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/gray_underline"/>
+            android:background="@drawable/gray_underline" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp">
+
             <TextView
                 android:id="@+id/title_license_list_panel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="자격증 목록"
-                android:gravity="center_vertical"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="자격증 목록"
+                android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textColor="@color/black"/>
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/filter_btn_list_license"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:src="@drawable/filter_2"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="24dp"/>
+                android:layout_marginTop="24dp"
+                android:src="@drawable/filter_2" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="가나다 순"
                 android:layout_marginTop="26dp"
-                android:layout_marginRight="15dp"
-                android:textSize="10sp"
-                android:layout_toLeftOf="@id/filter_btn_list_license"/>
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/filter_btn_list_license"
+                android:text="가나다 순"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/title_license_list_panel"
                 android:orientation="vertical">
+
                 <RelativeLayout
                     android:id="@+id/list_num1_license"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/boxtype_for_single_element"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="3dp">
+
                     <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginHorizontal="3dp">
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="3dp">
+
                         <ImageView
                             android:id="@+id/list_dot"
                             android:layout_width="6dp"
@@ -237,38 +265,44 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/left_dot_forlist" />
+
                         <TextView
                             android:id="@+id/etc_list_license_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot"
+                            android:layout_toEndOf="@+id/list_dot"
                             android:text="복어조리기능사"
                             android:textColor="@color/black" />
+
                         <ImageView
                             android:id="@+id/watch_more_at_license_list"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/list_num2_license"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/boxtype_for_single_element"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="3dp">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginHorizontal="3dp">
+
                         <ImageView
                             android:id="@+id/list_dot2"
                             android:layout_width="6dp"
@@ -277,38 +311,44 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/left_dot_forlist" />
+
                         <TextView
                             android:id="@+id/etc_list_license_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot2"
+                            android:layout_toEndOf="@+id/list_dot2"
                             android:text="복어조리기능사"
                             android:textColor="@color/black" />
+
                         <ImageView
                             android:id="@+id/watch_more_at_license_list2"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/list_num3_license"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/boxtype_for_single_element"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="3dp">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginHorizontal="3dp">
+
                         <ImageView
                             android:id="@+id/list_dot3"
                             android:layout_width="6dp"
@@ -317,38 +357,44 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/left_dot_forlist" />
+
                         <TextView
                             android:id="@+id/etc_list_license_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot3"
+                            android:layout_toEndOf="@+id/list_dot3"
                             android:text="복어조리기능사"
                             android:textColor="@color/black" />
+
                         <ImageView
                             android:id="@+id/watch_more_at_license_list3"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/list_num4_license"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/boxtype_for_single_element"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="3dp">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginHorizontal="3dp">
+
                         <ImageView
                             android:id="@+id/list_dot4"
                             android:layout_width="6dp"
@@ -357,38 +403,44 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/left_dot_forlist" />
+
                         <TextView
                             android:id="@+id/etc_list_license_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot4"
+                            android:layout_toEndOf="@+id/list_dot4"
                             android:text="복어조리기능사"
                             android:textColor="@color/black" />
+
                         <ImageView
                             android:id="@+id/watch_more_at_license_list4"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/list_num5_license"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/boxtype_for_single_element"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="3dp">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_marginHorizontal="3dp">
+
                         <ImageView
                             android:id="@+id/list_dot5"
                             android:layout_width="6dp"
@@ -397,26 +449,34 @@
                             android:layout_centerVertical="true"
                             android:layout_marginStart="8dp"
                             android:src="@drawable/left_dot_forlist" />
+
                         <TextView
                             android:id="@+id/etc_list_license_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
-                            android:layout_toRightOf="@+id/list_dot5"
+                            android:layout_toEndOf="@+id/list_dot5"
                             android:text="복어조리기능사"
                             android:textColor="@color/black" />
+
                         <ImageView
                             android:id="@+id/watch_more_at_license_list5"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
-                            android:src="@drawable/watch_more"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerVertical="true"/>
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
             </LinearLayout>
+
         </RelativeLayout>
+
     </LinearLayout>
+
 </ScrollView>

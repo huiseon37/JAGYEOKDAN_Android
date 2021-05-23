@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 class LicenseDetailInfo : AppCompatActivity() {
 
     private lateinit var binding: ActivityLicenseDetailInfoBinding
+    private val nickname = MyApplication.prefs.getString("nickname", "")
 
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
@@ -52,10 +53,15 @@ class LicenseDetailInfo : AppCompatActivity() {
             changeInfo()
         }
 
-        // 별 클릭
-        // Todo: 사용자가 찜한 자격증 목록에 추가 & 메인 화면에 추가
+        // 찜하기
+        // Todo: 사용자가 찜한 자격증 메인 화면에 추가
         binding.imgStarLicenseDetail.setOnClickListener {
             binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
+
+            // DB 테이블 연결
+            databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
+
+            databaseReference.push().setValue(intent.getStringExtra("name").toString())
         }
     }
 
