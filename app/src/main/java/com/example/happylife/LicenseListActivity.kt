@@ -22,7 +22,7 @@ class LicenseListActivity : AppCompatActivity() {
         // 1위 자격증 선택
         binding.linearlayoutNameOfRank1License.setOnClickListener {
             val intent = Intent(this, LicenseDetailInfo::class.java)
-            intent.putExtra("name", binding.licenseListCategoryName.text.toString())
+            intent.putExtra("name", binding.tvNameOfRank1License.text.toString())
             startActivity(intent)
         }
 

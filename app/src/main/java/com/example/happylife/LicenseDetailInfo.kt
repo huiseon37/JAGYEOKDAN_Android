@@ -23,14 +23,24 @@ class LicenseDetailInfo : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.tvCertificateNameDetail.text = intent.getStringExtra("name").toString()
+
         // 포인트 사용 버튼 클릭
         binding.usePoint.setOnClickListener {
             val dlg = UsePointDialog(this)
 
             dlg.setOnOKClickedListener {
                 openReview()
+                // Todo: 포인트 차감(-5)
             }
             dlg.start()
+        }
+
+        // 후기 작성하기 버튼 클릭
+        binding.btnWriteReview.setOnClickListener {
+            val intent = Intent(this, WriteReviewActivity::class.java)
+            intent.putExtra("name", binding.tvCertificateNameDetail.text.toString())
+            startActivity(intent)
         }
 
         // 신청 사이트 버튼 클릭

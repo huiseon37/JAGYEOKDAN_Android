@@ -752,6 +752,7 @@
                             android:layout_weight="1" />
 
                         <Button
+                            android:id="@+id/btn_write_review"
                             android:layout_width="110dp"
                             android:layout_height="22dp"
                             android:layout_gravity="center"

@@ -27,16 +27,17 @@
                 android:gravity="center_vertical"
                 android:text="후기 작성"
                 android:textColor="@color/black"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageButton
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:background="@color/white"
                 android:src="@drawable/x_sign_icon" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -62,19 +63,20 @@
                         android:fontFamily="@font/right_idea"
                         android:text="정보처리기사"
                         android:textColor="@color/main_color"
-                        android:textSize="22dp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/test_Round_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="9dp"
-                        android:layout_toRightOf="@id/license_test_name"
+                        android:layout_marginStart="9dp"
+                        android:layout_toEndOf="@id/license_test_name"
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="1회 실기"
                         android:textColor="@color/black"
-                        android:textSize="15dp" />
+                        android:textSize="15sp" />
+
                 </RelativeLayout>
 
                 <TextView
@@ -84,15 +86,18 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/a_title_gothic3"
-                    android:text="시험 수고 많으셨습니다."
-                    android:textSize="14dp" />
+                    android:text="시험 보느라 수고 많으셨습니다."
+                    android:textSize="14sp" />
+
             </RelativeLayout>
+
         </RelativeLayout>
 
+        <!--시험 난이도-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp">
+            android:layout_marginHorizontal="22dp">
 
             <RelativeLayout
                 android:id="@+id/question_test_level"
@@ -105,15 +110,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/a_title_gothic2"
-                    android:text="시험의 난이도는 어떠나요?"
-                    android:textColor="@color/main_color" />
+                    android:text="시험의 난이도는 어떠셨나요?"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
 
                 <RelativeLayout
                     android:id="@+id/five_star_checkbox"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     android:layout_below="@id/question_num1"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/container_for_boxtype">
 
                     <RelativeLayout
@@ -132,7 +138,7 @@
                             android:text="별점으로 평가해주세요."
                             android:textColor="@color/black"
                             android:textSize="10sp" />
-<!--                        별점 입력 별표버튼-->
+                        <!--                        별점 입력 별표버튼-->
                         <LinearLayout
                             android:id="@+id/five_stars"
                             android:layout_width="wrap_content"
@@ -152,77 +158,88 @@
                                 android:id="@+id/star2"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
                                 android:background="@drawable/star_2" />
 
                             <ImageButton
                                 android:id="@+id/star3"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
                                 android:background="@drawable/star_2" />
 
                             <ImageButton
                                 android:id="@+id/star4"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
                                 android:background="@drawable/star_2" />
 
                             <ImageButton
                                 android:id="@+id/star5"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
                                 android:background="@drawable/star_2" />
+
                         </LinearLayout>
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
             </RelativeLayout>
+
         </RelativeLayout>
 
+        <!--시험 준비 기간-->
         <RelativeLayout
             android:id="@+id/question_study_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/question_num2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
-                android:text="시험 준비기간 얼마나 걸리셨나요?"
-                android:textColor="@color/main_color" />
+                android:text="시험 준비기간은 얼마나 걸리셨나요?"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/user_input_about_question2"
                 android:layout_width="59dp"
-                android:layout_height="21dp"
+                android:layout_height="24dp"
                 android:layout_below="@id/question_num2"
-                android:layout_marginVertical="5dp"
-                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boxtype_for_single_element"
                 android:inputType="number"
-                android:background="@drawable/boxtype_for_single_element" />
+                android:paddingHorizontal="10dp"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/user_input_about_question2"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="2dp"
-                android:layout_toRightOf="@+id/user_input_about_question2"
+                android:layout_toEndOf="@+id/user_input_about_question2"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="일"
                 android:textColor="@color/black" />
+
         </RelativeLayout>
 
+        <!--시험장 위치-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/question_num3"
@@ -230,37 +247,42 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="시험장 위치"
-                android:textColor="@color/main_color" />
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_below="@id/question_num3"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/boxtype_for_single_element"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/user_input_about_question3"
-                    android:layout_width="360dp"
-                    android:layout_height="18dp"
+                    android:layout_width="330dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="2dp"
-                    android:paddingHorizontal="10dp"
-                    android:background="@color/white" />
+                    android:background="@color/white"
+                    android:paddingHorizontal="10dp" />
 
                 <Button
                     android:layout_width="11dp"
                     android:layout_height="11dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
                     android:background="@drawable/search_icon" />
+
             </LinearLayout>
+
         </RelativeLayout>
 
+        <!--시험장 분위기-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/question_num4"
@@ -268,26 +290,29 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="시험장 분위기는 어떠셨나요?"
-                android:textColor="@color/main_color" />
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/question_num4"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/question_num4"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/question_num4"
                 android:fontFamily="@font/a_title_gothic1"
                 android:text="(최소 30자/최대 500자)"
                 android:textColor="@color/gray"
-                android:textSize="10dp" />
+                android:textSize="10sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_below="@id/question_num4"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/container_for_boxtype">
 
                 <EditText
+                    android:id="@+id/et_mood_write_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="10dp"
@@ -297,15 +322,18 @@
                     android:gravity="start"
                     android:hint="예) 진행요원이 많아 어수선하다."
                     android:textColorHint="@color/gray"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
+
             </RelativeLayout>
+
         </RelativeLayout>
 
+        <!--자격증 Tip-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/question_num6"
@@ -313,26 +341,29 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="자격증 Tip을 알려주세요"
-                android:textColor="@color/main_color" />
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/question_num6"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/question_num6"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/question_num6"
                 android:fontFamily="@font/a_title_gothic1"
                 android:text="(최소 50자/최대 1000자)"
                 android:textColor="@color/gray"
-                android:textSize="10dp" />
+                android:textSize="10sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_below="@id/question_num6"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/container_for_boxtype">
 
                 <EditText
+                    android:id="@+id/et_tip_write_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="10dp"
@@ -342,15 +373,18 @@
                     android:gravity="start"
                     android:hint="예) 공부방 교재 추, 함계 들은 인강 등"
                     android:textColorHint="@color/gray"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
+
             </RelativeLayout>
+
         </RelativeLayout>
 
+        <!--자격증 우대 기업-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/question_num5"
@@ -358,15 +392,18 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="이 자격증을 우대하는 기업을 작성해주세요."
-                android:textColor="@color/main_color" />
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_below="@id/question_num5"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/container_for_boxtype">
 
                 <EditText
+                    android:id="@+id/et_company_write_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="10dp"
@@ -376,16 +413,20 @@
                     android:gravity="start"
                     android:hint="예) 삼성전자, SK 하이닉스"
                     android:textColorHint="@color/gray"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
+
             </RelativeLayout>
+
         </RelativeLayout>
 
-        <RelativeLayout
+        <!--수험표 인증-->
+        <LinearLayout
             android:id="@+id/ceritification_for_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/question_num7"
@@ -393,29 +434,34 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="수험표 인증"
-                android:textColor="@color/main_color" />
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
 
-<!--            사진 업로드 버튼-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!--사진 업로드 버튼-->
             <Button
                 android:id="@+id/addmission_ticket_upload"
-                android:layout_width="60dp"
+                android:layout_width="100dp"
                 android:layout_height="18dp"
-                android:layout_marginLeft="250dp"
-                android:layout_toRightOf="@id/question_num7"
                 android:background="@drawable/license_detail_info_round_box"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="사진 업로드"
                 android:textColor="@color/main_color"
                 android:textSize="8sp" />
 
-            <EditText
-                android:id="@+id/user_input_about_question7"
-                android:layout_width="match_parent"
-                android:layout_height="21dp"
-                android:layout_below="@id/question_num7"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/boxtype_for_single_element" />
-        </RelativeLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/user_input_about_question7"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boxtype_for_single_element" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -424,6 +470,7 @@
 
             <!--완료버튼-->
             <Button
+                android:id="@+id/btn_finish_write_review"
                 android:layout_width="248dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
@@ -432,6 +479,9 @@
                 android:text="완료"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
+
         </RelativeLayout>
+
     </LinearLayout>
+
 </ScrollView>

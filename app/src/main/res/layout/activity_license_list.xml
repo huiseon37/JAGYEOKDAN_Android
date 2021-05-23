@@ -97,7 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="인터넷 정보관리사 1급"
+                        android:text="정보처리기사"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
