@@ -21,7 +21,7 @@ class JobActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val nickname = MyApplication.prefs.getString("nickname", "")
+        val nickname = MyApplication.prefs?.getString("nickname", "")
 
         // DB 테이블 연결
         databaseReference = firebaseDatabase.getReference("users/$nickname/jobs")

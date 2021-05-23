@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // SearchBar
-    implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
 
     // Recyclerview
     implementation "androidx.recyclerview:recyclerview:1.2.0"

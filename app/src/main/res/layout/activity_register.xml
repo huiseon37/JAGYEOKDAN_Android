@@ -83,8 +83,7 @@
             android:layout_marginHorizontal="51dp"
             android:theme="@style/SearchViewStyle"
             app:mt_hint="자격증을 검색하세요"
-            app:mt_maxSuggestionsCount="5"
-            app:theme="@style/AppTheme.PopupOverlay" />
+            app:mt_maxSuggestionsCount="5" />
 
         <FrameLayout
             android:layout_width="match_parent"

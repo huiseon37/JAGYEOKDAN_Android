@@ -111,7 +111,7 @@ class RegisterActivity : AppCompatActivity() {
         // list 아이템 클릭
         binding.lvResultRegister.setOnItemClickListener { parent, view, position, id ->
             binding.lvResultRegister.visibility = View.INVISIBLE
-            binding.msbCertificateRegister.disableSearch()
+//            binding.msbCertificateRegister.disableSearch()
 
             // 보유 자격증 리스트에 선택한 자격증 추가
             certificateList.add(

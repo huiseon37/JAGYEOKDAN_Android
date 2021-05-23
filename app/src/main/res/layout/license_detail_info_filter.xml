@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/a_title_gothic3"
+            android:gravity="center_vertical"
+            android:text="회차 선택"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/review_contents_box">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="전체"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 1회 필기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 1회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 2회 필기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 2회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 3회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2021년 3회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 1회 필기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 1회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 2회 필기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 2회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 3회 필기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="2020년 3회 실기"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/gray_search_bar"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button_apply_sorting"
+            android:layout_width="248dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_membership_btn"
+            android:fontFamily="@font/a_title_gothic3"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
