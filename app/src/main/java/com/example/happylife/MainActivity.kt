@@ -3,55 +3,16 @@ package com.example.happylife
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import com.example.happylife.databinding.ActivityMainBinding
 import com.example.happylife.navigation.CommunityFragment
 import com.example.happylife.navigation.HomeViewFragment
 import com.example.happylife.navigation.LicenceInfoFragment
 import com.example.happylife.navigation.MyPageFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
+import nl.joery.animatedbottombar.AnimatedBottomBar
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
-        when (p0.itemId) {
-            R.id.action_home -> {
-                val homeViewFragment = HomeViewFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_screen_panel, homeViewFragment).commit()
-                return true
-            }
-            R.id.action_license_info -> {
-                val licenseInfoFragment = LicenceInfoFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
-                return true
-            }
-
-            R.id.action_community -> {
-                val communitiyFragment = CommunityFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_screen_panel, communitiyFragment).commit()
-                return true
-            }
-            R.id.action_mypage -> {
-                // 마이페이지로 닉네임 전달
-                val bundle = Bundle()
-                val myPageFragment = MyPageFragment()
-                bundle.putString("nickname", intent.getStringExtra("nickname"))
-                myPageFragment.arguments = bundle
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.main_screen_panel, myPageFragment).commit()
-
-                return true
-            }
-        }
-        return false
-    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +21,52 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val view = binding.root
         setContentView(view)
 
+        // Bottom Navigation
+        binding.bottomNavigation.setOnTabSelectListener(object :
+            AnimatedBottomBar.OnTabSelectListener {
+            override fun onTabSelected(
+                lastIndex: Int,
+                lastTab: AnimatedBottomBar.Tab?,
+                newIndex: Int,
+                newTab: AnimatedBottomBar.Tab
+            ) {
+                when (newIndex) {
+                    0 -> {
+                        val homeViewFragment = HomeViewFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.main_screen_panel, homeViewFragment).commit()
+                    }
+                    1 -> {
+                        val licenseInfoFragment = LicenceInfoFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
+                    }
+
+                    2 -> {
+                        val communitiyFragment = CommunityFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.main_screen_panel, communitiyFragment).commit()
+                    }
+                    3 -> {
+                        val bundle = Bundle()
+                        val myPageFragment = MyPageFragment()
+                        // 마이페이지로 닉네임 전달
+                        bundle.putString("nickname", intent.getStringExtra("nickname"))
+                        myPageFragment.arguments = bundle
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.main_screen_panel, myPageFragment).commit()
+                    }
+                }
+            }
+        })
+
+//        val dlg = ReviewDialog(this)
+//
+//        dlg.setOnOKClickedListener {
+//        }
+//        dlg.start(this)
+
+        // 알람 아이콘 클릭
         binding.watchAlarmButton.setOnClickListener {
             val intent = Intent(this, AlarmActivity::class.java)
             startActivity(intent)
@@ -68,7 +75,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val homeViewFragment = HomeViewFragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
             .commit()
-        bottom_navigation.setOnNavigationItemSelectedListener(this)
-        bottom_navigation.menu.getItem(0).isChecked = true
+//        bottom_navigation.setOnNavigationItemSelectedListener(this)
+//        bottom_navigation.menu.getItem(0).isChecked = true
     }
 }

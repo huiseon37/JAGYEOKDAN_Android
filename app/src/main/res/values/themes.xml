@@ -59,4 +59,10 @@
     <style name="SearchViewStyle">
         <item name="android:textSize">12sp</item>
     </style>
+
+    <style name="CustomText">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/a_title_gothic2</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>

@@ -64,4 +64,7 @@ dependencies {
 
     // Recyclerview
     implementation "androidx.recyclerview:recyclerview:1.2.0"
+
+    // BottomNavigation Animation
+    implementation 'nl.joery.animatedbottombar:library:1.0.9'
 }

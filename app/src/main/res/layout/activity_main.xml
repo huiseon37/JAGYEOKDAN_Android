@@ -29,14 +29,13 @@
                     android:id="@+id/top_Small_logo"
                     android:layout_width="60dp"
                     android:layout_height="30dp"
-                    android:layout_centerVertical="true"
                     android:src="@drawable/small_logo" />
 
                 <RelativeLayout
                     android:id="@id/search_bar"
                     android:layout_width="250dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/search_bar">
 
                     <EditText
@@ -54,6 +53,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/search_icon" />
+
                 </RelativeLayout>
 
                 <View
@@ -64,9 +64,8 @@
                 <Button
                     android:id="@+id/watch_alarm_button"
                     android:layout_width="25dp"
-                    android:layout_marginHorizontal="15dp"
                     android:layout_height="match_parent"
-                    android:layout_toRightOf="@id/search_bar"
+                    android:layout_marginHorizontal="15dp"
                     android:background="@drawable/alarm_icon" />
 
             </LinearLayout>
@@ -82,19 +81,21 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintTop_toBottomOf="@+id/top_bar_and_main_screen" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:fitsSystemWindows="true"
-        app:itemTextAppearanceActive="@style/navTextActive"
-        app:itemTextAppearanceInactive="@style/navTextInactive"
-        app:labelVisibilityMode="labeled"
-        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_main" />
+        app:abb_indicatorAppearance="square"
+        app:abb_indicatorColor="@color/main_color"
+        app:abb_tabColor="@color/black"
+        app:abb_tabColorSelected="@color/main_color"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="16dp"
+        app:abb_textAppearance="@style/CustomText"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="text"
+        app:abb_tabs="@menu/bottom_navigation_main"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
