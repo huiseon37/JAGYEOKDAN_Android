@@ -55,7 +55,7 @@ class LicenseDetailInfo : AppCompatActivity() {
         // 별 클릭
         // Todo: 사용자가 찜한 자격증 목록에 추가 & 메인 화면에 추가
         binding.imgStarLicenseDetail.setOnClickListener {
-            binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.star_purple)
+            binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
         }
     }
 
