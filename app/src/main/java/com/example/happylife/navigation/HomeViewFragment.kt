@@ -81,8 +81,7 @@ class HomeViewFragment : Fragment() {
                                     // 자격증 이름 & 신청 날짜 받아서 리스트에 추가
                                     for (postSnapshot in dataSnapshot.children) {
                                         postSnapshot.children.forEachIndexed { index, dataSnapshot ->
-
-                                            // 신청 기간이 제일 임박한 회차 정보 1개만 가져오기
+                                            // 각 자격증에서 신청 기간이 제일 임박한 회차 정보 1개만 가져오기
                                             if (index == 0) {
                                                 dataSnapshot.getValue(CertificateInfoData::class.java)
                                                     ?.let {
@@ -98,6 +97,9 @@ class HomeViewFragment : Fragment() {
                                             }
                                         }
                                     }
+                                    // 신청 날짜 임박한 순으로 정렬
+                                    recommendList.sortBy { it.d_day }
+
                                     notifyDataSetChanged()
                                 }
 
