@@ -1,5 +1,6 @@
 package com.example.happylife.navigation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +14,9 @@ import com.example.happylife.model.CertificateInfoData
 import com.example.happylife.model.RecCertificateData
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.recommend_certificate_item.view.*
-import java.nio.file.attribute.PosixFileAttributeView
+import kotlinx.android.synthetic.main.item_recommend_certificate.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeViewFragment : Fragment() {
 
@@ -30,7 +32,7 @@ class HomeViewFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return LayoutInflater.from(activity).inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,23 +40,85 @@ class HomeViewFragment : Fragment() {
         rv_recommend_certificate?.adapter = RecCertificateAdapter()
         rv_recommend_certificate?.layoutManager = LinearLayoutManager(context)
         rv_recommend_certificate?.setHasFixedSize(true) // recyclerview 크기 고정
+
+        // 더보기 버튼 클릭
+        look_more.setOnClickListener {
+            val params: ViewGroup.LayoutParams = rv_recommend_certificate.layoutParams
+            params.height = rv_recommend_certificate.height + 280
+            rv_recommend_certificate.layoutParams = params
+        }
     }
 
     inner class RecCertificateAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         init {
+            // ArrayList 비워줌
+            recommendList.clear()
+
             // 사용자의 관심 분야 목록 받아오기
-            getInterestJobs()
+            // DB 테이블 연결
+            databaseReference = firebaseDatabase.getReference("users/$nickname/jobs")
+
+            databaseReference.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                    // userInterests 비워줌
+                    userInterests.clear()
+
+                    for (postSnapshot in dataSnapshot.children) {
+                        userInterests.add(postSnapshot.value.toString())
+
+                        // 관심 분야에 해당하는 자격증 리스트 받아오기
+                        val category = postSnapshot.value.toString()
+
+                        // DB 테이블 연결
+                        databaseReference = firebaseDatabase.getReference("certificate/$category")
+
+                        // 신청 기간 임박한 순으로 정렬
+                        databaseReference.orderByChild("examStartRegDate")
+                            .addValueEventListener(object : ValueEventListener {
+                                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                    // 자격증 이름 & 신청 날짜 받아서 리스트에 추가
+                                    for (postSnapshot in dataSnapshot.children) {
+                                        postSnapshot.children.forEachIndexed { index, dataSnapshot ->
+
+                                            // 신청 기간이 제일 임박한 회차 정보 1개만 가져오기
+                                            if (index == 0) {
+                                                dataSnapshot.getValue(CertificateInfoData::class.java)
+                                                    ?.let {
+                                                        RecCertificateData(
+                                                            postSnapshot.key.toString(),
+                                                            getDDay(it.examStartRegDate)
+                                                        )
+                                                    }?.let {
+                                                        recommendList.add(
+                                                            it
+                                                        )
+                                                    }
+                                            }
+                                        }
+                                    }
+                                    notifyDataSetChanged()
+                                }
+
+                                override fun onCancelled(error: DatabaseError) {
+                                }
+                            })
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                }
+            })
 
             // 사용자가 보유한 자격증 목록 받아오기
             getUserCertificates()
-
         }
 
         // xml파일을 inflate하여 ViewHolder를 생성
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.recommend_certificate_item, parent, false)
+                .inflate(R.layout.item_recommend_certificate, parent, false)
             return ViewHolder(view)
         }
 
@@ -64,9 +128,8 @@ class HomeViewFragment : Fragment() {
         // onCreateViewHolder에서 만든 view와 실제 데이터를 연결
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             val viewHolder = (holder as ViewHolder).itemView
-
             viewHolder.tv_certificate_rec_item?.text = recommendList[position].name
-            viewHolder.tv_d_day_item?.text = recommendList[position].d_day
+            viewHolder.tv_d_day_item?.text = recommendList[position].d_day.toString()
 
             // recyclerview item click listener
             viewHolder.setOnClickListener {
@@ -77,32 +140,6 @@ class HomeViewFragment : Fragment() {
         override fun getItemCount(): Int {
             return recommendList.size
         }
-
-    }
-
-    // 사용자의 관심 분야 리스트
-    private fun getInterestJobs() {
-        println("getInterestJobs 실행됨")
-        // DB 테이블 연결
-        databaseReference = firebaseDatabase.getReference("users/$nickname/jobs")
-
-        databaseReference.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-                // userInterests 비워줌
-                userInterests.clear()
-
-                for (postSnapshot in dataSnapshot.children) {
-                    userInterests.add(postSnapshot.value.toString())
-                    println("관심분야 = " + postSnapshot.value.toString())
-                    // 관심 분야에 해당하는 자격증 리스트 받아오기
-                    getRecommendList(postSnapshot.value.toString())
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-            }
-        })
     }
 
     // 사용자가 보유한 자격증 리스트
@@ -126,43 +163,19 @@ class HomeViewFragment : Fragment() {
         })
     }
 
-    // 사용자 관심 분야에 해당하는 자격증 리스트
-    private fun getRecommendList(category: String) {
-        println("getRecommendList 실행됨")
-        // DB 테이블 연결
-        databaseReference = firebaseDatabase.getReference("certificate/$category")
+    // d-day 계산
+    @SuppressLint("SimpleDateFormat")
+    private fun getDDay(date: String): Long {
+        val dateFormat = SimpleDateFormat("yyyy.MM.dd")
 
-        // 신청 기간 임박 순으로 정렬
-        databaseReference.orderByChild("examStartRegDate")
-            .addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    // 자격증 이름 & 신청 날짜 받아서 리스트에 추가
-                    for (postSnapshot in dataSnapshot.children) {
+        val endDate = dateFormat.parse(date).time
+        val today = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }.time.time
 
-//                        println("자격증 이름 = " + postSnapshot.key.toString())
-                        println("postSnapshot = $postSnapshot")
-                        println("회차 이름 = " + postSnapshot.value.toString())
-
-                        val item = postSnapshot.getValue(CertificateInfoData::class.java)
-                        println("item = " + item.toString())
-                        if (item != null) {
-                            println("디데이 = " + postSnapshot.child("examStartRegDate").value.toString())
-                        }
-                        if (item != null) {
-                            recommendList.add(
-                                RecCertificateData(
-                                    postSnapshot.key.toString(),
-                                    item.examStartRegDate
-                                )
-                            )
-                            println("자격증 이름 : " + postSnapshot.key.toString() + ", 디데이: " + item.examStartRegDate)
-                        }
-                        return
-                    }
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                }
-            })
+        return (endDate - today) / (24 * 60 * 60 * 1000)
     }
 }
