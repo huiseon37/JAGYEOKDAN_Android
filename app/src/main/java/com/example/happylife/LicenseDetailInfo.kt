@@ -64,7 +64,6 @@ class LicenseDetailInfo : AppCompatActivity() {
         }
 
         // 찜하기
-        // Todo: 사용자가 찜한 자격증 메인 화면에 추가
         binding.imgStarLicenseDetail.setOnClickListener {
             binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
 
@@ -72,6 +71,11 @@ class LicenseDetailInfo : AppCompatActivity() {
             databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
 
             databaseReference.push().setValue(intent.getStringExtra("name").toString())
+        }
+
+        // 뒤로가기 버튼 클릭
+        binding.imvBackLicenseDetail.setOnClickListener {
+            finish()
         }
     }
 

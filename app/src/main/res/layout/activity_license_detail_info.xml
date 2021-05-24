@@ -22,14 +22,40 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ImageView
+                android:id="@+id/imv_back_license_detail"
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/right1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tv_certificate_name_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/a_title_gothic3"
+                android:gravity="center"
                 android:text="정보처리기사"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!--star-->
+            <ImageView
+                android:id="@+id/img_star_license_detail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginHorizontal="13dp"
+                android:src="@drawable/star_icon" />
 
         </LinearLayout>
 
@@ -206,17 +232,6 @@
 
     </LinearLayout>
 
-    <!--star-->
-    <ImageView
-        android:id="@+id/img_star_license_detail"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/star_icon"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -241,7 +256,8 @@
                     android:gravity="center"
                     android:text="시험 정보"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -309,7 +325,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="신청 기간"
                         android:textColor="@color/main_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/apply_date"
@@ -339,7 +356,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="시험 일자"
                         android:textColor="@color/main_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/test_date"
@@ -369,7 +387,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="결과 발표 일자"
                         android:textColor="@color/main_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/result_date"
@@ -398,7 +417,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="응시료"
                         android:textColor="@color/main_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/apply_cost"
@@ -427,7 +447,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="응시 자격"
                         android:textColor="@color/main_color"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/apply_qualification"
@@ -461,7 +482,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="신청 사이트"
                         android:textColor="@color/white"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                     <View
                         android:layout_width="1dp"
@@ -479,7 +501,8 @@
                         android:fontFamily="@font/a_title_gothic3"
                         android:text="기출 사이트"
                         android:textColor="@color/white"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -526,7 +549,8 @@
                         android:fontFamily="@font/a_title_gothic2"
                         android:text=" 직무에 관심있는 자격단원들이"
                         android:textColor="@color/black"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -552,7 +576,8 @@
                         android:fontFamily="@font/a_title_gothic2"
                         android:text=" 응시한 자격증"
                         android:textColor="@color/black"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -583,7 +608,8 @@
                         android:gravity="center"
                         android:text="응시 데이터"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
 
                     <View
                         android:layout_width="0dp"
@@ -607,7 +633,8 @@
                             android:gravity="center"
                             android:text="전체"
                             android:textColor="@color/black"
-                            android:textSize="10sp" />
+                            android:textSize="10sp"
+                            tools:ignore="HardcodedText" />
 
                         <View
                             android:layout_width="0dp"
@@ -668,7 +695,8 @@
                                 android:fontFamily="@font/a_title_gothic2"
                                 android:text=" /일"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -712,7 +740,8 @@
                                 android:fontFamily="@font/a_title_gothic2"
                                 android:text=" /5.0"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
 
                         </LinearLayout>
 
@@ -744,7 +773,8 @@
                             android:gravity="center"
                             android:text="자격단원 후기"
                             android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
 
                         <View
                             android:layout_width="0dp"
@@ -761,7 +791,8 @@
                             android:fontFamily="@font/a_title_gothic3"
                             android:text="후기 작성하기 +5P"
                             android:textColor="@color/main_color"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            tools:ignore="HardcodedText" />
 
                     </LinearLayout>
 
@@ -831,9 +862,10 @@
                                         android:background="#00000000"
                                         android:fontFamily="@font/a_title_gothic1"
                                         android:gravity="end"
-                                        android:text="더보기>"
+                                        android:text="더보기 >"
                                         android:textColor="#979797"
-                                        android:textSize="13sp" />
+                                        android:textSize="13sp"
+                                        tools:ignore="HardcodedText" />
 
                                 </LinearLayout>
 
@@ -851,7 +883,8 @@
                                         android:fontFamily="@font/a_title_gothic3"
                                         android:text="시험장 분위기"
                                         android:textColor="@color/main_color"
-                                        android:textSize="12sp" />
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -871,7 +904,8 @@
                                         android:fontFamily="@font/a_title_gothic3"
                                         android:text="우대 기업"
                                         android:textColor="@color/main_color"
-                                        android:textSize="12sp" />
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -890,7 +924,8 @@
                                         android:fontFamily="@font/a_title_gothic3"
                                         android:text="자격증 Tip"
                                         android:textColor="@color/main_color"
-                                        android:textSize="12sp" />
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -968,9 +1003,10 @@
                                             android:background="#00000000"
                                             android:fontFamily="@font/a_title_gothic1"
                                             android:gravity="end"
-                                            android:text="더보기>"
+                                            android:text="더보기 >"
                                             android:textColor="#979797"
-                                            android:textSize="13sp" />
+                                            android:textSize="13sp"
+                                            tools:ignore="HardcodedText" />
 
                                     </LinearLayout>
 
@@ -988,7 +1024,8 @@
                                             android:fontFamily="@font/a_title_gothic3"
                                             android:text="시험장 분위기"
                                             android:textColor="@color/main_color"
-                                            android:textSize="12sp" />
+                                            android:textSize="12sp"
+                                            tools:ignore="HardcodedText" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -1008,7 +1045,8 @@
                                             android:fontFamily="@font/a_title_gothic3"
                                             android:text="우대 기업"
                                             android:textColor="@color/main_color"
-                                            android:textSize="12sp" />
+                                            android:textSize="12sp"
+                                            tools:ignore="HardcodedText" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -1027,7 +1065,8 @@
                                             android:fontFamily="@font/a_title_gothic3"
                                             android:text="자격증 Tip"
                                             android:textColor="@color/main_color"
-                                            android:textSize="12sp" />
+                                            android:textSize="12sp"
+                                            tools:ignore="HardcodedText" />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -1066,7 +1105,8 @@
                                         android:fontFamily="@font/a_title_gothic2"
                                         android:text="이 정보를 읽기 위해 5포인트가 차감됩니다."
                                         android:textAlignment="center"
-                                        android:textColor="@color/black" />
+                                        android:textColor="@color/black"
+                                        tools:ignore="HardcodedText" />
 
                                     <TextView
                                         android:id="@+id/tv_comment2_license_detail"
@@ -1078,7 +1118,8 @@
                                         android:text="1회 차감 후에는 다시 읽을 수 있습니다."
                                         android:textAlignment="center"
                                         android:textColor="@color/black"
-                                        android:textSize="12sp" />
+                                        android:textSize="12sp"
+                                        tools:ignore="HardcodedText" />
 
                                 </FrameLayout>
 
@@ -1092,7 +1133,8 @@
                                     android:background="@drawable/license_detail_info_round_box"
                                     android:text="포인트 사용 -5P"
                                     android:textColor="@color/main_color"
-                                    android:textSize="12sp" />
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText" />
 
                             </FrameLayout>
 
