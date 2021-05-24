@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="306dp"
+    android:layout_height="250dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/license_test_name_and_round"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/license_test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/right_idea"
+            android:text="정보처리기사"
+            android:textColor="@color/main_color"
+            android:textSize="22sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/test_Round_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:fontFamily="@font/a_title_gothic3"
+            android:text="1회 실기"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_comment_review_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/license_test_name_and_round"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/a_title_gothic3"
+        android:text="시험 보느라 수고 많으셨습니다."
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_comment2_review_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_comment_review_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/a_title_gothic3"
+        android:text="지금 후기를 작성하고 포인트를 받으세요!"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_comment2_review_dialog"
+        android:layout_marginTop="30sp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_cancel_review_dialog"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/btn_choice_dialog"
+            android:fontFamily="@font/a_title_gothic1"
+            android:gravity="center"
+            android:text="다음에"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/button_ok_review_dialog"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/btn_choice_dialog"
+            android:fontFamily="@font/a_title_gothic1"
+            android:gravity="center"
+            android:text="작성하기"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -27,9 +27,11 @@
                 android:gravity="center_vertical"
                 android:text="후기 작성"
                 android:textColor="@color/black"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                tools:ignore="HardcodedText" />
 
             <ImageButton
+                android:id="@+id/imb_x_write_review"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
@@ -40,16 +42,18 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@color/back_sub_color_light_blue">
+            android:layout_height="200dp"
+            android:background="@drawable/pollen_review"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/congratulate_test_over"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true">
+                android:layout_marginTop="30dp">
 
                 <RelativeLayout
                     android:id="@+id/license_test_name_and_round"
@@ -87,102 +91,107 @@
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/a_title_gothic3"
                     android:text="시험 보느라 수고 많으셨습니다."
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
 
             </RelativeLayout>
 
-        </RelativeLayout>
-
-        <!--시험 난이도-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="22dp">
-
+            <!--시험 난이도-->
             <RelativeLayout
-                android:id="@+id/question_test_level"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/question_num1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:text="시험의 난이도는 어떠셨나요?"
-                    android:textColor="@color/main_color"
-                    android:textSize="14sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginTop="20dp">
 
                 <RelativeLayout
-                    android:id="@+id/five_star_checkbox"
+                    android:id="@+id/question_test_level"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:layout_below="@id/question_num1"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/container_for_boxtype">
+                    android:layout_height="wrap_content">
 
-                    <RelativeLayout
-                        android:id="@+id/content_in_five_star_checkbox"
+                    <TextView
+                        android:id="@+id/question_num1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="9dp">
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/a_title_gothic2"
+                        android:text="시험의 난이도는 어떠셨나요?"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
 
-                        <TextView
-                            android:id="@+id/question_above_fivestars"
+                    <RelativeLayout
+                        android:id="@+id/five_star_checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_below="@id/question_num1"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/container_for_boxtype">
+
+                        <RelativeLayout
+                            android:id="@+id/content_in_five_star_checkbox"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
-                            android:fontFamily="@font/a_title_gothic1"
-                            android:text="별점으로 평가해주세요."
-                            android:textColor="@color/black"
-                            android:textSize="10sp" />
-                        <!--                        별점 입력 별표버튼-->
-                        <LinearLayout
-                            android:id="@+id/five_stars"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/question_above_fivestars"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
-                            android:orientation="horizontal">
+                            android:layout_marginTop="9dp">
 
-                            <ImageButton
-                                android:id="@+id/star1"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:background="@drawable/star_2" />
+                            <TextView
+                                android:id="@+id/question_above_fivestars"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/a_title_gothic1"
+                                android:text="별점으로 평가해주세요."
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:ignore="HardcodedText" />
 
-                            <ImageButton
-                                android:id="@+id/star2"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_marginStart="10dp"
-                                android:background="@drawable/star_2" />
+                            <!--별점 입력 별표버튼-->
+                            <LinearLayout
+                                android:id="@+id/five_stars"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/question_above_fivestars"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageButton
-                                android:id="@+id/star3"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_marginStart="10dp"
-                                android:background="@drawable/star_2" />
+                                <ImageButton
+                                    android:id="@+id/star1"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/star_2" />
 
-                            <ImageButton
-                                android:id="@+id/star4"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_marginStart="10dp"
-                                android:background="@drawable/star_2" />
+                                <ImageButton
+                                    android:id="@+id/star2"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/star_2" />
 
-                            <ImageButton
-                                android:id="@+id/star5"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:layout_marginStart="10dp"
-                                android:background="@drawable/star_2" />
+                                <ImageButton
+                                    android:id="@+id/star3"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/star_2" />
 
-                        </LinearLayout>
+                                <ImageButton
+                                    android:id="@+id/star4"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/star_2" />
+
+                                <ImageButton
+                                    android:id="@+id/star5"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/star_2" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
 
                     </RelativeLayout>
 
@@ -190,7 +199,7 @@
 
             </RelativeLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <!--시험 준비 기간-->
         <RelativeLayout
@@ -198,7 +207,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="22dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 android:id="@+id/question_num2"
@@ -207,7 +216,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="시험 준비기간은 얼마나 걸리셨나요?"
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/user_input_about_question2"
@@ -218,7 +228,7 @@
                 android:background="@drawable/boxtype_for_single_element"
                 android:inputType="number"
                 android:paddingHorizontal="10dp"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -230,7 +240,8 @@
                 android:layout_toEndOf="@+id/user_input_about_question2"
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="일"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
@@ -248,7 +259,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="시험장 위치"
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -291,7 +303,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="시험장 분위기는 어떠셨나요?"
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -302,7 +315,8 @@
                 android:fontFamily="@font/a_title_gothic1"
                 android:text="(최소 30자/최대 500자)"
                 android:textColor="@color/gray"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="HardcodedText" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -322,7 +336,8 @@
                     android:gravity="start"
                     android:hint="예) 진행요원이 많아 어수선하다."
                     android:textColorHint="@color/gray"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
 
             </RelativeLayout>
 
@@ -342,7 +357,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="자격증 Tip을 알려주세요"
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -353,7 +369,8 @@
                 android:fontFamily="@font/a_title_gothic1"
                 android:text="(최소 50자/최대 1000자)"
                 android:textColor="@color/gray"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="HardcodedText" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -373,7 +390,8 @@
                     android:gravity="start"
                     android:hint="예) 공부방 교재 추, 함계 들은 인강 등"
                     android:textColorHint="@color/gray"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
 
             </RelativeLayout>
 
@@ -393,7 +411,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="이 자격증을 우대하는 기업을 작성해주세요."
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -413,7 +432,8 @@
                     android:gravity="start"
                     android:hint="예) 삼성전자, SK 하이닉스"
                     android:textColorHint="@color/gray"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
 
             </RelativeLayout>
 
@@ -435,7 +455,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="수험표 인증"
                 android:textColor="@color/main_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:layout_width="0dp"
@@ -451,7 +472,8 @@
                 android:fontFamily="@font/a_title_gothic2"
                 android:text="사진 업로드"
                 android:textColor="@color/main_color"
-                android:textSize="8sp" />
+                android:textSize="8sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -478,7 +500,8 @@
                 android:fontFamily="@font/a_title_gothic3"
                 android:text="완료"
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 

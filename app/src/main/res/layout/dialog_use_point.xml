@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="306dp"
-    android:layout_height="268dp"
+    android:layout_height="250dp"
     android:background="@drawable/dialog_background"
     android:gravity="center">
 
@@ -44,28 +44,28 @@
 
         <Button
             android:id="@+id/btn_cancel_point_dialog"
-            android:layout_width="114dp"
-            android:layout_height="48dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="10sp"
             android:background="@drawable/btn_choice_dialog"
             android:fontFamily="@font/a_title_gothic1"
             android:gravity="center"
             android:text="취소하기"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
 
         <Button
             android:id="@+id/btn_ok_point_dialog"
-            android:layout_width="114dp"
-            android:layout_height="48dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_marginStart="10sp"
             android:background="@drawable/btn_choice_dialog"
             android:fontFamily="@font/a_title_gothic1"
             android:gravity="center"
             android:text="사용하기"
             android:textColor="@color/white"
-            android:textSize="16dp"
+            android:textSize="14dp"
             tools:ignore="ButtonStyle,HardcodedText,SpUsage" />
 
     </LinearLayout>

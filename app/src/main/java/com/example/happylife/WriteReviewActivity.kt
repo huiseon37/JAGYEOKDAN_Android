@@ -27,6 +27,11 @@ class WriteReviewActivity : AppCompatActivity() {
 
         binding.licenseTestName.text = certificateName.toString()
 
+        // X 버튼 클릭
+        binding.imbXWriteReview.setOnClickListener {
+            finish()
+        }
+
         binding.star1.setOnClickListener {
             binding.star1.setBackgroundResource(R.drawable.star_purple)
             difficulty++
