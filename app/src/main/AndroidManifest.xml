@@ -2,33 +2,58 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.happylife">
 
+    <uses-permission android:name="android.permission.INTERNET " />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Happylife">
-<!--        <meta-data android:name="com.google.android.actions" />-->
-        <activity android:name=".LicenseDetailInfo"/>
+
+        <!--        <meta-data-->
+        <!--            android:name="com.google.android.actions" />-->
+        <activity android:name=".LicenseDetailInfo" />
+
+        <activity android:name=".WriteReviewActivity" />
+
         <activity android:name=".LicenseListActivity" />
-        <activity android:name=".WriteReviewActivity"/>
+
         <activity android:name=".JobActivity" />
+
         <activity android:name=".NicknameActivity" />
+
         <activity android:name=".MembershipActivity" />
+
         <activity android:name=".MypageActivity" />
+
         <activity android:name=".SplashActivity" />
+
         <activity
             android:name=".RegisterActivity"
-            android:windowSoftInputMode="adjustNothing"></activity>
+            android:windowSoftInputMode="adjustNothing" />
+
         <activity android:name=".LoginActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".AlarmActivity" />
+
     </application>
 
 </manifest>

@@ -47,6 +47,11 @@ class HomeViewFragment : Fragment() {
             params.height = rv_recommend_certificate.height + 280
             rv_recommend_certificate.layoutParams = params
         }
+
+        // DB 테이블 연결(사용자가 찜한 자격증 목록)
+        databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
+
+        postCertificateCards()
     }
 
     inner class RecCertificateAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -56,7 +61,7 @@ class HomeViewFragment : Fragment() {
             recommendList.clear()
 
             // 사용자의 관심 분야 목록 받아오기
-            // DB 테이블 연결
+            // DB 테이블 연결(관심 분야)
             databaseReference = firebaseDatabase.getReference("users/$nickname/jobs")
 
             databaseReference.addValueEventListener(object : ValueEventListener {
@@ -179,5 +184,25 @@ class HomeViewFragment : Fragment() {
         }.time.time
 
         return (endDate - today) / (24 * 60 * 60 * 1000)
+    }
+
+    // 메인 화면 자격증 카드 목록에 찜한 자격증 띄우기
+    private fun postCertificateCards() {
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                for (postSnapshot in dataSnapshot.children) {
+                    if (postSnapshot != null) {
+                        first_box_license_text.visibility = View.VISIBLE
+                        D_date_left_first.visibility = View.VISIBLE
+                        text_Dnext_to_date_first.visibility = View.VISIBLE
+                        imv_plus_home1.visibility = View.INVISIBLE
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+        })
     }
 }
