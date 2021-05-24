@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.happylife">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET " />
 
     <application
@@ -13,33 +14,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Happylife">
 
-        <!--        <meta-data-->
-        <!--            android:name="com.google.android.actions" />-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.actions" /> -->
         <activity android:name=".LicenseDetailInfo" />
-
         <activity android:name=".WriteReviewActivity" />
-
         <activity android:name=".LicenseListActivity" />
-
         <activity android:name=".JobActivity" />
-
         <activity android:name=".NicknameActivity" />
-
         <activity android:name=".MembershipActivity" />
-
         <activity android:name=".MypageActivity" />
-
         <activity android:name=".SplashActivity" />
-
         <activity
             android:name=".RegisterActivity"
             android:windowSoftInputMode="adjustNothing" />
-
         <activity android:name=".LoginActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -53,7 +56,6 @@
         </service>
 
         <activity android:name=".AlarmActivity" />
-
     </application>
 
 </manifest>

@@ -263,6 +263,7 @@
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
+                android:id="@+id/linearlayout_location_review"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_below="@id/question_num3"
@@ -279,6 +280,7 @@
                     android:paddingHorizontal="10dp" />
 
                 <Button
+                    android:id="@+id/btn_search_location"
                     android:layout_width="11dp"
                     android:layout_height="11dp"
                     android:layout_gravity="center_vertical"

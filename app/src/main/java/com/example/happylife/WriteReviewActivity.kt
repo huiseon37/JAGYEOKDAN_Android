@@ -1,13 +1,12 @@
 package com.example.happylife
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.happylife.databinding.ActivityWriteReviewBinding
 import com.example.happylife.model.ReviewData
-import com.example.happylife.model.UserInfo
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_write_review.*
 
 class WriteReviewActivity : AppCompatActivity() {
 
@@ -73,6 +72,12 @@ class WriteReviewActivity : AppCompatActivity() {
             )
 
             databaseReference.setValue(reviewInfo)
+        }
+
+        // 시험장 위치 선택
+        binding.btnSearchLocation.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
         }
     }
 }
