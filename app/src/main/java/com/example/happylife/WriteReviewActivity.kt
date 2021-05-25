@@ -1,5 +1,6 @@
 package com.example.happylife
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -77,7 +78,19 @@ class WriteReviewActivity : AppCompatActivity() {
         // 시험장 위치 선택
         binding.btnSearchLocation.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, 100)
+
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            when (requestCode) {
+                100 -> {
+                    binding.userInputAboutQuestion3.text = data?.getStringExtra("address").toString()
+                }
+            }
         }
     }
 }
