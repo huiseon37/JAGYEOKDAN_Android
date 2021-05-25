@@ -30,6 +30,7 @@
         <activity android:name=".LicenseDetailInfo" />
         <activity android:name=".WriteReviewActivity" />
         <activity android:name=".LicenseListActivity" />
+        <activity android:name=".CreateTalktalkActivity"/>
         <activity android:name=".JobActivity" />
         <activity android:name=".NicknameActivity" />
         <activity android:name=".MembershipActivity" />
@@ -37,7 +38,7 @@
         <activity android:name=".SplashActivity" />
         <activity
             android:name=".RegisterActivity"
-            android:windowSoftInputMode="adjustNothing" />
+            android:windowSoftInputMode="adjustNothing"></activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

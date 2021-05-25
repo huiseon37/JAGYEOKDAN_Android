@@ -27,6 +27,7 @@
     <color name="gray"> #999999 </color>
     <color name="gray_underbar">#E3E3E3</color>
     <color name="back_sub_color_light_blue">#F1F1FF</color>
+    <color name="light_gray">#F9F9F9</color>
 
 
 </resources>

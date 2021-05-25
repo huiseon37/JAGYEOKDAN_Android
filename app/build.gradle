@@ -54,6 +54,7 @@ dependencies {
 
     // 푸시 알림
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
     testImplementation 'junit:junit:4.13.2'
@@ -65,7 +66,6 @@ dependencies {
 
     // Recyclerview
     implementation "androidx.recyclerview:recyclerview:1.2.0"
-
     // BottomNavigation Animation
     implementation 'nl.joery.animatedbottombar:library:1.0.9'
 
