@@ -5,6 +5,8 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
 import com.example.happylife.model.CertificateInfoData
 import com.google.firebase.database.*
@@ -90,8 +92,18 @@ class LicenseDetailInfo : AppCompatActivity() {
     // 자격증 정보
     private fun changeInfo() {
 
-        binding.viewUnderbarTab1.visibility = View.INVISIBLE
         binding.viewUnderbarTab2.visibility = View.VISIBLE
+
+        val aniSlideOutRight: Animation =
+            AnimationUtils.loadAnimation(applicationContext, R.anim.slide_out_left)
+        val aniSlideOutLeft: Animation =
+            AnimationUtils.loadAnimation(applicationContext, R.anim.slide_out_right)
+        binding.viewUnderbarTab1.startAnimation(aniSlideOutRight)
+        binding.viewUnderbarTab1.visibility = View.INVISIBLE
+        binding.viewUnderbarTab2.startAnimation(aniSlideOutLeft)
+
+        binding.averagePreTime.text = 60.toString()
+        binding.avergeDifficulty.text = "4.8"
 
         // DB 테이블 연결
         databaseReference = firebaseDatabase.getReference("certificate/it/정보처리기사")
