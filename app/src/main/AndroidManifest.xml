@@ -40,18 +40,18 @@
         <activity android:name=".NicknameActivity" />
         <activity android:name=".MembershipActivity" />
         <activity android:name=".MypageActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity
-            android:name=".RegisterActivity"
-            android:windowSoftInputMode="adjustNothing" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
 
         <service
             android:name=".MyFirebaseMessagingService"

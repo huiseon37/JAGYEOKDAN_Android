@@ -48,9 +48,6 @@ class HomeViewFragment : Fragment() {
             rv_recommend_certificate.layoutParams = params
         }
 
-        // DB 테이블 연결(사용자가 찜한 자격증 목록)
-        databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
-
         postCertificateCards()
     }
 
@@ -188,16 +185,19 @@ class HomeViewFragment : Fragment() {
 
     // 메인 화면 자격증 카드 목록에 찜한 자격증 띄우기
     private fun postCertificateCards() {
+
+        // DB 테이블 연결(사용자가 찜한 자격증 목록)
+        databaseReference = firebaseDatabase.getReference("users/$nickname")
+
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                for (postSnapshot in dataSnapshot.children) {
-                    if (postSnapshot != null) {
-                        first_box_license_text.visibility = View.VISIBLE
-                        D_date_left_first.visibility = View.VISIBLE
-                        text_Dnext_to_date_first.visibility = View.VISIBLE
-                        imv_plus_home1.visibility = View.INVISIBLE
-                    }
+                // 찜한 자격증 있는 경우 정보 띄우기
+                if (dataSnapshot.hasChild("dibs")) {
+                    first_box_license_text.visibility = View.VISIBLE
+                    D_date_left_first.visibility = View.VISIBLE
+                    text_Dnext_to_date_first.visibility = View.VISIBLE
+                    imv_plus_home1.visibility = View.INVISIBLE
                 }
             }
 
