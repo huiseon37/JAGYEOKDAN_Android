@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.happylife.databinding.ActivityNicknameBinding
+import com.example.happylife.model.UserInfo
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -32,12 +33,13 @@ class NicknameActivity : AppCompatActivity() {
                     intent.getStringExtra("name"),
                     intent.getStringExtra("phone"),
                     binding.etNickname.text.toString(),
-                    null
+                    null, 0
                 )
                 databaseReference.child(binding.etNickname.text.toString()).setValue(userInfo)
 
                 // SharedPreference에 nickname 저장
                 MyApplication.prefs.setString("nickname", binding.etNickname.text.toString())
+                MyApplication.prefs.setString("isLogin", "true")
 
                 val intent = Intent(this, JobActivity::class.java)
 

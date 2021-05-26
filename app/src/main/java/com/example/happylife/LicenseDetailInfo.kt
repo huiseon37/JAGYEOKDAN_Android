@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
 import com.example.happylife.model.CertificateInfoData
 import com.google.firebase.database.*
@@ -73,6 +74,8 @@ class LicenseDetailInfo : AppCompatActivity() {
             databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
 
             databaseReference.push().setValue(intent.getStringExtra("name").toString())
+
+            Toast.makeText(applicationContext, "찜한 목록에 추가되었습니다.", Toast.LENGTH_SHORT).show()
         }
 
         // 뒤로가기 버튼 클릭

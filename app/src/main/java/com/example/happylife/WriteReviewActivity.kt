@@ -108,6 +108,8 @@ class WriteReviewActivity : AppCompatActivity() {
             // 수험표 사진 Firebase 업로드
             uploadImage()
 
+            Toast.makeText(applicationContext, "5포인트 적립 완료!", Toast.LENGTH_SHORT).show()
+
             // 메인 화면으로 이동
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -187,7 +189,7 @@ class WriteReviewActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(this, "사진 선택이 완료되었습니다.", Toast.LENGTH_LONG).show()
             }
-            .addOnFailureListener { e ->
+            .addOnFailureListener {
             }
     }
 }

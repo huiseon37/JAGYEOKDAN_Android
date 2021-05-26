@@ -48,6 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             "복어조리기능사",
             "빅데이터분석기사",
             "실내건축기능사",
+            "워드프로세서",
             "유통관리사 2급",
             "인터넷 정보관리사 1급",
             "일식조리기능사",
@@ -56,6 +57,7 @@ class RegisterActivity : AppCompatActivity() {
             "전자상거래운용사 1급",
             "정보보안기사",
             "정보처리기사",
+            "컴퓨터활용능력 2급",
             "SQL 개발자(SQLD)"
         )
 
