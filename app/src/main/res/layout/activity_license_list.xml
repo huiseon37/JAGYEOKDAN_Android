@@ -54,6 +54,7 @@
 
         </RelativeLayout>
 
+        <!--자격증 인기 순위-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,7 +69,8 @@
                 android:text="자격증 인기 순위"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -78,6 +80,7 @@
                 android:layout_marginTop="7dp"
                 android:background="@drawable/gray_blue_boxtype_background">
 
+                <!--1위-->
                 <LinearLayout
                     android:id="@+id/linearlayout_name_of_rank1_license"
                     android:layout_width="match_parent"
@@ -120,6 +123,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginVertical="13dp">
 
+                    <!--2위-->
                     <RelativeLayout
                         android:id="@+id/rank2_container"
                         android:layout_width="match_parent"
@@ -155,6 +159,7 @@
 
                     </RelativeLayout>
 
+                    <!--3위-->
                     <RelativeLayout
                         android:id="@+id/rank3_container"
                         android:layout_width="match_parent"
@@ -204,6 +209,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/gray_underline" />
 
+        <!--자격증 목록-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -218,7 +224,8 @@
                 android:text="자격증 목록"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:id="@+id/filter_btn_list_license"
@@ -235,12 +242,14 @@
                 android:layout_marginEnd="15dp"
                 android:layout_toStartOf="@id/filter_btn_list_license"
                 android:text="가나다 순"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="HardcodedText, SmallSp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/title_license_list_panel"
+                android:layout_marginBottom="25dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -273,7 +282,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/list_dot"
-                            android:text="복어조리기능사"
+                            android:text="네트워크관리사"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -319,7 +328,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/list_dot2"
-                            android:text="복어조리기능사"
+                            android:text="데이터분석전문가(ADP)"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -365,7 +374,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/list_dot3"
-                            android:text="복어조리기능사"
+                            android:text="데이터아키텍처전문가"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -411,7 +420,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/list_dot4"
-                            android:text="복어조리기능사"
+                            android:text="빅데이터분석기사"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -457,11 +466,195 @@
                             android:layout_centerInParent="true"
                             android:layout_marginStart="10dp"
                             android:layout_toEndOf="@+id/list_dot5"
-                            android:text="복어조리기능사"
+                            android:text="웹디자인기능사"
                             android:textColor="@color/black" />
 
                         <ImageView
                             android:id="@+id/watch_more_at_license_list5"
+                            android:layout_width="6dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/list_num6_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="3dp">
+
+                        <ImageView
+                            android:id="@+id/list_dot6"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/left_dot_forlist" />
+
+                        <TextView
+                            android:id="@+id/etc_list_license_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/list_dot6"
+                            android:text="인터넷 정보관리사"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/watch_more_at_license_list6"
+                            android:layout_width="6dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/list_num7_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="3dp">
+
+                        <ImageView
+                            android:id="@+id/list_dot7"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/left_dot_forlist" />
+
+                        <TextView
+                            android:id="@+id/etc_list_license_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/list_dot7"
+                            android:text="정보보안기사"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/watch_more_at_license_list7"
+                            android:layout_width="6dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/list_num8_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="3dp">
+
+                        <ImageView
+                            android:id="@+id/list_dot8"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/left_dot_forlist" />
+
+                        <TextView
+                            android:id="@+id/etc_list_license_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/list_dot8"
+                            android:text="GTQ 그래픽기술자격"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/watch_more_at_license_list8"
+                            android:layout_width="6dp"
+                            android:layout_height="12dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/watch_more" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/list_num9_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boxtype_for_single_element"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginHorizontal="3dp">
+
+                        <ImageView
+                            android:id="@+id/list_dot9"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/left_dot_forlist" />
+
+                        <TextView
+                            android:id="@+id/etc_list_license_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/list_dot9"
+                            android:text="SQLD"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/watch_more_at_license_list9"
                             android:layout_width="6dp"
                             android:layout_height="12dp"
                             android:layout_alignParentEnd="true"
