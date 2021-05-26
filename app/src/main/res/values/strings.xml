@@ -2,7 +2,7 @@
 
 <resources>
 
-    <string name="app_name">happylife</string>
+    <string name="app_name">자격단</string>
 
     <string name="menu_string"> \u00EC\u009E\u0090\u00EA\u00B2\u00A9\u00EC\u00A6\u009D </string>
     <string name="title_activity_maps">Map</string>
