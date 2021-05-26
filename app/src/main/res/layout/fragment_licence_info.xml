@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white">
 
     <LinearLayout
@@ -17,265 +16,303 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="자격증"
             android:fontFamily="@font/a_title_gothic3"
-            android:textSize="20sp"
+            android:gravity="center"
+            android:text="자격증"
             android:textColor="@color/black"
-            android:gravity="center" />
+            android:textSize="20sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-10dp"
             android:layout_marginBottom="24dp"
-            android:text="Category"
             android:fontFamily="@font/golden_plains_demo"
-            android:textSize="25sp"
+            android:gravity="center"
+            android:text="Category"
             android:textColor="@color/black"
-            android:gravity="center" />
+            android:textSize="25sp" />
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="#C4C4C4"
-            android:layout_marginHorizontal="40dp"/>
+            android:layout_marginHorizontal="40dp"
+            android:background="#C4C4C4" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/header_line"
+        android:layout_marginHorizontal="40dp"
         android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="40dp">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/header_line">
 
         <LinearLayout
             android:id="@+id/license_first_col"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/license_icon1"/>
+                        android:src="@drawable/license_icon1" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="경영·사무"
                     android:textColor="#979797"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon2"/>
+                        android:src="@drawable/lisence_icon2" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="마케팅·광고·홍보"
-                    android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
                     android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="마케팅·광고·홍보"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
                     android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
                     android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon3"/>
+                        android:src="@drawable/lisence_icon3" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="7dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="IT·인터넷"
                     android:textColor="#979797"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon4"/>
+                        android:src="@drawable/lisence_icon4" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="디자인"
                     android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/license_second_col"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_5"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon5"/>
+                        android:src="@drawable/lisence_icon5" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="무역·유통"
                     android:textColor="#979797"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_6"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon6"/>
+                        android:src="@drawable/lisence_icon6" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="영업·고객상담"
-                    android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
                     android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="영업·고객상담"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_7"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
                     android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
                     android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon7"/>
+                        android:src="@drawable/lisence_icon7" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="7dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="서비스"
                     android:textColor="#979797"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_8"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon8"/>
+                        android:src="@drawable/lisence_icon8" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="연구개발·설계"
-                    android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
                     android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="연구개발·설계"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -284,182 +321,220 @@
             android:id="@+id/license_third_col"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_9"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon9"/>
+                        android:src="@drawable/lisence_icon9" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="생산·제조"
-                    android:textColor="#979797"
                     android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
                     android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:text="생산·제조"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_10"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon10"/>
+                        android:src="@drawable/lisence_icon10" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="교육"
-                    android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
                     android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="교육"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_11"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
                     android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
                     android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon11"/>
+                        android:src="@drawable/lisence_icon11" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="7dp"
                     android:layout_height="wrap_content"
-                    android:text="건설"
-                    android:textColor="#979797"
                     android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
                     android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:text="건설"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_12"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon12"/>
+                        android:src="@drawable/lisence_icon12" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="의료"
                     android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:layout_gravity="center"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/license_forth_col"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="15dp">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_13"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="left">
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon13"/>
+                        android:src="@drawable/lisence_icon13" />
                 </LinearLayout>
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="미디어"
-                    android:textColor="#979797"
                     android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
                     android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:gravity="center"
+                    android:text="미디어"
+                    android:textAlignment="center"
+                    android:textColor="#979797"
+                    android:textSize="10sp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="35dp">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/license_button_14"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/license_circle"
-                    android:gravity="center"
-                    android:layout_gravity="left">
+                    android:background="@drawable/selector_license_icon"
+                    android:gravity="center">
+
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/lisence_icon14"/>
+                        android:src="@drawable/lisence_icon14" />
                 </LinearLayout>
+
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:gravity="center"
                     android:text="전문·특수직"
                     android:textColor="#979797"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:layout_gravity="left"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp" />
             </LinearLayout>
-        </LinearLayout>
 
+            <View
+                android:layout_width="55dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="55dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
