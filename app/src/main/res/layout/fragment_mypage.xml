@@ -309,7 +309,7 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:fontFamily="@font/a_title_gothic1"
-            android:text="스크랩한 게시글"
+            android:text="공감한 게시글"
             android:textColor="@color/black" />
 
         <View

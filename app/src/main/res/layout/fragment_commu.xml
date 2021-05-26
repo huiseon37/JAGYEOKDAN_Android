@@ -1,8 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_color">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_design"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/a_title_gothic3"
+                android:text="톡톡"
+                android:textColor="@color/main_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="63dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="-3dp"
+            android:background="@color/main_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E5E5E5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:hint="검색어를 입력해 주세요"
+                android:fontFamily="@font/a_title_gothic1"
+                android:textSize="13sp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/search_icon"
+                android:layout_marginStart="-35dp"/>
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/filter_2"/>
+
+       </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:background="@drawable/container_design"
+            app:layout_constraintTop_toBottomOf="@id/license_name_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_all"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/license_detail_info_round_box"
+                    android:text="전체"
+                    android:textColor="@color/main_color"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_management"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="경영·사무"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_marketing"
+                    android:layout_width="94dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="마케팅·광고·홍보"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_it"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="IT·인터넷"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_design"
+                    android:layout_width="46dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="디자인"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_trade"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="무역·유통"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_sales"
+                    android:layout_width="79dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="영업·고객상담"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_service"
+                    android:layout_width="46dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="서비스"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_research"
+                    android:layout_width="79dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="연구개발·설계"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_produce"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="생산·제조"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_teaching"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="교육"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_construction"
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="건설"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_medical"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="의료"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_media"
+                    android:layout_width="46dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="미디어"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btn_special"
+                    android:layout_width="69dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/btn_jobs"
+                    android:fontFamily="@font/a_title_gothic2"
+                    android:text="전문·특수직"
+                    android:textColor="@color/gray_color"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="130dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_contents_box"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="27dp"
+                        android:layout_height="15dp"
+                        android:text="질문"
+                        android:fontFamily="@font/a_title_gothic2"
+                        android:gravity="center"
+                        android:background="@drawable/btn_jobs_selected"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23시간 전"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제목"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/a_title_gothic3"
+                        android:textSize="15sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="내용"
+                        android:textColor="#999999"
+                        android:fontFamily="@font/a_title_gothic1"
+                        android:textSize="12sp"/>
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#E3E3E3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="닉네임"
+                        android:textSize="12sp"
+                        android:textColor="#999999"
+                        android:fontFamily="@font/a_title_gothic2"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_marginTop="-25dp"
+                    android:layout_marginHorizontal="10dp">
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="11dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/comment_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="15"
+                        android:textSize="10sp"/>
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="11dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/eye"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="23"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/commu_write_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/commu_write_btn"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

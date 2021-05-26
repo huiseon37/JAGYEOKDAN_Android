@@ -1,29 +1,16 @@
-<vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="318dp"
-    android:height="206dp"
-    android:viewportWidth="318"
-    android:viewportHeight="206"
-    >
-
-    <group>
-
-        <clip-path
-            android:pathData="M5 0H313C315.761 0 318 2.23858 318 5V201C318 203.761 315.761 206 313 206H5C2.23858 206 0 203.761 0 201V5C0 2.23858 2.23858 0 5 0Z"
-            />
-
-        <path
-            android:pathData="M0 0V206H318V0"
-            android:fillColor="#FFFFFF"
-            />
-
-        <path
-            android:pathData="M5 0H313C315.761 0 318 2.23858 318 5V201C318 203.761 315.761 206 313 206H5C2.23858 206 0 203.761 0 201V5C0 2.23858 2.23858 0 5 0Z"
-            android:strokeWidth="2"
-            android:strokeColor="#E3E3E3"
-            />
-
-    </group>
-
-</vector>
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <stroke
+        android:width="1dp"
+        android:color="#E3E3E3"/>
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp"/>
+    <corners
+        android:bottomLeftRadius="7dp"
+        android:bottomRightRadius="7dp"
+        android:topLeftRadius="7dp"
+        android:topRightRadius="7dp"/>
+</shape>
