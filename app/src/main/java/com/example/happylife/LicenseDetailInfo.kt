@@ -66,6 +66,12 @@ class LicenseDetailInfo : AppCompatActivity() {
             changeInfo()
         }
 
+        // 필터 선택
+        binding.licenseDataClassification.setOnClickListener {
+            val bottomSheet = TestRoundsFilterDialog()
+            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+        }
+
         // 찜하기
         binding.imgStarLicenseDetail.setOnClickListener {
             binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)

@@ -642,6 +642,7 @@
                             android:layout_weight="1" />
 
                         <ImageView
+                            android:id="@+id/imv_filter_license_detail"
                             android:layout_width="13dp"
                             android:layout_height="13dp"
                             android:layout_gravity="center"
@@ -892,7 +893,7 @@
                                         android:layout_marginTop="10dp"
                                         android:fontFamily="@font/a_title_gothic2"
                                         android:lineSpacingExtra="8dp"
-                                        android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                        android:text="조금 어수선했습니다. 책상은 넓고 좋았어요"
                                         android:textColor="#767676"
                                         android:textSize="12sp" />
 
@@ -934,7 +935,7 @@
                                         android:layout_marginTop="10dp"
                                         android:fontFamily="@font/a_title_gothic2"
                                         android:lineSpacingExtra="8dp"
-                                        android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                        android:text="책에 없는 내용이 많이 나왔습니다.\n그리고 수험장 잡기도 너무 어렸습니다. 저는 티켓팅 실패해서\n시험치러 제주도까지 다녀왔습니다^_^\n여러분들은 꼭 티켓팅 성공하셔서 집이랑 가까운 곳에서\n시험보시길..."
                                         android:textColor="#767676"
                                         android:textSize="12sp" />
 
@@ -972,7 +973,7 @@
                                             android:layout_gravity="center"
                                             android:layout_marginStart="7dp"
                                             android:fontFamily="@font/a_title_gothic3"
-                                            android:text="4.5"
+                                            android:text="4.8"
                                             android:textColor="#636196" />
 
                                         <ImageView
@@ -988,7 +989,7 @@
                                             android:layout_gravity="center"
                                             android:layout_marginStart="7dp"
                                             android:fontFamily="@font/a_title_gothic3"
-                                            android:text="23일"
+                                            android:text="30일"
                                             android:textColor="#636196" />
 
                                         <View
@@ -1033,7 +1034,7 @@
                                             android:layout_marginTop="10dp"
                                             android:fontFamily="@font/a_title_gothic2"
                                             android:lineSpacingExtra="8dp"
-                                            android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                            android:text="쾌적하고 좋았습니다."
                                             android:textColor="#767676"
                                             android:textSize="12sp" />
 
@@ -1075,7 +1076,7 @@
                                             android:layout_marginTop="10dp"
                                             android:fontFamily="@font/a_title_gothic2"
                                             android:lineSpacingExtra="8dp"
-                                            android:text="너무 졸렸어요... 도넛이 맛있었고 아이스티도 맛있었는데, 작업하는 게 아무래도 좀 피곤하더라구요..."
+                                            android:text="시나공과 수제비의 도움을 많이 받았습니다. 시나공은 3회독을 했고 매일매일 문제를 풀었습니다.\n오답노트를 만드시는걸 추천합니다. "
                                             android:textColor="#767676"
                                             android:textSize="12sp" />
 
