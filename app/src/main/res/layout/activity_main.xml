@@ -6,80 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/top_bar_and_main_screen"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/topPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_design">
-
-            <LinearLayout
-                android:id="@+id/top_container"
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
-
-                <ImageView
-                    android:id="@+id/top_Small_logo"
-                    android:layout_width="60dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/small_logo" />
-
-                <RelativeLayout
-                    android:id="@id/search_bar"
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="15dp"
-                    android:background="@drawable/search_bar">
-
-                    <EditText
-                        android:id="@+id/search_keyword"
-                        android:layout_width="240dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:background="@drawable/search_bar" />
-
-                    <Button
-                        android:id="@+id/top_search_button"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/search_icon" />
-
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/watch_alarm_button"
-                    android:layout_width="25dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="15dp"
-                    android:background="@drawable/alarm_icon" />
-
-            </LinearLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </LinearLayout>
-
     <FrameLayout
         android:id="@+id/main_screen_panel"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar_and_main_screen" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_navigation"

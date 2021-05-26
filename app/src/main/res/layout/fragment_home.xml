@@ -1,582 +1,646 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
+    <!--검색창-->
     <LinearLayout
+        android:id="@+id/top_container_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="50dp"
+        android:background="@drawable/container_design"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/top_Small_logo"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/small_logo" />
+
+        <RelativeLayout
+            android:id="@id/search_bar"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/search_bar">
+
+            <EditText
+                android:id="@+id/search_keyword"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/search_bar" />
+
+            <Button
+                android:id="@+id/top_search_button_home"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/search_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/watch_alarm_button"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/alarm_icon" />
+
+    </LinearLayout>
+
+    <!--메인 화면-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <LinearLayout
-            android:id="@+id/container_Dday_licesnse"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/design_default_color_background"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/container_Dday_licesnse"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp">
+                android:layout_height="200dp"
+                android:background="@color/design_default_color_background"
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/text_dday_licesnce"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp">
+                    android:layout_marginHorizontal="20dp">
 
-                    <TextView
-                        android:id="@+id/text_license"
+                    <RelativeLayout
+                        android:id="@+id/text_dday_licesnce"
                         android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:fontFamily="@font/a_title_gothic3"
-                        android:gravity="center_vertical"
-                        android:text="자격증 "
-                        android:textColor="@color/black"
-                        tools:ignore="HardcodedText" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="25dp"
-                        android:layout_toEndOf="@id/text_license"
-                        android:src="@drawable/dday_icon" />
+                        <TextView
+                            android:id="@+id/text_license"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:fontFamily="@font/a_title_gothic3"
+                            android:gravity="center_vertical"
+                            android:text="자격증 "
+                            android:textColor="@color/black"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="25dp"
+                            android:layout_toEndOf="@id/text_license"
+                            android:src="@drawable/dday_icon" />
+
+                    </RelativeLayout>
+
+                    <!--찜한 자격증 목록-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_dday_licesnce"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/dday_licensebox_yellow"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:background="@color/box_color_light_purple">
+
+                                <TextView
+                                    android:id="@+id/first_box_license_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:lineSpacingExtra="8dp"
+                                    android:text="정보처리기사"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:visibility="invisible" />
+
+                                <ImageView
+                                    android:id="@+id/imv_plus_home1"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/plus" />
+
+                                <TextView
+                                    android:id="@+id/text_Dnext_to_date_first"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_toStartOf="@+id/D_date_left_first"
+                                    android:fontFamily="@font/a_title_gothic2"
+                                    android:text="D - "
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/D_date_left_first"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/a_title_gothic2"
+                                    android:text="12"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:visibility="invisible" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/dday_licensebox_second"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginStart="19dp"
+                                android:background="@color/box_color_lightblue">
+
+                                <TextView
+                                    android:id="@+id/second_box_license_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:layout_marginVertical="8dp"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:lineSpacingExtra="8dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+                                <ImageView
+                                    android:id="@+id/imv_plus_home2"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/plus" />
+
+                                <TextView
+                                    android:id="@+id/text_Dnext_to_date_second"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_toStartOf="@+id/D_date_left_second"
+                                    android:text="D - "
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/D_date_left_second"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/dday_licensebox_third"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginStart="19dp"
+                                android:background="@color/box_color_light_purple">
+
+                                <TextView
+                                    android:id="@+id/third_box_license_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:layout_marginVertical="8dp"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:lineSpacingExtra="8dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp" />
+
+                                <ImageView
+                                    android:id="@+id/imv_plus_home3"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/plus" />
+
+                                <TextView
+                                    android:id="@+id/text_Dnext_to_date_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_toStartOf="@+id/D_date_left_third"
+                                    android:text="D - "
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/D_date_left_third"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
 
                 </RelativeLayout>
 
-                <!--찜한 자격증 목록-->
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text_dday_licesnce"
-                    android:layout_marginTop="10dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:id="@+id/dday_licensebox_yellow"
-                            android:layout_width="100dp"
-                            android:layout_height="120dp"
-                            android:background="@color/box_color_light_purple">
-
-                            <TextView
-                                android:id="@+id/first_box_license_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="10dp"
-                                android:layout_marginVertical="10dp"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:lineSpacingExtra="8dp"
-                                android:text="정보처리기사"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:visibility="invisible" />
-
-                            <ImageView
-                                android:id="@+id/imv_plus_home1"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/plus" />
-
-                            <TextView
-                                android:id="@+id/text_Dnext_to_date_first"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="10dp"
-                                android:layout_toStartOf="@+id/D_date_left_first"
-                                android:fontFamily="@font/a_title_gothic2"
-                                android:text="D - "
-                                android:textColor="@color/black"
-                                android:textSize="20sp"
-                                android:visibility="invisible"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/D_date_left_first"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:fontFamily="@font/a_title_gothic2"
-                                android:text="12"
-                                android:textColor="@color/black"
-                                android:textSize="20sp"
-                                android:visibility="invisible" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/dday_licensebox_second"
-                            android:layout_width="100dp"
-                            android:layout_height="120dp"
-                            android:layout_marginStart="19dp"
-                            android:background="@color/box_color_lightblue">
-
-                            <TextView
-                                android:id="@+id/second_box_license_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginVertical="8dp"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:lineSpacingExtra="8dp"
-                                android:textColor="@color/black"
-                                android:textSize="13sp" />
-
-                            <ImageView
-                                android:id="@+id/imv_plus_home2"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/plus" />
-
-                            <TextView
-                                android:id="@+id/text_Dnext_to_date_second"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="4dp"
-                                android:layout_toStartOf="@+id/D_date_left_second"
-                                android:text="D - "
-                                android:textColor="@color/black"
-                                android:textSize="20sp"
-                                android:visibility="invisible"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/D_date_left_second"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginEnd="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:textColor="@color/black"
-                                android:textSize="20sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/dday_licensebox_third"
-                            android:layout_width="100dp"
-                            android:layout_height="120dp"
-                            android:layout_marginStart="19dp"
-                            android:background="@color/box_color_light_purple">
-
-                            <TextView
-                                android:id="@+id/third_box_license_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="8dp"
-                                android:layout_marginVertical="8dp"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:lineSpacingExtra="8dp"
-                                android:textColor="@color/black"
-                                android:textSize="13sp" />
-
-                            <ImageView
-                                android:id="@+id/imv_plus_home3"
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/plus" />
-
-                            <TextView
-                                android:id="@+id/text_Dnext_to_date_third"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginBottom="4dp"
-                                android:layout_toStartOf="@+id/D_date_left_third"
-                                android:text="D - "
-                                android:textColor="@color/black"
-                                android:textSize="20sp"
-                                android:visibility="invisible"
-                                tools:ignore="HardcodedText" />
-
-                            <TextView
-                                android:id="@+id/D_date_left_third"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginEnd="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:textColor="@color/black"
-                                android:textSize="20sp" />
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-            </RelativeLayout>
-
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:id="@+id/dots_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                app:dotsColor="@color/gray_search_bar"
-                app:dotsCornerRadius="8dp"
-                app:dotsSize="7dp"
-                app:dotsSpacing="4dp"
-                app:dotsWidthFactor="2.5"
-                app:progressMode="true"
-                app:selectedDotColor="@color/gray_underbar" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.7sp"
-            android:background="@color/gray_underbar" />
-
-        <TextView
-            android:id="@+id/text_recommand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="18dp"
-            android:fontFamily="@font/a_title_gothic3"
-            android:text="추천 자격증"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            tools:ignore="HardcodedText" />
-
-        <!--추천 자격증 목록-->
-        <LinearLayout
-            android:id="@+id/linearlayout_recommend_certificate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="11dp"
-            android:background="@drawable/container_for_boxtype"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_recommend_certificate"
-                android:layout_width="match_parent"
-                android:layout_height="110dp" />
-
-            <TextView
-                android:id="@+id/look_more"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:fontFamily="@font/golden_plains_demo"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:text="더 보기  ↓"
-                android:textAlignment="center"
-                android:textSize="10sp"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.7sp"
-            android:layout_marginTop="20dp"
-            android:background="@color/gray_underbar" />
-
-        <!--실시간 인기 게시글-->
-        <RelativeLayout
-            android:id="@+id/container_Hot_post_onair"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_background">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp">
-
-                <TextView
-                    android:id="@+id/title_Hot_post_onair"
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:fontFamily="@font/a_title_gothic3"
-                    android:text="실시간 인기 게시글"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    app:dotsColor="@color/gray_search_bar"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="7dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:progressMode="true"
+                    app:selectedDotColor="@color/gray_underbar" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7sp"
+                android:background="@color/gray_underbar" />
+
+            <TextView
+                android:id="@+id/text_recommand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/a_title_gothic3"
+                android:text="추천 자격증"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <!--추천 자격증 목록-->
+            <LinearLayout
+                android:id="@+id/linearlayout_recommend_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/container_for_boxtype"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recommend_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp" />
+
+                <TextView
+                    android:id="@+id/look_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/golden_plains_demo"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="더 보기  ↓"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="10sp"
                     tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7sp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray_underbar" />
+
+            <!--실시간 인기 게시글-->
+            <RelativeLayout
+                android:id="@+id/container_Hot_post_onair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_background">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/title_Hot_post_onair"
-                    android:layout_marginTop="6dp">
+                    android:layout_marginHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/title_Hot_post_onair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/a_title_gothic3"
+                        android:text="실시간 인기 게시글"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
 
                     <RelativeLayout
-                        android:id="@+id/container_1st_post_onAir"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="13dp"
-                        android:background="@drawable/darkblue_circular_rectangle"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/number_1st"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:text="1"
-                            android:textColor="@color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            tools:ignore="HardcodedText" />
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_Hot_post_onair"
+                        android:layout_marginTop="6dp">
 
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toEndOf="@id/number_1st">
+                            android:id="@+id/container_1st_post_onAir"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/darkblue_circular_rectangle"
+                            android:padding="10dp">
 
                             <TextView
-                                android:id="@+id/hottest_post_text"
-                                android:layout_width="match_parent"
+                                android:id="@+id/number_1st"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentTop="true"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:text="[시험 후기] 한능검 단기간에 준비 했는데 ... "
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="1"
                                 android:textColor="@color/white"
-                                android:textSize="13sp"
+                                android:textSize="24sp"
                                 android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
 
                             <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="2dp">
-
-                                <ImageView
-                                    android:id="@+id/like_icon_at_1st_post"
-                                    android:layout_width="10dp"
-                                    android:layout_height="10dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_marginStart="5dp"
-                                    android:src="@drawable/icon_heart" />
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/number_1st">
 
                                 <TextView
-                                    android:id="@+id/number_of_like_at_1st_post"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="12dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_marginHorizontal="5dp"
-                                    android:layout_toEndOf="@id/like_icon_at_1st_post"
-                                    android:fontFamily="@font/a_title_gothic2"
-                                    android:text="33"
+                                    android:id="@+id/hottest_post_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="[시험 후기] 한능검 단기간에 준비 했는데 ... "
                                     android:textColor="@color/white"
-                                    android:textSize="10sp"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
                                     tools:ignore="HardcodedText" />
 
-                                <ImageView
-                                    android:id="@+id/comment_icon_at_1st_post"
-                                    android:layout_width="10dp"
-                                    android:layout_height="10dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_toEndOf="@id/number_of_like_at_1st_post"
-                                    android:src="@drawable/icon_comment" />
-
-                                <TextView
-                                    android:id="@+id/number_of_commnet_at_1st_post"
+                                <RelativeLayout
                                     android:layout_width="wrap_content"
-                                    android:layout_height="12dp"
-                                    android:layout_alignParentBottom="true"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_toEndOf="@id/comment_icon_at_1st_post"
-                                    android:fontFamily="@font/a_title_gothic2"
-                                    android:text="10"
-                                    android:textColor="@color/white"
-                                    android:textSize="10sp"
-                                    tools:ignore="HardcodedText" />
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="2dp">
+
+                                    <ImageView
+                                        android:id="@+id/like_icon_at_1st_post"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/icon_heart" />
+
+                                    <TextView
+                                        android:id="@+id/number_of_like_at_1st_post"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="12dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_toEndOf="@id/like_icon_at_1st_post"
+                                        android:fontFamily="@font/a_title_gothic2"
+                                        android:text="33"
+                                        android:textColor="@color/white"
+                                        android:textSize="10sp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <ImageView
+                                        android:id="@+id/comment_icon_at_1st_post"
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_toEndOf="@id/number_of_like_at_1st_post"
+                                        android:src="@drawable/icon_comment" />
+
+                                    <TextView
+                                        android:id="@+id/number_of_commnet_at_1st_post"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="12dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_toEndOf="@id/comment_icon_at_1st_post"
+                                        android:fontFamily="@font/a_title_gothic2"
+                                        android:text="10"
+                                        android:textColor="@color/white"
+                                        android:textSize="10sp"
+                                        tools:ignore="HardcodedText" />
+                                </RelativeLayout>
+
+                                <Button
+                                    android:layout_width="19dp"
+                                    android:layout_height="19dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:background="@drawable/watch_more_btn" />
+
                             </RelativeLayout>
 
-                            <Button
-                                android:layout_width="19dp"
-                                android:layout_height="19dp"
-                                android:layout_alignParentEnd="true"
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/container_2nd_post_onAir"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/container_1st_post_onAir"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/number_2nd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
                                 android:layout_centerVertical="true"
-                                android:layout_marginHorizontal="10dp"
-                                android:background="@drawable/watch_more_btn" />
+                                android:text="2"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/number_2nd">
+
+                                <TextView
+                                    android:id="@+id/hot_2nd_post_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="[장터] 단기간에 준비 했는데 ... "
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/container_2nd_post_onAir"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/container_1st_post_onAir"
-                        android:layout_marginTop="8dp">
-
-                        <TextView
-                            android:id="@+id/number_2nd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:text="2"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            tools:ignore="HardcodedText" />
-
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toEndOf="@id/number_2nd">
+                            android:id="@+id/container_3rd_post_onAir"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/container_2nd_post_onAir">
 
                             <TextView
-                                android:id="@+id/hot_2nd_post_text"
-                                android:layout_width="match_parent"
+                                android:id="@+id/number_3rd"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentTop="true"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:text="[장터] 단기간에 준비 했는데 ... "
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="3"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/number_3rd">
+
+                                <TextView
+                                    android:id="@+id/hot_3rd_post_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="[정보] 기획 직무 자격증 정보 공유"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/container_3rd_post_onAir"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/container_2nd_post_onAir">
-
-                        <TextView
-                            android:id="@+id/number_3rd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:text="3"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            tools:ignore="HardcodedText" />
-
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toEndOf="@id/number_3rd">
+                            android:id="@+id/container_4th_post_onAir"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/container_3rd_post_onAir">
 
                             <TextView
-                                android:id="@+id/hot_3rd_post_text"
-                                android:layout_width="match_parent"
+                                android:id="@+id/number_4th"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentTop="true"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:text="[정보] 기획 직무 자격증 정보 공유"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="4"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/number_4th">
+
+                                <TextView
+                                    android:id="@+id/hot_4th_post_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="[동아리] 큐시즘 23기 하면서 좋았던 "
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/container_4th_post_onAir"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/container_3rd_post_onAir">
-
-                        <TextView
-                            android:id="@+id/number_4th"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            tools:ignore="HardcodedText" />
-
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toEndOf="@id/number_4th">
+                            android:id="@+id/container_5th_post_onAir"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/container_4th_post_onAir">
 
                             <TextView
-                                android:id="@+id/hot_4th_post_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentTop="true"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:text="[동아리] 큐시즘 23기 하면서 좋았던 "
+                                android:id="@+id/number_5th"
+                                android:layout_width="wrap_content"
+                                android:layout_height="27dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="0dp"
+                                android:text="5"
                                 android:textColor="@color/black"
-                                android:textSize="13sp"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
                                 tools:ignore="HardcodedText" />
 
-                        </RelativeLayout>
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/container_5th_post_onAir"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/container_4th_post_onAir">
-
-                        <TextView
-                            android:id="@+id/number_5th"
-                            android:layout_width="wrap_content"
-                            android:layout_height="27dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="0dp"
-                            android:text="5"
-                            android:textColor="@color/black"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            tools:ignore="HardcodedText" />
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="10dp"
-                            android:layout_toEndOf="@id/number_5th">
-
-                            <TextView
-                                android:id="@+id/hot_5th_post_text"
-                                android:layout_width="match_parent"
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentTop="true"
-                                android:fontFamily="@font/a_title_gothic1"
-                                android:text="[개발] 살려줘.."
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                tools:ignore="HardcodedText" />
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/number_5th">
+
+                                <TextView
+                                    android:id="@+id/hot_5th_post_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="[개발] 살려줘.."
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </RelativeLayout>
 
                         </RelativeLayout>
 
@@ -586,8 +650,8 @@
 
             </RelativeLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+</LinearLayout>

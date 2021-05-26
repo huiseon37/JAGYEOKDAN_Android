@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.happylife.AlarmActivity
 import com.example.happylife.LicenseListActivity
 import com.example.happylife.R
 import kotlinx.android.synthetic.main.fragment_licence_info.*
@@ -28,6 +29,12 @@ class LicenceInfoFragment : Fragment() {
         license_button_3.setOnClickListener {
             val intent = Intent(context, LicenseListActivity::class.java)
             intent.putExtra("name", "IT·인터넷")
+            startActivity(intent)
+        }
+
+        // 알람 아이콘 클릭
+        top_search_button_license.setOnClickListener {
+            val intent = Intent(context, AlarmActivity::class.java)
             startActivity(intent)
         }
     }

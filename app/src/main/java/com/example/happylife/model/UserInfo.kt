@@ -1,4 +1,4 @@
-package com.example.happylife
+package com.example.happylife.model
 
 data class UserInfo(
     var id: String?,
@@ -6,5 +6,6 @@ data class UserInfo(
     var name: String?,
     var phone: String?,
     var nickname: String?,
-    var jobs: String?
+    var jobs: String?,
+    var point: Int?
 )

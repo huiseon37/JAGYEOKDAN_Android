@@ -1,6 +1,7 @@
 package com.example.happylife.navigation
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.happylife.AlarmActivity
 import com.example.happylife.MyApplication
 import com.example.happylife.R
 import com.example.happylife.model.CertificateInfoData
@@ -46,6 +48,12 @@ class HomeViewFragment : Fragment() {
             val params: ViewGroup.LayoutParams = rv_recommend_certificate.layoutParams
             params.height = rv_recommend_certificate.height + 280
             rv_recommend_certificate.layoutParams = params
+        }
+
+        // 알람 아이콘 클릭
+        top_search_button_home.setOnClickListener {
+            val intent = Intent(context, AlarmActivity::class.java)
+            startActivity(intent)
         }
 
         postCertificateCards()

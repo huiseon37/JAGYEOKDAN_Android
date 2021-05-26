@@ -70,12 +70,6 @@ class MainActivity : AppCompatActivity() {
 //
 //        dlg.start(this)
 
-        // 알람 아이콘 클릭
-        binding.watchAlarmButton.setOnClickListener {
-            val intent = Intent(this, AlarmActivity::class.java)
-            startActivity(intent)
-        }
-
         val homeViewFragment = HomeViewFragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
             .commit()
