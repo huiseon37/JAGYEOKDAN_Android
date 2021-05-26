@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.AlarmActivity
+import com.example.happylife.LicenseDetailInfo
 import com.example.happylife.MyApplication
 import com.example.happylife.R
 import com.example.happylife.model.CertificateInfoData
@@ -51,8 +52,15 @@ class HomeViewFragment : Fragment() {
         }
 
         // 알람 아이콘 클릭
-        top_search_button_home.setOnClickListener {
+        watch_alarm_button_home.setOnClickListener {
             val intent = Intent(context, AlarmActivity::class.java)
+            startActivity(intent)
+        }
+
+        // 검색 버튼 클릭
+        top_search_button_home.setOnClickListener {
+            val intent = Intent(context, LicenseDetailInfo::class.java)
+            intent.putExtra("name", "정보처리기사")
             startActivity(intent)
         }
 

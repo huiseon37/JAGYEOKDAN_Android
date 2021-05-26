@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -34,7 +35,9 @@
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
-                android:background="@drawable/search_bar" />
+                android:background="@drawable/search_bar"
+                android:importantForAutofill="no"
+                android:inputType="text" />
 
             <Button
                 android:id="@+id/top_search_button_license"
@@ -53,7 +56,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/watch_alarm_button"
+            android:id="@+id/watch_alarm_button_license"
             android:layout_width="25dp"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="15dp"
@@ -76,7 +79,8 @@
             android:gravity="center"
             android:text="자격증"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"
@@ -87,7 +91,8 @@
             android:gravity="center"
             android:text="Category"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
 
         <View
             android:layout_width="wrap_content"
@@ -109,8 +114,10 @@
             android:id="@+id/license_first_col"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
+            <!--경영/사무-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -129,6 +136,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/license_icon1" />
+
                 </LinearLayout>
 
                 <TextView
@@ -139,9 +147,12 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="경영·사무"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--마케팅/광고/홍보-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -160,6 +171,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon2" />
+
                 </LinearLayout>
 
                 <TextView
@@ -171,9 +183,12 @@
                     android:text="마케팅·광고·홍보"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--IT/인터넷-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -192,6 +207,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon3" />
+
                 </LinearLayout>
 
                 <TextView
@@ -202,9 +218,12 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="IT·인터넷"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--디자인-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -223,6 +242,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon4" />
+
                 </LinearLayout>
 
                 <TextView
@@ -233,7 +253,9 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="디자인"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -243,8 +265,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
+            <!--무역/유통-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -263,6 +287,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon5" />
+
                 </LinearLayout>
 
                 <TextView
@@ -273,9 +298,12 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="무역·유통"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--영업/고객상담-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -294,6 +322,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon6" />
+
                 </LinearLayout>
 
                 <TextView
@@ -305,9 +334,12 @@
                     android:text="영업·고객상담"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--서비스-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -326,6 +358,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon7" />
+
                 </LinearLayout>
 
                 <TextView
@@ -336,9 +369,12 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="서비스"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--연구개발/설계-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -357,6 +393,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon8" />
+
                 </LinearLayout>
 
                 <TextView
@@ -368,7 +405,9 @@
                     android:text="연구개발·설계"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -378,8 +417,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
+            <!--생산/제조-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -398,6 +439,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon9" />
+
                 </LinearLayout>
 
                 <TextView
@@ -409,9 +451,12 @@
                     android:text="생산·제조"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--교육-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -430,6 +475,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon10" />
+
                 </LinearLayout>
 
                 <TextView
@@ -441,9 +487,12 @@
                     android:text="교육"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--건설-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -462,6 +511,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon11" />
+
                 </LinearLayout>
 
                 <TextView
@@ -473,9 +523,12 @@
                     android:text="건설"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--의료-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -494,6 +547,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon12" />
+
                 </LinearLayout>
 
                 <TextView
@@ -504,7 +558,9 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="의료"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -516,6 +572,7 @@
             android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
+            <!--미디어-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -534,6 +591,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon13" />
+
                 </LinearLayout>
 
                 <TextView
@@ -546,9 +604,12 @@
                     android:text="미디어"
                     android:textAlignment="center"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
+            <!--전문/특수직-->
             <LinearLayout
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
@@ -567,6 +628,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/lisence_icon14" />
+
                 </LinearLayout>
 
                 <TextView
@@ -577,7 +639,9 @@
                     android:gravity="center"
                     android:text="전문·특수직"
                     android:textColor="#979797"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
             <View
@@ -592,6 +656,6 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
