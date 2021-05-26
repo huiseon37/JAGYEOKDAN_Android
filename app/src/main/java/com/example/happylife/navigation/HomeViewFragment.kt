@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.happylife.AlarmActivity
-import com.example.happylife.LicenseDetailInfo
-import com.example.happylife.MyApplication
+import com.example.happylife.*
 import com.example.happylife.R
 import com.example.happylife.model.CertificateInfoData
 import com.example.happylife.model.RecCertificateData
@@ -62,6 +60,18 @@ class HomeViewFragment : Fragment() {
             val intent = Intent(context, LicenseDetailInfo::class.java)
             intent.putExtra("name", "정보처리기사")
             startActivity(intent)
+        }
+
+        dday_licensebox_second.setOnClickListener {
+            val dlg = ReviewDialog(requireContext())
+
+            dlg.setOnOKClickedListener {
+                val intent = Intent(context, WriteReviewActivity::class.java)
+                intent.putExtra("name", "정보처리기사")
+                startActivity(intent)
+            }
+
+            dlg.start()
         }
 
         postCertificateCards()

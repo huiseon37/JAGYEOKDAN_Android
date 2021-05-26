@@ -1,6 +1,5 @@
 package com.example.happylife
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.happylife.databinding.ActivityMainBinding
@@ -50,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                     3 -> {
                         val bundle = Bundle()
                         val myPageFragment = MyPageFragment()
+
                         // 마이페이지로 닉네임 전달
                         bundle.putString("nickname", intent.getStringExtra("nickname"))
                         myPageFragment.arguments = bundle
@@ -60,20 +60,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-//        val dlg = ReviewDialog(this)
-//
-//        dlg.setOnOKClickedListener {
-//            val intent = Intent(this, WriteReviewActivity::class.java)
-//            intent.putExtra("name", "정보처리기사")
-//            startActivity(intent)
-//        }
-//
-//        dlg.start(this)
-
         val homeViewFragment = HomeViewFragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_screen_panel, homeViewFragment)
             .commit()
-//        bottom_navigation.setOnNavigationItemSelectedListener(this)
-//        bottom_navigation.menu.getItem(0).isChecked = true
     }
 }

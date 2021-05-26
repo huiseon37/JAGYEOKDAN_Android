@@ -14,7 +14,7 @@ class ReviewDialog(context: Context) {
 
     private val dlg = Dialog(context)
 
-    fun start(mainActivity: MainActivity) {
+    fun start() {
 
         dlg.requestWindowFeature(Window.FEATURE_NO_TITLE) // 타이틀바 제거
         dlg.setContentView(R.layout.dialog_review)
