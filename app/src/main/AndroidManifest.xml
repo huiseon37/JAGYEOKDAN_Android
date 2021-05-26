@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET " />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -32,7 +33,13 @@
         <!-- <meta-data -->
         <!-- android:name="com.google.android.actions" /> -->
         <activity android:name=".LicenseDetailInfo" />
-        <activity android:name=".WriteReviewActivity" />
+        <activity android:name=".WriteReviewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LicenseListActivity" />
         <activity android:name=".CreateTalktalkActivity"/>
         <activity android:name=".JobActivity" />
@@ -45,11 +52,11 @@
             android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <service

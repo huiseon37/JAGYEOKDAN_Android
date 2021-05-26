@@ -228,7 +228,8 @@
                 android:background="@drawable/boxtype_for_single_element"
                 android:inputType="number"
                 android:paddingHorizontal="10dp"
-                android:textSize="13sp" />
+                android:textAlignment="viewEnd"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -238,7 +239,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="2dp"
                 android:layout_toEndOf="@+id/user_input_about_question2"
-                android:fontFamily="@font/a_title_gothic2"
+                android:fontFamily="@font/a_title_gothic1"
                 android:text="일"
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
@@ -339,7 +340,7 @@
                     android:gravity="start"
                     android:hint="예) 진행요원이 많아 어수선하다."
                     android:textColorHint="@color/gray"
-                    android:textSize="13sp"
+                    android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
             </RelativeLayout>
@@ -393,7 +394,7 @@
                     android:gravity="start"
                     android:hint="예) 공부방 교재 추, 함계 들은 인강 등"
                     android:textColorHint="@color/gray"
-                    android:textSize="13sp"
+                    android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
             </RelativeLayout>
@@ -435,7 +436,7 @@
                     android:gravity="start"
                     android:hint="예) 삼성전자, SK 하이닉스"
                     android:textColorHint="@color/gray"
-                    android:textSize="13sp"
+                    android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
             </RelativeLayout>
@@ -480,13 +481,15 @@
 
         </LinearLayout>
 
-        <EditText
+        <TextView
             android:id="@+id/user_input_about_question7"
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:layout_marginHorizontal="22dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/boxtype_for_single_element" />
+            android:background="@drawable/boxtype_for_single_element"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
