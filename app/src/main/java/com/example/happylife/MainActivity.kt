@@ -63,7 +63,11 @@ class MainActivity : AppCompatActivity() {
 //        val dlg = ReviewDialog(this)
 //
 //        dlg.setOnOKClickedListener {
+//            val intent = Intent(this, WriteReviewActivity::class.java)
+//            intent.putExtra("name", "정보처리기사")
+//            startActivity(intent)
 //        }
+//
 //        dlg.start(this)
 
         // 알람 아이콘 클릭
