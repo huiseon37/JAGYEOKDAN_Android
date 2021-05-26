@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/review_contents_box"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/commu_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:paddingHorizontal="7dp"
+                android:text="질문"
+                android:fontFamily="@font/a_title_gothic2"
+                android:gravity="center"
+                android:background="@drawable/btn_jobs_selected"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/commu_contents_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23시간 전"
+                android:textSize="10sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/commu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textColor="@color/black"
+                android:fontFamily="@font/a_title_gothic3"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/commu_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="내용"
+                android:textColor="#999999"
+                android:fontFamily="@font/a_title_gothic1"
+                android:textSize="12sp"/>
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#E3E3E3"/>
+            <TextView
+                android:id="@+id/commu_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="닉네임"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="@font/a_title_gothic2"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_marginTop="-25dp"
+            android:layout_marginHorizontal="10dp">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="11dp"
+                android:layout_gravity="center"
+                android:src="@drawable/comment_icon"/>
+            <TextView
+                android:id="@+id/commu_comment_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="15"
+                android:textSize="10sp"/>
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="11dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/eye"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="23"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
