@@ -11,6 +11,7 @@ data class TalkTalkDTO (
     var userID: String? = null,
     var timestamp: Long? = null,
     var favoriteCount : Int = 0,
+    var nickname: String? = null,
     var favorites : Map<String, Boolean> = HashMap()) {
     data class Comment(var uid : String? = null,
                        var userID : String? = null,
