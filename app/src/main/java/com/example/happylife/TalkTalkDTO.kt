@@ -5,6 +5,7 @@ import java.sql.Timestamp
 data class TalkTalkDTO (
     var title : String? = null,
     var tag : String? = null,
+    var boardTag : String? = null,
     var contents : String? = null,
     var ImageUri : String? = null,
     var uid : String? = null,

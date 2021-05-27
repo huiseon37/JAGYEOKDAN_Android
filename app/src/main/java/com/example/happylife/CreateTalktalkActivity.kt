@@ -12,6 +12,7 @@ import com.example.happylife.databinding.ActivityCreateTalktalkBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.main.commu_board_filter.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,6 +35,11 @@ class CreateTalktalkActivity : AppCompatActivity() {
         binding = ActivityCreateTalktalkBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        //board tag 변수
+        var boardTagNum = intent.getIntExtra("boardTagNum",1)
+        println(boardTagNum)
+        createBoardTag(boardTagNum)
 
         //initial auth,firebase
         auth = FirebaseAuth.getInstance()
@@ -97,6 +103,37 @@ class CreateTalktalkActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    private fun createBoardTag(boardTagNum: Int){
+
+        when(boardTagNum){
+            1 -> {
+                TalkTalkDTO.boardTag = "질문"
+                binding.boardTag.text = "질문 >"
+            }
+            2 -> {
+                TalkTalkDTO.boardTag = "시험복기/후기"
+                binding.boardTag.text = "시험복기/후기 >"
+            }
+            3 -> {
+                TalkTalkDTO.boardTag = "고민상담/수다"
+                binding.boardTag.text = "고민상담/수다 >"
+            }
+            4 -> {
+                TalkTalkDTO.boardTag = "정보"
+                binding.boardTag.text = "정보 >"
+            }
+            5 -> {
+                TalkTalkDTO.boardTag = "스터디모집"
+                binding.boardTag.text = "스터디모집 >"
+            }
+            6 -> {
+                TalkTalkDTO.boardTag = "중고장터"
+                binding.boardTag.text = "중고장터 >"
+            }
+        }
+
     }
 
     private fun contentUpload() {

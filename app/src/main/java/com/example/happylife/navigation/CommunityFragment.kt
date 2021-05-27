@@ -99,6 +99,7 @@ class CommunityFragment : Fragment() {
             viewHolder.commu_content?.text = talktalkList[position].contents
             viewHolder.commu_nickname?.text = talktalkList[position].nickname
             viewHolder.commu_contents_time?.text = convertTimestampToDate(time)
+            viewHolder.commu_tag?.text = talktalkList[position].boardTag
             // recyclerview item click listener
             viewHolder.setOnClickListener {
                 val intent = Intent(context, TalkTalkActivity::class.java)
