@@ -25,6 +25,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
     var database: FirebaseDatabase? = null
 
     private lateinit var tagList: ArrayList<String>
+    val TalkTalkDTO = TalkTalkDTO()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +70,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
             startActivityForResult(photoPickerIntent, PICK_IMAGE_FROM_ALBUM)
         }
 
-        //이미지 업로드
+        // 완료 버튼
         binding.buttonCommitMyTalk.setOnClickListener {
             contentUpload()
         }
@@ -104,8 +105,6 @@ class CreateTalktalkActivity : AppCompatActivity() {
         val storageRef = storage?.reference?.child("images/")?.child(imageFileName)
         val DatabaseRef = database?.reference?.child("TalkTalk")
 
-        val TalkTalkDTO = TalkTalkDTO()
-
         //Insert uid of user
         TalkTalkDTO.uid = auth?.currentUser?.uid
 
@@ -123,10 +122,14 @@ class CreateTalktalkActivity : AppCompatActivity() {
 
         TalkTalkDTO.tag = "1"
 
-        storageRef?.putFile(photoUri!!)?.addOnSuccessListener {
-            storageRef.downloadUrl.addOnSuccessListener { uri ->
-                //Insert downloadUri of image
-                TalkTalkDTO.ImageUri = uri.toString()
+        if (storageRef != null) {
+            photoUri?.let {
+                storageRef.putFile(it).addOnSuccessListener {
+                    storageRef.downloadUrl.addOnSuccessListener { uri ->
+                        //Insert downloadUri of image
+                        TalkTalkDTO.ImageUri = uri.toString()
+                    }
+                }
             }
         }
 
@@ -152,6 +155,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
                 id: Long
             ) {
                 binding.spinnerLabels.setSelection(position)
+//                TalkTalkDTO.tag = position.toString()
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {}
