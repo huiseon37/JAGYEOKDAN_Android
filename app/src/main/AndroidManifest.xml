@@ -39,8 +39,8 @@
         <activity android:name=".JobActivity" />
         <activity android:name=".NicknameActivity" />
         <activity android:name=".MembershipActivity" />
-        <activity android:name=".MypageActivity" />
         <activity android:name=".SplashActivity" />
+        <activity android:name=".TalkTalkActivity" />
         <activity
             android:name=".RegisterActivity"
             android:windowSoftInputMode="adjustNothing" />

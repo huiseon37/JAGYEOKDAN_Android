@@ -4,59 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MypageActivity">
+    android:background="@color/white">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/topPanel"
+    <RelativeLayout
+        android:id="@+id/top_container"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/container_design"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
-            android:id="@+id/top_container"
-            android:layout_width="match_parent"
-            android:layout_height="30dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true" />
 
-            <TextView
-                android:id="@+id/top_Small_logo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="15dp"
-                android:fontFamily="@font/a_title_gothic3"
-                android:gravity="center_horizontal|center_vertical"
-                android:letterSpacing="0.07"
-                android:text="마이페이지"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <TextView
+            android:id="@+id/top_Small_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/a_title_gothic3"
+            android:gravity="center"
+            android:letterSpacing="0.07"
+            android:text="마이페이지"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
 
             <Button
-                android:layout_width="25dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="60dp"
+                android:layout_width="19dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/alarm_icon" />
 
             <Button
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/settings" />
-        </RelativeLayout>
 
-    </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/my_info"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="#E0E5F5"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel">
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,12 +82,13 @@
 
             <TextView
                 android:id="@+id/tv_nickname_mypage"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/right_idea"
                 android:text="닉넴이다"
                 android:textColor="@color/main_color"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,7 +105,7 @@
                     android:text="경영·사무"
                     android:textColor="@color/gray_color"
                     android:textSize="10sp"
-                    tools:ignore="HardcodedText,SmallSp" />
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:layout_width="60dp"
@@ -108,7 +117,8 @@
                     android:text="IT·인터넷"
                     android:textColor="@color/gray_color"
                     android:textSize="10sp"
-                    tools:ignore="HardcodedText,SmallSp" />
+                    tools:ignore="HardcodedText, SmallSp" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -126,7 +136,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
-                android:src="@drawable/profile_img" />
+                android:src="@drawable/profile_image_sample" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -137,7 +147,8 @@
                 android:gravity="end"
                 android:text="내 프로필"
                 android:textColor="#979797"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="HardcodedText, SmallSp" />
 
         </LinearLayout>
 
@@ -153,7 +164,7 @@
         android:background="@drawable/mypage_round_boxtype"
         android:backgroundTint="@color/main_color"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/topPanel">
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
 
         <LinearLayout
             android:id="@+id/my_point"
@@ -172,7 +183,8 @@
                 android:gravity="center"
                 android:text="100P"
                 android:textColor="@color/white"
-                android:textSize="35sp" />
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -180,7 +192,10 @@
                 android:fontFamily="@font/a_title_gothic1"
                 android:gravity="center"
                 android:text="내 포인트"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="10.5sp"
+                tools:ignore="HardcodedText, SmallSp" />
+
         </LinearLayout>
 
         <View
@@ -200,8 +215,8 @@
             android:textColor="@color/white">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/coin_plus_btn" />
 
@@ -210,7 +225,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="충전하기"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="10.5sp"
+                tools:ignore="HardcodedText, SmallSp" />
 
         </LinearLayout>
 
@@ -231,8 +248,8 @@
             android:textColor="@color/white">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/play_btn" />
 
@@ -241,7 +258,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="공짜로 모으기"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="10.5sp"
+                tools:ignore="HardcodedText, SmallSp" />
 
         </LinearLayout>
 
@@ -272,15 +291,18 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:fontFamily="@font/a_title_gothic1"
-            android:text="찜한자격증"
-            android:textColor="@color/black" />
+            android:text="찜한 자격증"
+            android:textColor="@color/black"
+            android:textSize="10.5sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="7dp"
-            android:background="@color/gray"/>
+            android:background="@color/gray" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -288,7 +310,9 @@
             android:background="#00000000"
             android:fontFamily="@font/a_title_gothic1"
             android:text="보유한 자격증"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="10.5sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
     </LinearLayout>
 
@@ -309,8 +333,10 @@
             android:layout_weight="1"
             android:background="#00000000"
             android:fontFamily="@font/a_title_gothic1"
-            android:text="공감한 게시글"
-            android:textColor="@color/black" />
+            android:text="스크랩한 게시글"
+            android:textColor="@color/black"
+            android:textSize="10.5sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
         <View
             android:layout_width="1dp"
@@ -326,43 +352,48 @@
             android:background="#00000000"
             android:fontFamily="@font/a_title_gothic1"
             android:text="내가 쓴 후기"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="10.5sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/submenu_second">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="FAQ"
             android:textColor="#979797"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="문의하기"
             android:textColor="#979797"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="약관 및 정책"
             android:textColor="#979797"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -371,9 +402,9 @@
             android:gravity="center"
             android:text="공지사항"
             android:textColor="#979797"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            tools:ignore="HardcodedText, SmallSp" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

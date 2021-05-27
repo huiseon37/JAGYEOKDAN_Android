@@ -57,8 +57,8 @@
 
         <Button
             android:id="@+id/watch_alarm_button_home"
-            android:layout_width="25dp"
-            android:layout_height="match_parent"
+            android:layout_width="19dp"
+            android:layout_height="22dp"
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/alarm_icon" />
 
