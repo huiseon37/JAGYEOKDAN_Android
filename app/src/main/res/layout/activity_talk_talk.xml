@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TalkTalkActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".TalkTalkActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1"
         android:orientation="vertical"
+        android:weightSum="1"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
@@ -20,39 +21,47 @@
             android:background="@drawable/container_design"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
+
             <Button
+                android:id="@+id/btn_back_talk_talk"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/right1"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginStart="15dp"
+                android:background="@drawable/right1" />
 
             <TextView
                 android:id="@+id/tv_certificate_name_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:fontFamily="@font/a_title_gothic3"
                 android:text="톡톡"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"/>
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
         </RelativeLayout>
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:background="@color/light_gray">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="12sp">
+                    android:layout_margin="20dp">
+
                     <LinearLayout
                         android:id="@+id/talktalk_tag_container"
                         android:layout_width="wrap_content"
@@ -60,43 +69,50 @@
                         android:layout_alignParentStart="true"
                         android:layout_marginTop="12dp"
                         android:orientation="horizontal">
-                        //게시글 태그 1
+
+                        <!--게시글 태그 1-->
                         <TextView
                             android:id="@+id/talktalk_tag1"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
                             android:background="@drawable/main_color_talktag"
-                            android:text="스터디 모집"
-                            android:textColor="@color/white"
                             android:fontFamily="@font/a_title_gothic2"
-                            android:textSize="9dp"
+                            android:gravity="center"
+                            android:text="스터디 모집"
                             android:textAlignment="center"
-                            android:gravity="center"/>
-                        //게시글 태그 2
+                            android:textColor="@color/white"
+                            android:textSize="9sp"
+                            tools:ignore="HardcodedText" />
+
+                        <!--게시글 태그 2-->
                         <TextView
                             android:id="@+id/talktalk_tag2"
-                            android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
                             android:background="@drawable/main_color_talktag"
-                            android:text="시험 복기"
-                            android:textColor="@color/white"
                             android:fontFamily="@font/a_title_gothic2"
-                            android:textSize="9sp"
+                            android:gravity="center"
+                            android:text="시험 복기"
                             android:textAlignment="center"
-                            android:gravity="center"/>
+                            android:textColor="@color/white"
+                            android:textSize="9sp"
+                            tools:ignore="HardcodedText" />
+
                     </LinearLayout>
-                    //게시글 제목
+
+                    <!--게시글 제목-->
                     <TextView
                         android:id="@+id/talktalk_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/talktalk_tag_container"
-                        android:text="시험 망한 사람 스터디하자"
+                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/a_title_gothic3"
-                        android:layout_marginTop="12dp"
-                        android:textSize="18dp"
-                        android:textColor="@color/black"/>
+                        android:text="시험 망한 사람 스터디하자"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
                     <View
                         android:id="@+id/divider_title_username"
                         android:layout_width="35dp"
@@ -104,63 +120,71 @@
                         android:layout_below="@id/talktalk_title"
                         android:layout_marginTop="6dp"
                         android:background="@drawable/gray_underline" />
-                    //작성자 프로필
+
+                    <!--작성자 프로필-->
                     <ImageView
                         android:id="@+id/talktalk_user_profile_image"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
-                        android:src="@drawable/profile_img"
                         android:layout_below="@+id/divider_title_username"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/profile_img" />
+
                     <TextView
                         android:id="@+id/talktalk_user_name"
                         android:layout_width="wrap_content"
                         android:layout_height="15dp"
-                        android:text="육회한 인생"
-                        android:layout_toRightOf="@+id/talktalk_user_profile_image"
                         android:layout_below="@id/divider_title_username"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/talktalk_user_profile_image"
                         android:fontFamily="@font/a_title_gothic2"
-                        android:textSize="12sp"
                         android:gravity="center"
-                        android:layout_marginTop="5dp"/>
-                    //게시한 시간 00분
+                        android:text="육회한 인생"
+                        android:textSize="12sp" />
+
+                    <!--게시한 시간 00분-->
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:textAlignment="textEnd"
-                        android:text="18분 전"
                         android:layout_above="@id/talktalk_title"
+                        android:layout_alignParentEnd="true"
                         android:fontFamily="@font/a_title_gothic1"
-                        android:textSize="10sp"
-                        android:layout_alignParentEnd="true"/>
+                        android:text="18분 전"
+                        android:textAlignment="textEnd"
+                        android:textSize="10sp" />
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
                     android:background="@color/white">
+
                     <View
-                        android:layout_marginVertical="10dp"
                         android:id="@+id/divider_context_and_username"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
                         android:layout_marginTop="6dp"
                         android:background="@drawable/gray_underline" />
-                    //게시글 본
+
                     <TextView
                         android:id="@+id/talktalk_context"
-                        android:layout_below="@id/divider_context_and_username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_context_and_username"
                         android:layout_marginVertical="10dp"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="이번에 정처기 망한사람 잇냐 \n나말고 있음 스터나 하자.. \n복습도 할겸 \n다음에는 붙어야할꺼 아니냐... "
                         android:fontFamily="@font/a_title_gothic2"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
                         android:letterSpacing="0.07"
-                        android:lineSpacingExtra="3dp"/>
+                        android:lineSpacingExtra="8dp"
+                        android:text="이번에 정처기 망한사람 잇냐 \n나말고 있음 스터나 하자.. \n복습도 할겸 \n다음에는 붙어야할꺼 아니냐... "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
                     <RelativeLayout
+                        android:id="@+id/relativelayout_heart_talk_talk"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_below="@id/talktalk_context"
@@ -168,225 +192,273 @@
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="30dp"
                         android:background="@drawable/gray_circle">
+
                         <RelativeLayout
                             android:id="@+id/btn_like_context"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:background="@drawable/heart_icon_maincolor"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginTop="11dp"/>
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/heart_icon_maincolor" />
+
                         <TextView
+                            android:id="@+id/tv_heart_count_talk_talk"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/btn_like_context"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
-                            android:text="공감"
                             android:fontFamily="@font/a_title_gothic1"
-                            android:textSize="12sp"
-                            android:textColor="@color/main_color"/>
+                            android:text="공감"
+                            android:textColor="@color/main_color"
+                            android:textSize="8sp"
+                            tools:ignore="HardcodedText" />
+
                     </RelativeLayout>
+
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/light_gray">
+                    android:background="@color/light_gray"
+                    android:padding="20dp">
+
                     <RelativeLayout
                         android:id="@+id/talktalk_reply_zone"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp">
+                        android:layout_height="wrap_content">
+
                         <RelativeLayout
                             android:id="@+id/talktalk_reply_container"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp">
+                            android:layout_height="wrap_content">
+
                             <ImageView
                                 android:id="@+id/talktalk_replyer_profile_image"
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/profile_img"
-                                android:layout_marginTop="5dp"/>
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/profile_img" />
+
                             <TextView
                                 android:id="@+id/talktalk_replyer_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="15dp"
-                                android:text="칠회한 인생"
-                                android:layout_toRightOf="@id/talktalk_replyer_profile_image"
-                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@id/talktalk_replyer_profile_image"
                                 android:fontFamily="@font/a_title_gothic2"
-                                android:textSize="12sp"
                                 android:gravity="center"
-                                android:layout_marginTop="5dp"/>
+                                android:text="칠회한 인생"
+                                android:textSize="12sp" />
+
                             <TextView
                                 android:id="@+id/talktalk_reply_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="기만 아니고 찐으로 나도 껴줘"
                                 android:layout_below="@id/talktalk_replyer_profile_image"
+                                android:layout_marginTop="7dp"
                                 android:fontFamily="@font/a_title_gothic2"
+                                android:text="기만 아니고 찐으로 나도 껴줘"
                                 android:textColor="@color/black"
-                                android:layout_marginTop="7dp"/>
+                                android:textSize="12sp" />
+
                             <TextView
                                 android:id="@+id/talktalk_reply_time"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/talktalk_reply_text"
-                                android:text="2 분전"
+                                android:layout_marginTop="6dp"
                                 android:fontFamily="@font/a_title_gothic1"
-                                android:textSize="10dp"
-                                android:layout_marginTop="6dp"/>
+                                android:text="2 분전"
+                                android:textSize="10sp" />
+
                             <ImageView
                                 android:id="@+id/talktalk_reply_like_btn"
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:background="@drawable/heart_icon_maincolor"
-                                android:layout_toLeftOf="@id/talktalk_reply_like_count"
-                                android:layout_marginTop="6dp"/>
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_toStartOf="@id/talktalk_reply_like_count"
+                                android:background="@drawable/heart_icon_maincolor" />
+
                             <TextView
                                 android:id="@+id/talktalk_reply_like_count"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="12"
-                                android:layout_toLeftOf="@id/talktalk_reply_commit_btn"
+                                android:layout_marginStart="5dp"
                                 android:layout_marginTop="6dp"
-                                android:layout_marginLeft="5dp"
-                                android:textSize="13sp"
-                                android:fontFamily="@font/a_title_gothic1"/>
+                                android:layout_toStartOf="@id/talktalk_reply_commit_btn"
+                                android:fontFamily="@font/a_title_gothic1"
+                                android:text="12"
+                                android:textSize="10sp" />
+
                             <TextView
                                 android:id="@+id/talktalk_reply_commit_btn"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:text="댓글달기"
                                 android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="7dp"
                                 android:layout_marginRight="10dp"
-                                android:textSize="12sp"
-                                android:fontFamily="@font/a_title_gothic1"/>
+                                android:fontFamily="@font/a_title_gothic1"
+                                android:text="댓글달기"
+                                android:textSize="10sp"
+                                tools:ignore="HardcodedText" />
+
                         </RelativeLayout>
+
                         <RelativeLayout
                             android:id="@+id/talktalk_reply_reply_container"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/talktalk_reply_container"
                             android:layout_marginHorizontal="10dp"
-                            android:layout_below="@id/talktalk_reply_container">
+                            android:layout_marginTop="7dp">
+
                             <ImageView
                                 android:id="@+id/reply_reply_arrow"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:background="@drawable/reply_reply_arrow"/>
+                                android:background="@drawable/reply_reply_arrow" />
+
                             <RelativeLayout
                                 android:layout_width="350dp"
-                                android:layout_height="70dp"
-                                android:layout_toRightOf="@id/reply_reply_arrow"
+                                android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@id/reply_reply_arrow"
                                 android:background="@drawable/boxtype_for_single_element"
-                                android:layout_marginLeft="10dp">
+                                android:paddingHorizontal="5dp"
+                                android:paddingVertical="5dp">
+
                                 <ImageView
-                                    android:layout_marginLeft="7dp"
                                     android:id="@+id/talktalk_reply_reply_profile_image"
                                     android:layout_width="15dp"
                                     android:layout_height="15dp"
-                                    android:src="@drawable/profile_img"
-                                    android:layout_marginTop="7dp"/>
+                                    android:layout_marginStart="7dp"
+                                    android:layout_marginTop="7dp"
+                                    android:src="@drawable/profile_img" />
+
                                 <TextView
                                     android:id="@+id/talktalk_reply_replyer_name"
                                     android:layout_width="wrap_content"
                                     android:layout_height="15dp"
-                                    android:text="육회한 인생"
-                                    android:layout_toRightOf="@id/talktalk_reply_reply_profile_image"
-                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_toEndOf="@id/talktalk_reply_reply_profile_image"
                                     android:fontFamily="@font/a_title_gothic2"
-                                    android:textSize="12sp"
                                     android:gravity="center"
-                                    android:layout_marginTop="7dp"/>
+                                    android:text="육회한 인생"
+                                    android:textSize="12sp" />
+
                                 <TextView
                                     android:id="@+id/talktalk_reply_reply_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="ㅇㅋㅇㅋ"
                                     android:layout_below="@id/talktalk_reply_reply_profile_image"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="7dp"
                                     android:fontFamily="@font/a_title_gothic2"
+                                    android:text="ㅇㅋㅇㅋ"
                                     android:textColor="@color/black"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="7dp"/>
+                                    android:textSize="12sp" />
+
                                 <TextView
                                     android:id="@+id/talktalk_reply_reply_time"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/talktalk_reply_reply_text"
-                                    android:text="2 분전"
-                                    android:fontFamily="@font/a_title_gothic1"
-                                    android:textSize="10dp"
+                                    android:layout_marginStart="8dp"
                                     android:layout_marginTop="6dp"
-                                    android:layout_marginLeft="8dp"/>
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="2 분전"
+                                    android:textSize="10sp" />
+
                                 <ImageView
                                     android:id="@+id/talktalk_reply_reply_like_btn"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:background="@drawable/heart_icon_maincolor"
-                                    android:layout_toLeftOf="@id/talktalk_reply_reply_like_count"
-                                    android:layout_marginTop="6dp"/>
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_toStartOf="@id/talktalk_reply_reply_like_count"
+                                    android:background="@drawable/heart_icon_maincolor" />
+
                                 <TextView
                                     android:id="@+id/talktalk_reply_reply_like_count"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="12"
-                                    android:layout_toLeftOf="@id/talktalk_reply_reply_commit_btn"
+                                    android:layout_marginStart="5dp"
                                     android:layout_marginTop="6dp"
-                                    android:layout_marginLeft="5dp"
-                                    android:textSize="13sp"
-                                    android:fontFamily="@font/a_title_gothic1"/>
+                                    android:layout_toStartOf="@id/talktalk_reply_reply_commit_btn"
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="12"
+                                    android:textSize="10sp" />
+
                                 <TextView
                                     android:id="@+id/talktalk_reply_reply_commit_btn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="댓글달기"
                                     android:layout_alignParentEnd="true"
+                                    android:layout_marginLeft="10dp"
                                     android:layout_marginTop="7dp"
                                     android:layout_marginRight="10dp"
-                                    android:textSize="12sp"
-                                    android:fontFamily="@font/a_title_gothic1"/>
+                                    android:fontFamily="@font/a_title_gothic1"
+                                    android:text="댓글달기"
+                                    android:textSize="10sp"
+                                    tools:ignore="HardcodedText" />
+
                             </RelativeLayout>
+
                         </RelativeLayout>
+
                     </RelativeLayout>
+
                     <View
-                        android:layout_below="@id/talktalk_reply_zone"
-                        android:layout_marginVertical="12dp"
-                        android:layout_marginHorizontal="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/gray_underbar"/>
+                        android:layout_below="@id/talktalk_reply_zone"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="@color/gray_underbar" />
+
                 </RelativeLayout>
+
             </LinearLayout>
+
         </ScrollView>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white">
+
             <TextView
                 android:id="@+id/user_comment_text"
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
-                android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="13dp"
-                android:hint="자격단 단원의 매너있는 댓글을 남겨주세요."
+                android:layout_marginVertical="10dp"
                 android:fontFamily="@font/a_title_gothic1"
+                android:gravity="center_vertical"
+                android:hint="자격단 단원의 매너있는 댓글을 남겨주세요."
                 android:textSize="12sp"
-                android:gravity="center_vertical"/>
+                tools:ignore="HardcodedText" />
+
             <Button
                 android:layout_width="40dp"
                 android:layout_height="20dp"
-                android:text="입력"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
                 android:background="@drawable/main_color_talktag"
                 android:fontFamily="@font/a_title_gothic2"
+                android:text="입력"
                 android:textColor="@color/white"
                 android:textSize="10sp"
-                android:layout_marginRight="12dp"/>
+                tools:ignore="HardcodedText" />
+
         </RelativeLayout>
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
