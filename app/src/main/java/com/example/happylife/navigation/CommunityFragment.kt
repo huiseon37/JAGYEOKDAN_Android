@@ -2,21 +2,18 @@ package com.example.happylife.navigation
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.*
 import com.example.happylife.R
-import com.example.happylife.model.RecCertificateData
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.commu_talktalk_item.view.*
 import kotlinx.android.synthetic.main.fragment_commu.*
-import kotlinx.android.synthetic.main.item_recommend_certificate.view.*
+import java.text.SimpleDateFormat
 
 class CommunityFragment : Fragment() {
 
@@ -49,8 +46,8 @@ class CommunityFragment : Fragment() {
         rv_commu?.setHasFixedSize(true)
 
         commu_write_btn.setOnClickListener{
-            val intent = Intent(context, CreateTalktalkActivity::class.java)
-            startActivity(intent)
+            val filterSheet = CommuFilterDialog()
+            filterSheet.show(this.parentFragmentManager, filterSheet.tag)
         }
 
         commu_filter_btn.setOnClickListener{
@@ -64,7 +61,8 @@ class CommunityFragment : Fragment() {
         init {
                 databaseReference = firebaseDatabase.getReference("TalkTalk")
 
-                databaseReference.orderByChild("timestamp").addValueEventListener(object : ValueEventListener {
+                databaseReference.orderByChild("timestamp").addValueEventListener(object :
+                    ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
 
                         // ArrayList 비워줌
@@ -73,7 +71,7 @@ class CommunityFragment : Fragment() {
                         for (postSnapshot in dataSnapshot.children) {
                             val item = postSnapshot.getValue(TalkTalkDTO::class.java)
                             if (item != null) {
-                                talktalkList.add(0,item)
+                                talktalkList.add(0, item)
                             }
                         }
                         notifyDataSetChanged()
@@ -96,9 +94,11 @@ class CommunityFragment : Fragment() {
 
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             val viewHolder = (holder as ViewHolder).itemView
+            val time = talktalkList[position].timestamp
             viewHolder.commu_title?.text = talktalkList[position].title
             viewHolder.commu_content?.text = talktalkList[position].contents
             viewHolder.commu_nickname?.text = talktalkList[position].nickname
+            viewHolder.commu_contents_time?.text = convertTimestampToDate(time)
             // recyclerview item click listener
             viewHolder.setOnClickListener {
                 val intent = Intent(context, TalkTalkActivity::class.java)
@@ -111,4 +111,10 @@ class CommunityFragment : Fragment() {
         }
     }
 
+    private fun convertTimestampToDate(timestamp: Long?): String? {
+        val sdf = SimpleDateFormat("MM/dd hh:mm")
+        val date = sdf.format(timestamp)
+
+        return date
+    }
 }
