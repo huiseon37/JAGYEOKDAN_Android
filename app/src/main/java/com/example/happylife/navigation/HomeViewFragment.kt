@@ -7,27 +7,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.*
 import com.example.happylife.R
+import com.example.happylife.databinding.ActivityMainBinding
 import com.example.happylife.model.CertificateInfoData
 import com.example.happylife.model.RecCertificateData
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_recommend_certificate.view.*
+import nl.joery.animatedbottombar.AnimatedBottomBar
 import java.text.SimpleDateFormat
 import java.util.*
 
 class HomeViewFragment : Fragment() {
 
+    private lateinit var binding: ActivityMainBinding
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
     private val nickname = MyApplication.prefs.getString("nickname", "")
     private val userCertificateList = arrayListOf<String>()
     private val userInterests = arrayListOf<String>()
     private val recommendList = arrayListOf<RecCertificateData>()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -38,6 +43,7 @@ class HomeViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         rv_recommend_certificate?.adapter = RecCertificateAdapter()
         rv_recommend_certificate?.layoutManager = LinearLayoutManager(context)
         rv_recommend_certificate?.setHasFixedSize(true) // recyclerview 크기 고정
@@ -72,6 +78,15 @@ class HomeViewFragment : Fragment() {
             }
 
             dlg.start()
+        }
+
+        dday_licensebox_third.setOnClickListener {
+            val licenseInfoFragment = LicenceInfoFragment()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
+            //binding.bottomNavigation.selectTabAt(1)
+            MyApplication.prefs.setString("isClicked", "true")
+            println(MyApplication.prefs.getString("isClicked", "none"))
         }
 
         postCertificateCards()
@@ -136,7 +151,6 @@ class HomeViewFragment : Fragment() {
                             })
                     }
                 }
-
                 override fun onCancelled(error: DatabaseError) {
                 }
             })
