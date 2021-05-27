@@ -3,9 +3,7 @@ package com.example.happylife
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import com.example.happylife.databinding.ActivityMembershipBinding
 import com.example.happylife.databinding.ActivityTalkTalkBinding
-import kotlinx.android.synthetic.main.commu_talktalk_item.*
 
 class TalkTalkActivity : AppCompatActivity() {
 
@@ -23,23 +21,27 @@ class TalkTalkActivity : AppCompatActivity() {
         binding.talktalkContext.text = intent.getStringExtra("context").toString()
         binding.talktalkTag1.text = intent.getStringExtra("commutag").toString()
 
-//        intent.putExtra("title", commu_title.text.toString() )
-//        intent.putExtra("context", commu_content.text.toString())
-//        intent.putExtra("nickname", commu_nickname.text.toString())
-//        intent.putExtra("timestamp", commu_contents_time.text.toString())
-//        intent.putExtra("commutag", commu_tag.text.toString())
-
         // 공감 버튼 클릭
         binding.btnLikeContext.setOnClickListener {
             binding.btnLikeContext.setBackgroundResource(R.drawable.heart_purple)
             binding.tvHeartCountTalkTalk.text = 12.toString()
-            binding.tvHeartCountTalkTalk.setTextColor(ContextCompat.getColor(this, R.color.main_color))
+            binding.tvHeartCountTalkTalk.setTextColor(
+                ContextCompat.getColor(
+                    this,
+                    R.color.main_color
+                )
+            )
             binding.relativelayoutHeartTalkTalk.setBackgroundResource(R.drawable.purple_circle)
         }
 
         // 뒤로가기 버튼 클릭
         binding.btnBackTalkTalk.setOnClickListener {
             finish()
+        }
+
+        // 완료버튼 클릭
+        binding.btnFinishTalkTalk.setOnClickListener {
+            // Todo: db에 댓글 저장, 댓글 띄우기
         }
     }
 }

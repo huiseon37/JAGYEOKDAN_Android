@@ -7,7 +7,6 @@ import com.example.happylife.navigation.CommunityFragment
 import com.example.happylife.navigation.HomeViewFragment
 import com.example.happylife.navigation.LicenceInfoFragment
 import com.example.happylife.navigation.MyPageFragment
-import kotlinx.android.synthetic.main.fragment_home.*
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class MainActivity : AppCompatActivity() {
@@ -23,14 +22,14 @@ class MainActivity : AppCompatActivity() {
 
 
         //네비게이션 선택-이거안됨
-        dday_licensebox_third.setOnClickListener {
-            val isNavTab = MyApplication.prefs.getString("isClicked", "false")
-            println(isNavTab+"롤롤로")
-            if(isNavTab == "true"){
-                binding.bottomNavigation.selectTabAt(1)
-                MyApplication.prefs.setString("isClicked", "false")
-            }
-        }
+//        dday_licensebox_third.setOnClickListener {
+//            val isNavTab = MyApplication.prefs.getString("isClicked", "false")
+//            println(isNavTab+"롤롤로")
+//            if(isNavTab == "true"){
+//                binding.bottomNavigation.selectTabAt(1)
+//                MyApplication.prefs.setString("isClicked", "false")
+//            }
+//        }
 
         // Bottom Navigation
         binding.bottomNavigation.setOnTabSelectListener(object :
