@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.*
 import com.example.happylife.R
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.commu_talktalk_item.*
 import kotlinx.android.synthetic.main.commu_talktalk_item.view.*
+import kotlinx.android.synthetic.main.custom_info_contents.*
 import kotlinx.android.synthetic.main.fragment_commu.*
 import java.text.SimpleDateFormat
 
@@ -103,6 +105,11 @@ class CommunityFragment : Fragment() {
             // recyclerview item click listener
             viewHolder.setOnClickListener {
                 val intent = Intent(context, TalkTalkActivity::class.java)
+                intent.putExtra("title", viewHolder.commu_title.text.toString() )
+                intent.putExtra("context", viewHolder.commu_content.text.toString())
+                intent.putExtra("nickname", viewHolder.commu_nickname.text.toString())
+                intent.putExtra("timestamp", viewHolder.commu_contents_time.text.toString())
+                intent.putExtra("commutag", talktalkList[position].boardTag.toString())
                 startActivity(intent)
             }
         }
@@ -118,4 +125,5 @@ class CommunityFragment : Fragment() {
 
         return date
     }
+
 }

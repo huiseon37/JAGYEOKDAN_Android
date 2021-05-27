@@ -1,4 +1,4 @@
-package com.example.happylife
+ package com.example.happylife
 
 import android.app.Activity
 import android.content.Intent

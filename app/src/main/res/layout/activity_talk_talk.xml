@@ -82,22 +82,9 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            tools:ignore="HardcodedText" />
+                             />
 
                         <!--게시글 태그 2-->
-                        <TextView
-                            android:id="@+id/talktalk_tag2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="10dp"
-                            android:background="@drawable/main_color_talktag"
-                            android:fontFamily="@font/a_title_gothic2"
-                            android:gravity="center"
-                            android:text="시험 복기"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="9sp"
-                            tools:ignore="HardcodedText" />
 
                     </LinearLayout>
 
@@ -145,6 +132,7 @@
 
                     <!--게시한 시간 00분-->
                     <TextView
+                        android:id="@+id/talktalk_timestamp"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:layout_above="@id/talktalk_title"

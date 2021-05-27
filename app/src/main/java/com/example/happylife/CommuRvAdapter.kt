@@ -1,6 +1,7 @@
 package com.example.happylife
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ class CommuRvAdapter(
         val view = LayoutInflater.from(parent.context).inflate(R.layout.commu_talktalk_item, parent, false)
         return Holder(view)
     }
+
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(talktalkList[position])

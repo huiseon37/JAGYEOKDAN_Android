@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.happylife.databinding.ActivityMembershipBinding
 import com.example.happylife.databinding.ActivityTalkTalkBinding
+import kotlinx.android.synthetic.main.commu_talktalk_item.*
 
 class TalkTalkActivity : AppCompatActivity() {
 
@@ -15,6 +16,18 @@ class TalkTalkActivity : AppCompatActivity() {
         binding = ActivityTalkTalkBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        binding.talktalkTitle.text = intent.getStringExtra("title").toString()
+        binding.talktalkTimestamp.text = intent.getStringExtra("timestamp").toString()
+        binding.talktalkUserName.text = intent.getStringExtra("nickname").toString()
+        binding.talktalkContext.text = intent.getStringExtra("context").toString()
+        binding.talktalkTag1.text = intent.getStringExtra("commutag").toString()
+
+//        intent.putExtra("title", commu_title.text.toString() )
+//        intent.putExtra("context", commu_content.text.toString())
+//        intent.putExtra("nickname", commu_nickname.text.toString())
+//        intent.putExtra("timestamp", commu_contents_time.text.toString())
+//        intent.putExtra("commutag", commu_tag.text.toString())
 
         // 공감 버튼 클릭
         binding.btnLikeContext.setOnClickListener {

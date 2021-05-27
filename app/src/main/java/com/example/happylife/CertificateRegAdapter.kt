@@ -39,4 +39,6 @@ class CertificateRegAdapter(
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(deadlineList[position])
     }
+
+
 }
