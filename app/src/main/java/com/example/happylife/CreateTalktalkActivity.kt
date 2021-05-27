@@ -120,7 +120,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
         //talk timstamp
         TalkTalkDTO.timestamp = System.currentTimeMillis()
 
-        TalkTalkDTO.tag = "1"
+        TalkTalkDTO.nickname = MyApplication.prefs.getString("nickname", "")
 
         if (storageRef != null) {
             photoUri?.let {
@@ -155,7 +155,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
                 id: Long
             ) {
                 binding.spinnerLabels.setSelection(position)
-//                TalkTalkDTO.tag = position.toString()
+                TalkTalkDTO.tag = position.toString()
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {}
