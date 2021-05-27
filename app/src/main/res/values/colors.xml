@@ -29,5 +29,6 @@
     <color name="back_sub_color_light_blue">#F1F1FF</color>
     <color name="light_gray">#F9F9F9</color>
     <color name="light_purple">#FAFAFF</color>
+    <color name="gray_border_line">#C4C4C4</color>
 
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white">
 
     <LinearLayout
@@ -27,53 +27,63 @@
                 android:fontFamily="@font/a_title_gothic3"
                 android:text="톡톡"
                 android:textColor="@color/main_color"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
         </LinearLayout>
+
         <View
             android:layout_width="63dp"
             android:layout_height="3dp"
             android:layout_marginTop="-3dp"
-            android:background="@color/main_color"/>
+            android:background="@color/main_color" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E5E5E5"
+            android:background="@color/gray_search_bar"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:layout_width="360dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:hint="검색어를 입력해 주세요"
+                android:backgroundTint="@color/main_color"
                 android:fontFamily="@font/a_title_gothic1"
-                android:textSize="13sp"/>
+                android:hint="검색어를 입력해 주세요"
+                android:paddingBottom="15dp"
+                android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:src="@drawable/search_icon"
-                android:layout_marginStart="-35dp"/>
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="-35dp"
+                android:paddingBottom="3dp"
+                android:src="@drawable/search_icon" />
+
             <ImageView
                 android:id="@+id/commu_filter_btn"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:layout_marginStart="15dp"
-                android:src="@drawable/filter_2"/>
+                android:paddingBottom="3dp"
+                android:src="@drawable/filter_2" />
 
-       </LinearLayout>
+        </LinearLayout>
 
         <HorizontalScrollView
             android:id="@+id/horizontalScroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none"
             android:background="@drawable/container_design"
+            android:scrollbars="none"
             app:layout_constraintTop_toBottomOf="@id/license_name_bar">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
@@ -84,10 +94,11 @@
                     android:layout_height="25dp"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/license_detail_info_round_box"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="전체"
                     android:textColor="@color/main_color"
-                    android:fontFamily="@font/a_title_gothic2"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_management"
@@ -98,7 +109,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="경영·사무"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_marketing"
@@ -109,7 +121,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="마케팅·광고·홍보"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_it"
@@ -120,7 +133,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="IT·인터넷"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_design"
@@ -131,7 +145,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="디자인"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_trade"
@@ -142,7 +157,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="무역·유통"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_sales"
@@ -153,7 +169,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="영업·고객상담"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_service"
@@ -164,7 +181,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="서비스"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_research"
@@ -175,7 +193,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="연구개발·설계"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_produce"
@@ -186,7 +205,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="생산·제조"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_teaching"
@@ -197,7 +217,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="교육"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_construction"
@@ -208,7 +229,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="건설"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_medical"
@@ -219,7 +241,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="의료"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_media"
@@ -230,7 +253,8 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="미디어"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
                 <Button
                     android:id="@+id/btn_special"
@@ -242,35 +266,42 @@
                     android:fontFamily="@font/a_title_gothic2"
                     android:text="전문·특수직"
                     android:textColor="@color/gray_color"
-                    android:textSize="10sp"/>
+                    android:textSize="10sp"
+                    tools:ignore="HardcodedText, SmallSp" />
 
             </LinearLayout>
 
         </HorizontalScrollView>
+
     </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="130dp">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_commu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
-            </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_commu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
+        android:gravity="end"
         app:layout_constraintBottom_toBottomOf="parent">
+
         <ImageView
             android:id="@+id/commu_write_btn"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/commu_write_btn"/>
+            android:src="@drawable/commu_write_btn" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

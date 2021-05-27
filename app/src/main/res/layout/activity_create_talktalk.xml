@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateTalktalkActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".CreateTalktalkActivity">
+
     <RelativeLayout
         android:id="@+id/top_bar_writetalktalk"
         android:layout_width="match_parent"
@@ -13,123 +14,178 @@
         android:background="@drawable/container_design"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
-        //뒤로가기 버튼
+
         <Button
+            android:id="@+id/return_to_commu"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/right1"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginStart="15dp"
+            android:background="@drawable/right1" />
 
         <TextView
             android:id="@+id/tv_certificate_name_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:fontFamily="@font/a_title_gothic3"
             android:text="글 쓰기"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>튼
-        //업로드 버튼
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <!--업로드 버튼-->
         <Button
-            android:layout_width="50dp"
+            android:id="@+id/button_commit_my_talk"
+            android:layout_width="40dp"
             android:layout_height="25dp"
-            android:background="@drawable/main_color_talktag"
             android:layout_alignParentEnd="true"
-            android:text="완료"
             android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:textColor="@color/white"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_jobs_selected"
             android:fontFamily="@font/a_title_gothic1"
-            android:textSize="12sp"/>
+            android:text="완료"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="HardcodedText, SmallSp" />
+
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/divider_topbar_talkttalk"
-        android:layout_below="@id/top_bar_writetalktalk"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@id/top_bar_writetalktalk"
         android:background="@drawable/gray_underline"
         android:orientation="horizontal" />
+
     <ScrollView
-        android:layout_below="@id/divider_topbar_talkttalk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/bottom_layer_talktalk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:layout_below="@id/divider_topbar_talkttalk"
-        android:orientation="vertical"
-        android:layout_margin="12dp">
-        //태그 선
+        android:layout_below="@id/divider_topbar_talkttalk">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="68dp"
-                android:layout_height="30dp"
-                android:background="@drawable/background_button_white"
-                android:text="태그 선택"
-                android:layout_marginRight="13dp"
-                android:fontFamily="@font/a_title_gothic2"
-                android:textColor="@color/main_color"
-                android:textSize="13sp"/>
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintlayout_labels_spinner"
+                    android:layout_width="97dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/background_tag_spinner">
+
+                    <Spinner
+                        android:id="@+id/spinner_labels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:popupBackground="@drawable/background_tag_spinner"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="14dp"
+                        android:src="@drawable/btn_arrow_down"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="contentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <!--게시글 제목-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:hintTextColor="@color/main_color">
+
+                <EditText
+                    android:id="@+id/talktalk_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/a_title_gothic3"
+                    android:hint="제목을 입력해주세요."
+                    android:paddingTop="7dp"
+                    android:textSize="13sp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gray_underline" />
+
+            <!--게시글 본문-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="@color/main_color">
+
+                <EditText
+                    android:id="@+id/talktalk_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/a_title_gothic1"
+                    android:hint="내용을 입력해주세요."
+                    android:paddingTop="7dp"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/addphoto_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp" />
+
         </LinearLayout>
-        //게시글 제목
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_marginHorizontal="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:hint="제목을 입력해주세요."
-                android:fontFamily="@font/a_title_gothic3"
-                android:textSize="18sp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/gray_underline"/>
-        //게시글 본문
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:hint="내용을 입력해주세요."
-                android:textAlignment="textStart"
-                android:background="@color/white"
-                android:fontFamily="@font/a_title_gothic1"
-                android:textSize="14sp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <ImageView
-            android:layout_margin="5dp"
-            android:id="@+id/addphoto_image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            />
-    </LinearLayout>
+
     </ScrollView>
+
     <RelativeLayout
         android:id="@+id/bottom_layer_talktalk"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/gray_underline">
+        android:background="@color/gray_search_bar">
+
         <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:id="@+id/btn_add_photo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="14dp"
-            android:background="@drawable/addphoto_icon"/>
+            android:layout_marginStart="14dp"
+            android:background="@drawable/addphoto_icon" />
+
     </RelativeLayout>
+
 </RelativeLayout>

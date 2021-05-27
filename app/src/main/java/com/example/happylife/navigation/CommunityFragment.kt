@@ -39,7 +39,7 @@ class CommunityFragment : Fragment() {
         rv_commu?.setHasFixedSize(true)
 
         commu_write_btn.setOnClickListener{
-            val intent = Intent(context, TalkTalkActivity::class.java)
+            val intent = Intent(context, CreateTalktalkActivity::class.java)
             startActivity(intent)
         }
 
