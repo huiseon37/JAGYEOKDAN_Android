@@ -30,5 +30,9 @@
     <color name="light_gray">#F9F9F9</color>
     <color name="light_purple">#FAFAFF</color>
     <color name="gray_border_line">#C4C4C4</color>
+    <color name="light_gray_text">#979797</color>
+    <color name="red_color">#FF7B7B</color>
+    <color name="purple_middle">#8989D3</color>
+    <color name="blue">#577BE1</color>
 
 </resources>

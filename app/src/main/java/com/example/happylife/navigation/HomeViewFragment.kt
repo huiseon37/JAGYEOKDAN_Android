@@ -7,26 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.*
 import com.example.happylife.R
-import com.example.happylife.databinding.ActivityMainBinding
 import com.example.happylife.model.CertificateInfoData
 import com.example.happylife.model.RecCertificateData
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_recommend_certificate.view.*
-import nl.joery.animatedbottombar.AnimatedBottomBar
 import java.text.SimpleDateFormat
 import java.util.*
 
 class HomeViewFragment : Fragment() {
 
-    private lateinit var binding: ActivityMainBinding
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
     private val nickname = MyApplication.prefs.getString("nickname", "")
@@ -43,7 +37,6 @@ class HomeViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         rv_recommend_certificate?.adapter = RecCertificateAdapter()
         rv_recommend_certificate?.layoutManager = LinearLayoutManager(context)
         rv_recommend_certificate?.setHasFixedSize(true) // recyclerview 크기 고정
@@ -68,7 +61,8 @@ class HomeViewFragment : Fragment() {
             startActivity(intent)
         }
 
-        dday_licensebox_second.setOnClickListener {
+        // 12시 지난 후 다이얼로그
+        dday_licensebox_third.setOnClickListener {
             val dlg = ReviewDialog(requireContext())
 
             dlg.setOnOKClickedListener {
@@ -124,19 +118,21 @@ class HomeViewFragment : Fragment() {
                                     // 자격증 이름 & 신청 날짜 받아서 리스트에 추가
                                     for (postSnapshot in dataSnapshot.children) {
                                         postSnapshot.children.forEachIndexed { index, dataSnapshot ->
-                                            // 각 자격증에서 신청 기간이 제일 임박한 회차 정보 1개만 가져오기
-                                            if (index == 0) {
-                                                dataSnapshot.getValue(CertificateInfoData::class.java)
-                                                    ?.let {
-                                                        RecCertificateData(
-                                                            postSnapshot.key.toString(),
-                                                            getDDay(it.examStartRegDate)
-                                                        )
-                                                    }?.let {
-                                                        recommendList.add(
-                                                            it
-                                                        )
-                                                    }
+                                            if (postSnapshot.key.toString() != "정보처리기사") {
+                                                // 각 자격증에서 신청 기간이 제일 임박한 회차 정보 1개만 가져오기
+                                                if (index == 0) {
+                                                    dataSnapshot.getValue(CertificateInfoData::class.java)
+                                                        ?.let {
+                                                            RecCertificateData(
+                                                                postSnapshot.key.toString(),
+                                                                getDDay(it.examStartRegDate)
+                                                            )
+                                                        }?.let {
+                                                            recommendList.add(
+                                                                it
+                                                            )
+                                                        }
+                                                }
                                             }
                                         }
                                     }
@@ -151,6 +147,7 @@ class HomeViewFragment : Fragment() {
                             })
                     }
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                 }
             })
@@ -234,10 +231,19 @@ class HomeViewFragment : Fragment() {
 
                 // 찜한 자격증 있는 경우 정보 띄우기
                 if (dataSnapshot.hasChild("dibs")) {
+                    // 첫번째 카드
                     first_box_license_text.visibility = View.VISIBLE
                     D_date_left_first.visibility = View.VISIBLE
                     text_Dnext_to_date_first.visibility = View.VISIBLE
                     imv_plus_home1.visibility = View.INVISIBLE
+                    btn_test_home.visibility = View.VISIBLE
+
+                    // 두번째 카드
+                    second_box_license_text.visibility = View.VISIBLE
+                    imv_plus_home2.visibility = View.INVISIBLE
+                    text_Dnext_to_date_second.visibility = View.VISIBLE
+                    D_date_left_second.visibility = View.VISIBLE
+                    btn_apply_home.visibility = View.VISIBLE
                 }
             }
 

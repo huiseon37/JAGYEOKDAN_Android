@@ -150,6 +150,21 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/plus" />
 
+                                <Button
+                                    android:id="@+id/btn_test_home"
+                                    android:layout_width="25dp"
+                                    android:layout_height="17dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/btn_test_home"
+                                    android:text="시험"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText, SmallSp" />
+
                                 <TextView
                                     android:id="@+id/text_Dnext_to_date_first"
                                     android:layout_width="wrap_content"
@@ -159,8 +174,8 @@
                                     android:layout_toStartOf="@+id/D_date_left_first"
                                     android:fontFamily="@font/a_title_gothic2"
                                     android:text="D - "
-                                    android:textColor="@color/black"
-                                    android:textSize="20sp"
+                                    android:textColor="@color/red_color"
+                                    android:textSize="15sp"
                                     android:visibility="invisible"
                                     tools:ignore="HardcodedText" />
 
@@ -174,8 +189,8 @@
                                     android:layout_marginBottom="10dp"
                                     android:fontFamily="@font/a_title_gothic2"
                                     android:text="12"
-                                    android:textColor="@color/black"
-                                    android:textSize="20sp"
+                                    android:textColor="@color/red_color"
+                                    android:textSize="15sp"
                                     android:visibility="invisible" />
                             </RelativeLayout>
 
@@ -194,8 +209,10 @@
                                     android:layout_marginVertical="8dp"
                                     android:fontFamily="@font/a_title_gothic1"
                                     android:lineSpacingExtra="8dp"
+                                    android:text="정보처리기사"
                                     android:textColor="@color/black"
-                                    android:textSize="13sp" />
+                                    android:textSize="13sp"
+                                    android:visibility="invisible" />
 
                                 <ImageView
                                     android:id="@+id/imv_plus_home2"
@@ -204,16 +221,32 @@
                                     android:layout_centerInParent="true"
                                     android:src="@drawable/plus" />
 
+                                <Button
+                                    android:id="@+id/btn_apply_home"
+                                    android:layout_width="25dp"
+                                    android:layout_height="17dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/btn_apply_home"
+                                    android:text="신청"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+                                    android:visibility="invisible"
+                                    tools:ignore="HardcodedText, SmallSp" />
+
                                 <TextView
                                     android:id="@+id/text_Dnext_to_date_second"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginBottom="4dp"
+                                    android:layout_marginBottom="10dp"
                                     android:layout_toStartOf="@+id/D_date_left_second"
+                                    android:fontFamily="@font/a_title_gothic2"
                                     android:text="D - "
                                     android:textColor="@color/black"
-                                    android:textSize="20sp"
+                                    android:textSize="15sp"
                                     android:visibility="invisible"
                                     tools:ignore="HardcodedText" />
 
@@ -223,10 +256,13 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:layout_alignParentBottom="true"
-                                    android:layout_marginEnd="4dp"
-                                    android:layout_marginBottom="4dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/a_title_gothic2"
+                                    android:text="38"
                                     android:textColor="@color/black"
-                                    android:textSize="20sp" />
+                                    android:textSize="15sp"
+                                    android:visibility="invisible" />
 
                             </RelativeLayout>
 
