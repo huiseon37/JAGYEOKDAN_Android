@@ -5,6 +5,9 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.example.happylife.databinding.ActivityCreateTalktalkBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -16,10 +19,12 @@ import java.util.*
 class CreateTalktalkActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateTalktalkBinding
     var PICK_IMAGE_FROM_ALBUM = 0
-    var storage : FirebaseStorage? = null
-    var photoUri : Uri? = null
-    var auth : FirebaseAuth? = null
-    var database : FirebaseDatabase? = null
+    var storage: FirebaseStorage? = null
+    var photoUri: Uri? = null
+    var auth: FirebaseAuth? = null
+    var database: FirebaseDatabase? = null
+
+    private lateinit var tagList: ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +39,26 @@ class CreateTalktalkActivity : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
         database = FirebaseDatabase.getInstance()
 
+        tagList = arrayListOf(
+            "태그 선택",
+            "경영·사무",
+            "마케팅·광고·홍보",
+            "IT·인터넷",
+            "디자인",
+            "무역·유통",
+            "영업·고객상담",
+            "서비스",
+            "연구개발·설계",
+            "생산·제조",
+            "교육",
+            "건설",
+            "의료",
+            "미디어",
+            "전문·특수직"
+        )
+
+        tagsAdapter()
+
 
         //앨범 열기
         binding.btnAddPhoto.setOnClickListener {
@@ -41,7 +66,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
             //앨범열기
             val photoPickerIntent = Intent(Intent.ACTION_PICK)
             photoPickerIntent.type = "image/*"
-            startActivityForResult(photoPickerIntent,PICK_IMAGE_FROM_ALBUM)
+            startActivityForResult(photoPickerIntent, PICK_IMAGE_FROM_ALBUM)
         }
 
         //이미지 업로드
@@ -58,17 +83,21 @@ class CreateTalktalkActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == PICK_IMAGE_FROM_ALBUM){
-            if(resultCode == Activity.RESULT_OK) {
+        if (requestCode == PICK_IMAGE_FROM_ALBUM) {
+            if (resultCode == Activity.RESULT_OK) {
                 //이미지 경로 불러오기
                 photoUri = data?.data
                 binding.addphotoImage.setImageURI(photoUri)
-            }else{
+                binding.imvXTalktalk.visibility = View.VISIBLE
+                binding.viewImageUnderlineTalktalk.visibility = View.VISIBLE
+                binding.etAddCommentTalktalk.visibility = View.VISIBLE
+            } else {
                 //취소하기
                 finish()
             }
         }
     }
+
     private fun contentUpload() {
         val timestamp = SimpleDateFormat("yyyyMMddmmss").format(Date())
         val imageFileName = "IMAGE_" + timestamp + "_.png"
@@ -106,5 +135,26 @@ class CreateTalktalkActivity : AppCompatActivity() {
         setResult(Activity.RESULT_OK)
 
         finish()
+    }
+
+    private fun tagsAdapter() {
+        val tagsAdapter = ArrayAdapter(this, R.layout.item_tags_spinner, tagList)
+
+        binding.constraintlayoutLabelsSpinner.visibility = View.VISIBLE
+        binding.spinnerLabels.adapter = tagsAdapter
+        binding.spinnerLabels.setSelection(0)
+
+        binding.spinnerLabels.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                binding.spinnerLabels.setSelection(position)
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+        }
     }
 }

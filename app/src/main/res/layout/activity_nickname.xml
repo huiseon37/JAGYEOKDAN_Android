@@ -142,7 +142,7 @@
                 android:inputType="text"
                 android:paddingBottom="15dp"
                 android:singleLine="true"
-                android:textSize="11sp"
+                android:textSize="12sp"
                 tools:ignore="HardcodedText" />
 
             <View
