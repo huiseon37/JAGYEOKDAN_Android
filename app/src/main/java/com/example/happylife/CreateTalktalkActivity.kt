@@ -37,7 +37,6 @@ class CreateTalktalkActivity : AppCompatActivity() {
 
         //board tag 변수
         val boardTagNum = intent.getIntExtra("boardTagNum",1)
-        println(boardTagNum)
         createBoardTag(boardTagNum)
 
         //initial auth,firebase

@@ -72,7 +72,6 @@ class LicenseDetailInfo : AppCompatActivity(){
         binding.licenseDataClassification.setOnClickListener {
             val bottomSheet = TestRoundsFilterDialog()
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
-            sleep(5000)
             binding.averagePreTime.text = "26"
             binding.avergeDifficulty.text = "4.1"
             binding.licenseDataClassificationText.text = "2020년 2회 필기"

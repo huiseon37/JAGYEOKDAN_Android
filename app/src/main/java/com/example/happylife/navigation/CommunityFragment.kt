@@ -107,7 +107,8 @@ class CommunityFragment : Fragment() {
                 intent.putExtra("context", viewHolder.commu_content.text.toString())
                 intent.putExtra("nickname", viewHolder.commu_nickname.text.toString())
                 intent.putExtra("timestamp", viewHolder.commu_contents_time.text.toString())
-                intent.putExtra("commutag", talktalkList[position].boardTag.toString())
+                intent.putExtra("commutag", viewHolder.commu_tag.text.toString())
+                intent.putExtra("jobtag", talktalkList[position].tag.toString())
                 startActivity(intent)
             }
         }

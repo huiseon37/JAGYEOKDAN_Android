@@ -19,7 +19,8 @@ class TalkTalkActivity : AppCompatActivity() {
         binding.talktalkTimestamp.text = intent.getStringExtra("timestamp").toString()
         binding.talktalkUserName.text = intent.getStringExtra("nickname").toString()
         binding.talktalkContext.text = intent.getStringExtra("context").toString()
-        binding.talktalkTag1.text = intent.getStringExtra("commutag").toString()
+        binding.talktalkBoardTag.text = intent.getStringExtra("commutag").toString()
+        jobTagIntToString(intent.getStringExtra("jobtag").toString())
 
         // 공감 버튼 클릭
         binding.btnLikeContext.setOnClickListener {
@@ -42,6 +43,29 @@ class TalkTalkActivity : AppCompatActivity() {
         // 완료버튼 클릭
         binding.btnFinishTalkTalk.setOnClickListener {
             // Todo: db에 댓글 저장, 댓글 띄우기
+        }
+    }
+
+    private fun jobTagIntToString(tagNum:String){
+        when(tagNum){
+            "1" -> {
+                binding.talktalkTag1.text = "경영·사무"
+            }
+            "2" -> {
+                binding.talktalkTag1.text = "마케팅·광고·홍보"
+            }
+            "3" -> {
+                binding.talktalkTag1.text = "IT·인터넷"
+            }
+            "4" -> {
+                binding.talktalkTag1.text = "디자인"
+            }
+            "5" -> {
+                binding.talktalkTag1.text = "무역·유통"
+            }
+            "6" -> {
+                binding.talktalkTag1.text = "영업·고객상담"
+            }
         }
     }
 }

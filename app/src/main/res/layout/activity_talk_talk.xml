@@ -58,7 +58,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/board_tag"
+                    android:id="@+id/talktalk_board_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
