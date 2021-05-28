@@ -7,6 +7,7 @@ import com.example.happylife.navigation.CommunityFragment
 import com.example.happylife.navigation.HomeViewFragment
 import com.example.happylife.navigation.LicenceInfoFragment
 import com.example.happylife.navigation.MyPageFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class MainActivity : AppCompatActivity() {

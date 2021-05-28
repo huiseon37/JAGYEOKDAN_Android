@@ -5,10 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
+import com.example.happylife.databinding.ActivityMainBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import kotlinx.android.synthetic.main.activity_license_detail_info.*
 import kotlinx.android.synthetic.main.license_detail_info_filter.*
 
-class TestRoundsFilterDialog : BottomSheetDialogFragment() {
+class TestRoundsFilterDialog : BottomSheetDialogFragment(){
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,6 +29,12 @@ class TestRoundsFilterDialog : BottomSheetDialogFragment() {
             linearlayout_2020_2_writing.setBackgroundColor(resources.getColor(R.color.light_purple))
             imv_check_license_detail.visibility = View.VISIBLE
         }
+
+        /*이거안됨
+        button_apply_sorting_license.setOnClickListener {
+            binding.averagePreTime.text = "26"
+            binding.avergeDifficulty.text = "4.1"
+        }*/
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
