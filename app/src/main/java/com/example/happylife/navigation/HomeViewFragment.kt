@@ -43,7 +43,7 @@ class HomeViewFragment : Fragment() {
 
         // 필터 클릭
         imv_filter_home.setOnClickListener {
-            val filterSheet = BottomFilterSheetDialog()
+            val filterSheet = MainBottomFilterSheetDialog()
             filterSheet.show(this.parentFragmentManager, filterSheet.tag)
         }
 
