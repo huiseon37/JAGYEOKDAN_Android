@@ -4,15 +4,17 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock.sleep
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
 import com.example.happylife.model.CertificateInfoData
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.database.*
 
-class LicenseDetailInfo : AppCompatActivity() {
+class LicenseDetailInfo : AppCompatActivity(){
 
     private lateinit var binding: ActivityLicenseDetailInfoBinding
     private val nickname = MyApplication.prefs.getString("nickname", "")
@@ -70,6 +72,10 @@ class LicenseDetailInfo : AppCompatActivity() {
         binding.licenseDataClassification.setOnClickListener {
             val bottomSheet = TestRoundsFilterDialog()
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+            sleep(5000)
+            binding.averagePreTime.text = "26"
+            binding.avergeDifficulty.text = "4.1"
+            binding.licenseDataClassificationText.text = "2020년 2회 필기"
         }
 
         // 찜하기
