@@ -278,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="5dp"
-                        android:text="428"
+                        android:text="42"
                         android:textColor="#979797"
                         android:textSize="10sp" />
 
@@ -296,7 +296,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="25dp"
-                        android:text="22"
+                        android:text="12"
                         android:textColor="#979797"
                         android:textSize="10sp" />
 

@@ -155,6 +155,9 @@ class CreateTalktalkActivity : AppCompatActivity() {
         //talk timstamp
         TalkTalkDTO.timestamp = System.currentTimeMillis()
 
+        //comments_cnt
+        TalkTalkDTO.comments_cnt = 0
+
         TalkTalkDTO.nickname = MyApplication.prefs.getString("nickname", "")
 
         if (storageRef != null) {

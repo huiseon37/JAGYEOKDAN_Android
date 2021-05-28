@@ -7,10 +7,14 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.example.happylife.databinding.ActivityTalkTalkBinding
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class TalkTalkActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTalkTalkBinding
+    private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
+    private var databaseReference: DatabaseReference = firebaseDatabase.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +22,7 @@ class TalkTalkActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        var keyV = intent.getStringExtra("keyValue").toString()
         binding.talktalkTitle.text = intent.getStringExtra("title").toString()
         binding.talktalkTimestamp.text = intent.getStringExtra("timestamp").toString()
         binding.talktalkUserName.text = intent.getStringExtra("nickname").toString()
@@ -48,6 +53,9 @@ class TalkTalkActivity : AppCompatActivity() {
             binding.talktalkReplyContainer.visibility = View.VISIBLE
             binding.talktalkReplyText.text = binding.userCommentText.text.toString()
             binding.userCommentText.text = null
+            databaseReference = firebaseDatabase.getReference("TalkTalk/$keyV")
+
+            databaseReference.child("comments_cnt").setValue(1)
 
             // 키보드 내려가게
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

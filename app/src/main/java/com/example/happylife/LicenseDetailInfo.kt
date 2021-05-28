@@ -86,6 +86,7 @@ class LicenseDetailInfo : AppCompatActivity() {
         // 찜하기
         binding.imgStarLicenseDetail.setOnClickListener {
             binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
+            binding.star.text = "13"
 
             // DB 테이블 연결
             databaseReference = firebaseDatabase.getReference("users/$nickname/dibs")
@@ -153,7 +154,4 @@ class LicenseDetailInfo : AppCompatActivity() {
         })
     }
 
-    private fun changeContents(){
-
-    }
 }

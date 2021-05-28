@@ -29,7 +29,8 @@ class CommunityFragment : Fragment() {
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
     //private val nickname = MyApplication.prefs.getString("nickname", "")
-    private val talktalkList = arrayListOf<TalkTalkDTO>()
+    private var talktalkList = arrayListOf<TalkTalkDTO>()
+    private lateinit var keyV: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -70,14 +71,13 @@ class CommunityFragment : Fragment() {
 
                         for (postSnapshot in dataSnapshot.children) {
                             val item = postSnapshot.getValue(TalkTalkDTO::class.java)
+                            keyV = postSnapshot.key.toString()
                             if (item != null) {
                                 talktalkList.add(0, item)
                             }
                         }
                         notifyDataSetChanged()
-
                     }
-
                     override fun onCancelled(error: DatabaseError) {
                     }
                 })
@@ -100,6 +100,7 @@ class CommunityFragment : Fragment() {
             viewHolder.commu_nickname?.text = talktalkList[position].nickname
             viewHolder.commu_contents_time?.text = convertTimestampToDate(time)
             viewHolder.commu_tag?.text = talktalkList[position].boardTag
+            viewHolder.commu_comment_cnt?.text = talktalkList[position].comments_cnt.toString()
             // recyclerview item click listener
             viewHolder.setOnClickListener {
                 val intent = Intent(context, TalkTalkActivity::class.java)
@@ -109,6 +110,7 @@ class CommunityFragment : Fragment() {
                 intent.putExtra("timestamp", viewHolder.commu_contents_time.text.toString())
                 intent.putExtra("commutag", viewHolder.commu_tag.text.toString())
                 intent.putExtra("jobtag", talktalkList[position].tag.toString())
+                intent.putExtra("keyValue",keyV)
                 startActivity(intent)
             }
         }
