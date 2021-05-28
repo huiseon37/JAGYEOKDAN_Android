@@ -28,6 +28,7 @@ class CommunityFragment : Fragment() {
 
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
+
     //private val nickname = MyApplication.prefs.getString("nickname", "")
     private var talktalkList = arrayListOf<TalkTalkDTO>()
     private lateinit var keyV: String
@@ -46,12 +47,12 @@ class CommunityFragment : Fragment() {
         rv_commu?.layoutManager = LinearLayoutManager(context)
         rv_commu?.setHasFixedSize(true)
 
-        commu_write_btn.setOnClickListener{
+        commu_write_btn.setOnClickListener {
             val filterSheet = CommuFilterDialog()
             filterSheet.show(this.parentFragmentManager, filterSheet.tag)
         }
 
-        commu_filter_btn.setOnClickListener{
+        commu_filter_btn.setOnClickListener {
             val filterSheet = CommuFilterDialog()
             filterSheet.show(this.parentFragmentManager, filterSheet.tag)
         }
@@ -60,27 +61,28 @@ class CommunityFragment : Fragment() {
     inner class CommuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         init {
-                databaseReference = firebaseDatabase.getReference("TalkTalk")
+            databaseReference = firebaseDatabase.getReference("TalkTalk")
 
-                databaseReference.orderByChild("timestamp").addValueEventListener(object :
-                    ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+            databaseReference.orderByChild("timestamp").addValueEventListener(object :
+                ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                        // ArrayList 비워줌
-                        talktalkList.clear()
+                    // ArrayList 비워줌
+                    talktalkList.clear()
 
-                        for (postSnapshot in dataSnapshot.children) {
-                            val item = postSnapshot.getValue(TalkTalkDTO::class.java)
-                            keyV = postSnapshot.key.toString()
-                            if (item != null) {
-                                talktalkList.add(0, item)
-                            }
+                    for (postSnapshot in dataSnapshot.children) {
+                        val item = postSnapshot.getValue(TalkTalkDTO::class.java)
+                        keyV = postSnapshot.key.toString()
+                        if (item != null) {
+                            talktalkList.add(0, item)
                         }
-                        notifyDataSetChanged()
                     }
-                    override fun onCancelled(error: DatabaseError) {
-                    }
-                })
+                    notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                }
+            })
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -104,13 +106,13 @@ class CommunityFragment : Fragment() {
             // recyclerview item click listener
             viewHolder.setOnClickListener {
                 val intent = Intent(context, TalkTalkActivity::class.java)
-                intent.putExtra("title", viewHolder.commu_title.text.toString() )
+                intent.putExtra("title", viewHolder.commu_title.text.toString())
                 intent.putExtra("context", viewHolder.commu_content.text.toString())
                 intent.putExtra("nickname", viewHolder.commu_nickname.text.toString())
                 intent.putExtra("timestamp", viewHolder.commu_contents_time.text.toString())
                 intent.putExtra("commutag", viewHolder.commu_tag.text.toString())
                 intent.putExtra("jobtag", talktalkList[position].tag.toString())
-                intent.putExtra("keyValue",keyV)
+                intent.putExtra("keyValue", keyV)
                 startActivity(intent)
             }
         }

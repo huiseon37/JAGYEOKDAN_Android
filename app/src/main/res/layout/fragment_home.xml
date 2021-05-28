@@ -462,7 +462,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[정보] 코딩 자격증 종류와 다양한 자격증 정보들 공유"
+                                    android:text="[정보] 코딩 자격증 종류와 다양한 자격증 정보들..."
                                     android:textColor="@color/white"
                                     android:textSize="13sp"
                                     android:textStyle="bold"
@@ -562,7 +562,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[고민상담/수다] 외국계 기업 목표인데 컴퓨터 자격증 필요할까요? "
+                                    android:text="[고민상담/수다] 외국계 기업 목표인데 컴퓨터 자격증 필요할..."
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />
@@ -602,7 +602,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[정보] 이번에 큐시즘 동아리 하게됬는데"
+                                    android:text="[정보] 이번에 큐시즘 동아리 하게됐는데"
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />

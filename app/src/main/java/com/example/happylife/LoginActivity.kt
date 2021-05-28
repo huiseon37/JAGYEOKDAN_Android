@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
                 //Second step
                 firebaseAuthWithGoogle(account)
             } else {
-                Toast.makeText(this, "fail", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "fail", Toast.LENGTH_LONG).show()
             }
         }
     }

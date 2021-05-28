@@ -40,6 +40,7 @@ class NicknameActivity : AppCompatActivity() {
                 // SharedPreference에 nickname 저장
                 MyApplication.prefs.setString("nickname", binding.etNickname.text.toString())
                 MyApplication.prefs.setString("isLogin", "true")
+                MyApplication.prefs.setString("star", "false")
 
                 val intent = Intent(this, JobActivity::class.java)
 

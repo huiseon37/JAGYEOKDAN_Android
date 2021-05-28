@@ -32,6 +32,11 @@ class LicenseDetailInfo : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val starPressed = MyApplication.prefs.getString("star", "")
+        if(starPressed == "true") {
+            binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
+        }
+
         binding.tvCertificateNameDetail.text = intent.getStringExtra("name").toString()
 
         // 포인트 사용 버튼 클릭
@@ -85,6 +90,7 @@ class LicenseDetailInfo : AppCompatActivity() {
 
         // 찜하기
         binding.imgStarLicenseDetail.setOnClickListener {
+            MyApplication.prefs.setString("star", "true")
             binding.imgStarLicenseDetail.setBackgroundResource(R.drawable.start_deep_purple)
             binding.star.text = "13"
 
