@@ -1,7 +1,8 @@
 package com.example.happylife
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import androidx.appcompat.app.AppCompatActivity
 import com.example.happylife.databinding.ActivityMainBinding
 import com.example.happylife.navigation.CommunityFragment
 import com.example.happylife.navigation.HomeViewFragment
@@ -21,13 +22,19 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.hiddenBtn.setOnClickListener {
+            val licenseInfoFragment = LicenceInfoFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
+            binding.bottomNavigation.selectTabAt(1)
+        }
 
         //네비게이션 선택-이거안됨
 //        dday_licensebox_third.setOnClickListener {
 //            val isNavTab = MyApplication.prefs.getString("isClicked", "false")
 //            println(isNavTab+"롤롤로")
 //            if(isNavTab == "true"){
-//                binding.bottomNavigation.selectTabAt(1)
+//
 //                MyApplication.prefs.setString("isClicked", "false")
 //            }
 //        }
