@@ -80,7 +80,7 @@ class HomeViewFragment : Fragment() {
             dlg.start()
         }
 
-        dday_licensebox_third.setOnClickListener {
+        imv_plus_home3.setOnClickListener {
             val licenseInfoFragment = LicenceInfoFragment()
             parentFragmentManager.beginTransaction()
                 .replace(R.id.main_screen_panel, licenseInfoFragment).commit()
