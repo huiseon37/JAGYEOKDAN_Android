@@ -80,6 +80,18 @@ class HomeViewFragment : Fragment() {
             dlg.start()
         }
 
+        // 메인 화면 카드 선택 시 자격증 상세 정보 화면으로 이동
+        dday_licensebox_yellow.setOnClickListener {
+            val intent = Intent(context, LicenseDetailInfo::class.java)
+            intent.putExtra("name", "정보처리기사")
+            startActivity(intent)
+        }
+        dday_licensebox_second.setOnClickListener {
+            val intent = Intent(context, LicenseDetailInfo::class.java)
+            intent.putExtra("name", "정보처리기사")
+            startActivity(intent)
+        }
+
         imv_plus_home3.setOnClickListener {
             val licenseInfoFragment = LicenceInfoFragment()
             parentFragmentManager.beginTransaction()

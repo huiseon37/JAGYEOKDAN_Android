@@ -128,15 +128,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     }
 
     private fun loadPlacePicker() {
+        println("loadPlacePicker 실행됨")
         val builder = PlacePicker.IntentBuilder()
+        startActivityForResult(builder.build(this@MapsActivity), PLACE_PICKER_REQUEST)
 
-        try {
-            startActivityForResult(builder.build(this@MapsActivity), PLACE_PICKER_REQUEST)
-        } catch (e: GooglePlayServicesRepairableException) {
-            e.printStackTrace()
-        } catch (e: GooglePlayServicesNotAvailableException) {
-            e.printStackTrace()
-        }
+//        try {
+//            startActivityForResult(builder.build(this@MapsActivity), PLACE_PICKER_REQUEST)
+//        } catch (e: GooglePlayServicesRepairableException) {
+//            e.printStackTrace()
+//        } catch (e: GooglePlayServicesNotAvailableException) {
+//            e.printStackTrace()
+//        }
     }
 
     companion object {
