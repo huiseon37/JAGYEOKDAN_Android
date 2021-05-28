@@ -1,8 +1,10 @@
 package com.example.happylife
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.example.happylife.databinding.ActivityTalkTalkBinding
 
@@ -45,11 +47,16 @@ class TalkTalkActivity : AppCompatActivity() {
         binding.btnFinishTalkTalk.setOnClickListener {
             binding.talktalkReplyContainer.visibility = View.VISIBLE
             binding.talktalkReplyText.text = binding.userCommentText.text.toString()
+            binding.userCommentText.text = null
+
+            // 키보드 내려가게
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(binding.userCommentText.windowToken, 0)
         }
     }
 
-    private fun jobTagIntToString(tagNum:String){
-        when(tagNum){
+    private fun jobTagIntToString(tagNum: String) {
+        when (tagNum) {
             "1" -> {
                 binding.talktalkTag1.text = "경영·사무"
             }
