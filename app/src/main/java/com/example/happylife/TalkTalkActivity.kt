@@ -24,7 +24,7 @@ class TalkTalkActivity : AppCompatActivity() {
         // 공감 버튼 클릭
         binding.btnLikeContext.setOnClickListener {
             binding.btnLikeContext.setBackgroundResource(R.drawable.heart_purple)
-            binding.tvHeartCountTalkTalk.text = 12.toString()
+            binding.tvHeartCountTalkTalk.text = 3.toString()
             binding.tvHeartCountTalkTalk.setTextColor(
                 ContextCompat.getColor(
                     this,
