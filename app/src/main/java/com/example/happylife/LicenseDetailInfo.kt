@@ -78,11 +78,6 @@ class LicenseDetailInfo : AppCompatActivity(){
                 binding.avergeDifficulty.text = "4.1"
                 binding.licenseDataClassificationText.text = "2020년 2회 필기"
             }, 3000)
-            Handler().postDelayed({
-                binding.averagePreTime.text = "26"
-                binding.avergeDifficulty.text = "4.1"
-                binding.licenseDataClassificationText.text = "2020년 2회 필기"
-            }, 15000)
         }
 
         // 찜하기
