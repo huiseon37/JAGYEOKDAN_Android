@@ -1,7 +1,5 @@
 package com.example.happylife
 
-import java.sql.Timestamp
-
 data class TalkTalkDTO (
     var title : String? = null,
     var tag : String? = null,

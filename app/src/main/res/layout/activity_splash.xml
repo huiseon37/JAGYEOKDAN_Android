@@ -10,10 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -21,25 +21,28 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="-13dp"
-            android:src="@drawable/we">
-        </ImageView>
+            android:src="@drawable/we" />
+
         <ImageView
             android:id="@+id/splash_got"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="-27dp"
-            android:src="@drawable/got"/>
+            android:src="@drawable/got" />
+
         <ImageView
             android:id="@+id/splash_main"
             android:layout_width="190dp"
             android:layout_height="82dp"
             android:layout_marginBottom="-30dp"
-            android:src="@drawable/main_logo_white"/>
+            android:src="@drawable/main_logo_white" />
+
         <ImageView
             android:id="@+id/splash_certificate"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:src="@drawable/certificate"/>
+            android:src="@drawable/certificate" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

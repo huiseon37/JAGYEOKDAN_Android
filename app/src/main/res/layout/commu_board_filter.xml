@@ -34,160 +34,196 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:baselineAligned="false">
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag1"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_margin="3dp"
-                android:gravity="center">
+                android:layout_weight="1"
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon1"/>
+                    android:src="@drawable/commu_filter_icon1" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag1_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="질문"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag2"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon2"/>
+                    android:src="@drawable/commu_filter_icon2" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag2_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="시험복기/후기"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:baselineAligned="false">
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag3"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_margin="3dp"
-                android:gravity="center">
+                android:layout_weight="1"
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon3"/>
+                    android:src="@drawable/commu_filter_icon3" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag3_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="고민상담/수다"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag4"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon4"/>
+                    android:src="@drawable/commu_filter_icon4" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag4_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="정보"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp">
+            android:baselineAligned="false">
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag5"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_margin="3dp"
-                android:gravity="center">
+                android:layout_weight="1"
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon5"/>
+                    android:src="@drawable/commu_filter_icon5" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag5_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="스터디모집"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/commu_board_filter_tag6"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
-                android:background="@drawable/review_contents_box"
-                android:orientation="vertical"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:background="@drawable/review_contents_box"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="17dp"
                     android:layout_height="17dp"
-                    android:src="@drawable/commu_filter_icon6"/>
+                    android:src="@drawable/commu_filter_icon6" />
+
                 <TextView
                     android:id="@+id/commu_board_filter_tag6_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
+                    android:fontFamily="@font/a_title_gothic2"
                     android:text="중고장터"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:fontFamily="@font/a_title_gothic2"/>
+                    tools:ignore="HardcodedText" />
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

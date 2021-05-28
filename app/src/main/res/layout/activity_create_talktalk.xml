@@ -166,6 +166,7 @@
                     android:background="@color/white"
                     android:fontFamily="@font/a_title_gothic1"
                     android:hint="내용을 입력해주세요."
+                    android:lineSpacingExtra="7dp"
                     android:paddingTop="7dp"
                     android:textAlignment="textStart"
                     android:textSize="14sp"
@@ -188,9 +189,9 @@
                     android:id="@+id/et_add_comment_talktalk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:backgroundTint="#00000000"
                     android:hint="설명을 추가할 수 있어요"
-                    android:layout_marginStart="10dp"
                     android:textSize="11sp"
                     android:visibility="invisible"
                     tools:ignore="HardcodedText, SmallSp" />

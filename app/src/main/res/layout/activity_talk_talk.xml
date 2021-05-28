@@ -141,7 +141,8 @@
                         android:fontFamily="@font/a_title_gothic1"
                         android:text="18분 전"
                         android:textAlignment="textEnd"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
 
                 </RelativeLayout>
 
@@ -201,7 +202,7 @@
                             android:text="공감"
                             android:textColor="@color/main_color"
                             android:textSize="8sp"
-                            tools:ignore="HardcodedText" />
+                            tools:ignore="HardcodedText, SmallSp" />
 
                     </RelativeLayout>
 
@@ -261,7 +262,8 @@
                                 android:layout_marginTop="6dp"
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="2 분전"
-                                android:textSize="10sp" />
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
 
                             <ImageView
                                 android:id="@+id/talktalk_reply_like_btn"
@@ -280,7 +282,8 @@
                                 android:layout_toStartOf="@id/talktalk_reply_commit_btn"
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="12"
-                                android:textSize="10sp" />
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
 
                             <TextView
                                 android:id="@+id/talktalk_reply_commit_btn"
@@ -293,7 +296,7 @@
                                 android:fontFamily="@font/a_title_gothic1"
                                 android:text="댓글달기"
                                 android:textSize="10sp"
-                                tools:ignore="HardcodedText" />
+                                tools:ignore="HardcodedText, SmallSp" />
 
                         </RelativeLayout>
 
@@ -363,7 +366,8 @@
                                     android:layout_marginTop="6dp"
                                     android:fontFamily="@font/a_title_gothic1"
                                     android:text="2 분전"
-                                    android:textSize="10sp" />
+                                    android:textSize="10sp"
+                                    tools:ignore="SmallSp" />
 
                                 <ImageView
                                     android:id="@+id/talktalk_reply_reply_like_btn"
@@ -382,7 +386,8 @@
                                     android:layout_toStartOf="@id/talktalk_reply_reply_commit_btn"
                                     android:fontFamily="@font/a_title_gothic1"
                                     android:text="12"
-                                    android:textSize="10sp" />
+                                    android:textSize="10sp"
+                                    tools:ignore="SmallSp" />
 
                                 <TextView
                                     android:id="@+id/talktalk_reply_reply_commit_btn"
@@ -395,7 +400,7 @@
                                     android:fontFamily="@font/a_title_gothic1"
                                     android:text="댓글달기"
                                     android:textSize="10sp"
-                                    tools:ignore="HardcodedText" />
+                                    tools:ignore="HardcodedText, SmallSp" />
 
                             </RelativeLayout>
 
@@ -435,7 +440,7 @@
                 android:gravity="center_vertical"
                 android:hint="자격단 단원님의 매너있는 댓글을 남겨주세요."
                 android:textSize="11sp"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText, SmallSp" />
 
             <Button
                 android:id="@+id/btn_finish_talk_talk"
@@ -449,7 +454,7 @@
                 android:text="입력"
                 android:textColor="@color/white"
                 android:textSize="10sp"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText, SmallSp" />
 
         </RelativeLayout>
 

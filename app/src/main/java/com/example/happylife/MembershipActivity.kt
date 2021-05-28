@@ -19,31 +19,26 @@ class MembershipActivity : AppCompatActivity() {
         binding.btnSigninMembership.setOnClickListener {
             if (binding.etId.text.toString().trim().isNotEmpty()) {
                 if (binding.etPwd.text.toString().trim().isNotEmpty()) {
-                    if (binding.etPwdCheck.text.toString().trim().isNotEmpty()) {
-                        if (binding.etName.text.toString().trim().isNotEmpty()) {
-                            if (binding.etPhone.text.toString().trim().isNotEmpty()) {
+                    if (binding.etName.text.toString().trim().isNotEmpty()) {
+                        if (binding.etPhone.text.toString().trim().isNotEmpty()) {
 
-                                val intent = Intent(this, NicknameActivity::class.java)
-                                intent.putExtra("id", binding.etId.text.toString())
-                                intent.putExtra("pwd", binding.etPwd.text.toString())
-                                intent.putExtra("name", binding.etName.text.toString())
-                                intent.putExtra("phone", binding.etPhone.text.toString())
-                                startActivity(intent)
+                            val intent = Intent(this, NicknameActivity::class.java)
+                            intent.putExtra("id", binding.etId.text.toString())
+                            intent.putExtra("pwd", binding.etPwd.text.toString())
+                            intent.putExtra("name", binding.etName.text.toString())
+                            intent.putExtra("phone", binding.etPhone.text.toString())
+                            startActivity(intent)
 
-                            } else {
-                                Toast.makeText(
-                                    applicationContext,
-                                    "핸드폰 번호를 입력해주세요",
-                                    Toast.LENGTH_SHORT
-                                )
-                                    .show()
-                            }
                         } else {
-                            Toast.makeText(applicationContext, "이름을 입력해주세요", Toast.LENGTH_SHORT)
+                            Toast.makeText(
+                                applicationContext,
+                                "핸드폰 번호를 입력해주세요",
+                                Toast.LENGTH_SHORT
+                            )
                                 .show()
                         }
                     } else {
-                        Toast.makeText(applicationContext, "비밀번호를 확인해주세요", Toast.LENGTH_SHORT)
+                        Toast.makeText(applicationContext, "이름을 입력해주세요", Toast.LENGTH_SHORT)
                             .show()
                     }
                 } else {

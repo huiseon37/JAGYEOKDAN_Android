@@ -63,7 +63,7 @@
             android:text="편리한 자격단 서비스 이용에 활용됩니다."
             android:textColor="@color/gray_color"
             android:textSize="10sp"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText, SmallSp" />
 
     </LinearLayout>
 
@@ -135,7 +135,8 @@
             android:text="나중에 하기"
             android:textColor="@color/gray"
             android:textSize="13sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_next_register" />
+            app:layout_constraintBottom_toTopOf="@+id/btn_next_register"
+            tools:ignore="HardcodedText" />
 
         <View
             android:layout_width="70dp"

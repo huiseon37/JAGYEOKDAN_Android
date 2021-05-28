@@ -12,7 +12,6 @@ import com.example.happylife.databinding.ActivityCreateTalktalkBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.commu_board_filter.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,7 +36,7 @@ class CreateTalktalkActivity : AppCompatActivity() {
         setContentView(view)
 
         //board tag 변수
-        var boardTagNum = intent.getIntExtra("boardTagNum",1)
+        val boardTagNum = intent.getIntExtra("boardTagNum",1)
         println(boardTagNum)
         createBoardTag(boardTagNum)
 

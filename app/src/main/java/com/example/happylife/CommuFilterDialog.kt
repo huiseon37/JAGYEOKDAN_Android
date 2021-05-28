@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.bottom_filter_sheet.*
 import kotlinx.android.synthetic.main.commu_board_filter.*
-import kotlinx.android.synthetic.main.license_detail_info_filter.*
 
 class CommuFilterDialog : BottomSheetDialogFragment() {
     private var boardTagN = 0
@@ -34,6 +31,7 @@ class CommuFilterDialog : BottomSheetDialogFragment() {
             val intent = Intent(context, CreateTalktalkActivity::class.java)
             intent.putExtra("boardTagNum",boardTagN)
             startActivity(intent)
+            dismiss()
         }
 
     }

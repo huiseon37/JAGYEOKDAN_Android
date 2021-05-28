@@ -1,6 +1,5 @@
 package com.example.happylife
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.happylife.databinding.ActivityAlarmBinding
@@ -18,8 +17,7 @@ class AlarmActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.btnBackwardAtAlarm.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }

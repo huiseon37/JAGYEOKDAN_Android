@@ -143,7 +143,7 @@
                                 android:text="별점으로 평가해주세요."
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
-                                tools:ignore="HardcodedText" />
+                                tools:ignore="HardcodedText, SmallSp" />
 
                             <!--별점 입력 별표버튼-->
                             <LinearLayout
@@ -226,6 +226,7 @@
                 android:layout_below="@id/question_num2"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/boxtype_for_single_element"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:paddingHorizontal="10dp"
                 android:textAlignment="viewEnd"
@@ -339,6 +340,8 @@
                     android:fontFamily="@font/a_title_gothic1"
                     android:gravity="start"
                     android:hint="예) 진행요원이 많아 어수선하다."
+                    android:importantForAutofill="no"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
@@ -393,6 +396,8 @@
                     android:fontFamily="@font/a_title_gothic1"
                     android:gravity="start"
                     android:hint="예) 공부방 교재 추, 함계 들은 인강 등"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
@@ -435,6 +440,8 @@
                     android:fontFamily="@font/a_title_gothic1"
                     android:gravity="start"
                     android:hint="예) 삼성전자, SK 하이닉스"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
                     android:textColorHint="@color/gray"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
@@ -477,7 +484,7 @@
                 android:text="사진 업로드"
                 android:textColor="@color/main_color"
                 android:textSize="8sp"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText, SmallSp" />
 
         </LinearLayout>
 

@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.happylife.*
 import com.example.happylife.R
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.commu_talktalk_item.*
 import kotlinx.android.synthetic.main.commu_talktalk_item.view.*
-import kotlinx.android.synthetic.main.custom_info_contents.*
 import kotlinx.android.synthetic.main.fragment_commu.*
 import java.text.SimpleDateFormat
 
