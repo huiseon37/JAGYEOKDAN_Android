@@ -462,7 +462,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[시험 후기] 한능검 단기간에 준비 했는데 ... "
+                                    android:text="[정보] 코딩 자격증 종류와 다양한 자격증 정보들 공유"
                                     android:textColor="@color/white"
                                     android:textSize="13sp"
                                     android:textStyle="bold"
@@ -562,7 +562,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[장터] 단기간에 준비 했는데 ... "
+                                    android:text="[고민상담/수다] 외국계 기업 목표인데 컴퓨터 자격증 필요할까요? "
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />
@@ -602,7 +602,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[정보] 기획 직무 자격증 정보 공유"
+                                    android:text="[정보] 이번에 큐시즘 동아리 하게됬는데"
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />
@@ -642,7 +642,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[동아리] 큐시즘 23기 하면서 좋았던 "
+                                    android:text="[스터디모집] 빅데이터 분석 기사 자격증 스터디 모집"
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />
@@ -683,7 +683,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/a_title_gothic1"
-                                    android:text="[개발] 살려줘.."
+                                    android:text="[중고장터] 투운사 자격증 교재 팔아요"
                                     android:textColor="@color/black"
                                     android:textSize="13sp"
                                     tools:ignore="HardcodedText" />
