@@ -22,7 +22,7 @@ class TalkTalkActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        var keyV = intent.getStringExtra("keyValue").toString()
+        val keyV = intent.getStringExtra("keyValue").toString()
         binding.talktalkTitle.text = intent.getStringExtra("title").toString()
         binding.talktalkTimestamp.text = intent.getStringExtra("timestamp").toString()
         binding.talktalkUserName.text = intent.getStringExtra("nickname").toString()
@@ -50,8 +50,8 @@ class TalkTalkActivity : AppCompatActivity() {
 
         // 댓글 작성 완료버튼 클릭
         binding.btnFinishTalkTalk.setOnClickListener {
-            binding.talktalkReplyContainer.visibility = View.VISIBLE
             binding.talktalkReplyText.text = binding.userCommentText.text.toString()
+            binding.talktalkReplyContainer.visibility = View.VISIBLE
             binding.userCommentText.text = null
             databaseReference = firebaseDatabase.getReference("TalkTalk/$keyV")
 

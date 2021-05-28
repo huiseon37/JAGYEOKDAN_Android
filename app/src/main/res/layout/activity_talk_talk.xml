@@ -201,7 +201,7 @@
                             android:fontFamily="@font/a_title_gothic1"
                             android:text="공감"
                             android:textColor="@color/main_color"
-                            android:textSize="8sp"
+                            android:textSize="9sp"
                             tools:ignore="HardcodedText, SmallSp" />
 
                     </RelativeLayout>

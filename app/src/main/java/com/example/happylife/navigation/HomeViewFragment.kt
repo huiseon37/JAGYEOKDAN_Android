@@ -250,18 +250,18 @@ class HomeViewFragment : Fragment() {
                 // 찜한 자격증 있는 경우 정보 띄우기
                 if (dataSnapshot.hasChild("dibs")) {
                     // 첫번째 카드
-                    first_box_license_text.visibility = View.VISIBLE
-                    D_date_left_first.visibility = View.VISIBLE
-                    text_Dnext_to_date_first.visibility = View.VISIBLE
-                    imv_plus_home1.visibility = View.INVISIBLE
-                    btn_test_home.visibility = View.VISIBLE
+                    first_box_license_text?.visibility = View.VISIBLE
+                    D_date_left_first?.visibility = View.VISIBLE
+                    text_Dnext_to_date_first?.visibility = View.VISIBLE
+                    imv_plus_home1?.visibility = View.INVISIBLE
+                    btn_test_home?.visibility = View.VISIBLE
 
                     // 두번째 카드
-                    second_box_license_text.visibility = View.VISIBLE
-                    imv_plus_home2.visibility = View.INVISIBLE
-                    text_Dnext_to_date_second.visibility = View.VISIBLE
-                    D_date_left_second.visibility = View.VISIBLE
-                    btn_apply_home.visibility = View.VISIBLE
+                    second_box_license_text?.visibility = View.VISIBLE
+                    imv_plus_home2?.visibility = View.INVISIBLE
+                    text_Dnext_to_date_second?.visibility = View.VISIBLE
+                    D_date_left_second?.visibility = View.VISIBLE
+                    btn_apply_home?.visibility = View.VISIBLE
                 }
             }
 

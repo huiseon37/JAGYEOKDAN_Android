@@ -932,7 +932,6 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
                                         android:layout_marginTop="10dp"
                                         android:fontFamily="@font/a_title_gothic2"
                                         android:lineSpacingExtra="8dp"
