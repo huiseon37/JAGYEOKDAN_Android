@@ -1,5 +1,6 @@
 package com.example.happylife
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +14,10 @@ import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
 import com.example.happylife.model.CertificateInfoData
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.coroutines.delay
 
-class LicenseDetailInfo : AppCompatActivity(){
+class LicenseDetailInfo : AppCompatActivity() {
 
     private lateinit var binding: ActivityLicenseDetailInfoBinding
     private val nickname = MyApplication.prefs.getString("nickname", "")
@@ -23,6 +25,7 @@ class LicenseDetailInfo : AppCompatActivity(){
     private val firebaseDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var databaseReference: DatabaseReference = firebaseDatabase.reference
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLicenseDetailInfoBinding.inflate(layoutInflater)
@@ -118,9 +121,6 @@ class LicenseDetailInfo : AppCompatActivity(){
         binding.viewUnderbarTab1.startAnimation(aniSlideOutRight)
         binding.viewUnderbarTab1.visibility = View.INVISIBLE
         binding.viewUnderbarTab2.startAnimation(aniSlideOutLeft)
-
-        binding.averagePreTime.text = 60.toString()
-        binding.avergeDifficulty.text = "4.8"
 
         // DB 테이블 연결
         databaseReference = firebaseDatabase.getReference("certificate/it/정보처리기사")
