@@ -4,7 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock.sleep
+import android.os.Handler
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -13,6 +13,7 @@ import com.example.happylife.databinding.ActivityLicenseDetailInfoBinding
 import com.example.happylife.model.CertificateInfoData
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.database.*
+import kotlinx.coroutines.delay
 
 class LicenseDetailInfo : AppCompatActivity(){
 
@@ -72,9 +73,16 @@ class LicenseDetailInfo : AppCompatActivity(){
         binding.licenseDataClassification.setOnClickListener {
             val bottomSheet = TestRoundsFilterDialog()
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
-            binding.averagePreTime.text = "26"
-            binding.avergeDifficulty.text = "4.1"
-            binding.licenseDataClassificationText.text = "2020년 2회 필기"
+            Handler().postDelayed({
+                binding.averagePreTime.text = "26"
+                binding.avergeDifficulty.text = "4.1"
+                binding.licenseDataClassificationText.text = "2020년 2회 필기"
+            }, 3000)
+            Handler().postDelayed({
+                binding.averagePreTime.text = "26"
+                binding.avergeDifficulty.text = "4.1"
+                binding.licenseDataClassificationText.text = "2020년 2회 필기"
+            }, 15000)
         }
 
         // 찜하기
@@ -148,5 +156,9 @@ class LicenseDetailInfo : AppCompatActivity(){
             override fun onCancelled(error: DatabaseError) {
             }
         })
+    }
+
+    private fun changeContents(){
+
     }
 }
