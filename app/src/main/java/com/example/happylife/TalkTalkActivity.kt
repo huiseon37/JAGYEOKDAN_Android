@@ -2,6 +2,7 @@ package com.example.happylife
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.happylife.databinding.ActivityTalkTalkBinding
 
@@ -39,9 +40,10 @@ class TalkTalkActivity : AppCompatActivity() {
             finish()
         }
 
-        // 완료버튼 클릭
+        // 댓글 작성 완료버튼 클릭
         binding.btnFinishTalkTalk.setOnClickListener {
-            // Todo: db에 댓글 저장, 댓글 띄우기
+            binding.talktalkReplyContainer.visibility = View.VISIBLE
+            binding.talktalkReplyText.text = binding.userCommentText.text.toString()
         }
     }
 }
