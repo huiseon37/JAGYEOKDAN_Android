@@ -415,6 +415,14 @@
                         android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
+                    <ImageView
+                        android:id="@+id/imv_filter_home"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:src="@drawable/filter_2" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -471,7 +479,7 @@
                                         android:layout_height="10dp"
                                         android:layout_alignParentBottom="true"
                                         android:layout_marginStart="5dp"
-                                        android:src="@drawable/icon_heart" />
+                                        android:src="@drawable/comment_white" />
 
                                     <TextView
                                         android:id="@+id/number_of_like_at_1st_post"
@@ -481,7 +489,7 @@
                                         android:layout_marginHorizontal="5dp"
                                         android:layout_toEndOf="@id/like_icon_at_1st_post"
                                         android:fontFamily="@font/a_title_gothic2"
-                                        android:text="33"
+                                        android:text="26"
                                         android:textColor="@color/white"
                                         android:textSize="10sp"
                                         tools:ignore="HardcodedText, SmallSp" />
@@ -493,7 +501,7 @@
                                         android:layout_alignParentBottom="true"
                                         android:layout_marginStart="5dp"
                                         android:layout_toEndOf="@id/number_of_like_at_1st_post"
-                                        android:src="@drawable/icon_comment" />
+                                        android:src="@drawable/heart_white" />
 
                                     <TextView
                                         android:id="@+id/number_of_commnet_at_1st_post"
@@ -503,7 +511,7 @@
                                         android:layout_marginStart="5dp"
                                         android:layout_toEndOf="@id/comment_icon_at_1st_post"
                                         android:fontFamily="@font/a_title_gothic2"
-                                        android:text="10"
+                                        android:text="11"
                                         android:textColor="@color/white"
                                         android:textSize="10sp"
                                         tools:ignore="HardcodedText, SmallSp" />

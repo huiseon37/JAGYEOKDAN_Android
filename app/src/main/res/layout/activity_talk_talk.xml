@@ -128,7 +128,7 @@
                         android:layout_toEndOf="@+id/talktalk_user_profile_image"
                         android:fontFamily="@font/a_title_gothic2"
                         android:gravity="center"
-                        android:text="육회한 인생"
+                        android:text="칠회한 인생"
                         android:textSize="12sp" />
 
                     <!--게시한 시간 00분-->
@@ -222,7 +222,8 @@
                         <RelativeLayout
                             android:id="@+id/talktalk_reply_container"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible">
 
                             <ImageView
                                 android:id="@+id/talktalk_replyer_profile_image"
@@ -240,7 +241,7 @@
                                 android:layout_toEndOf="@id/talktalk_replyer_profile_image"
                                 android:fontFamily="@font/a_title_gothic2"
                                 android:gravity="center"
-                                android:text="칠회한 인생"
+                                android:text="육회한 인생"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -250,7 +251,7 @@
                                 android:layout_below="@id/talktalk_replyer_profile_image"
                                 android:layout_marginTop="7dp"
                                 android:fontFamily="@font/a_title_gothic2"
-                                android:text="기만 아니고 찐으로 나도 껴줘"
+                                android:text="기만 아니고 찐으로 나도 망했는데 껴줘"
                                 android:textColor="@color/black"
                                 android:textSize="12sp" />
 
@@ -261,7 +262,7 @@
                                 android:layout_below="@id/talktalk_reply_text"
                                 android:layout_marginTop="6dp"
                                 android:fontFamily="@font/a_title_gothic1"
-                                android:text="2 분전"
+                                android:text="방금"
                                 android:textSize="10sp"
                                 tools:ignore="SmallSp" />
 
@@ -281,7 +282,7 @@
                                 android:layout_marginTop="6dp"
                                 android:layout_toStartOf="@id/talktalk_reply_commit_btn"
                                 android:fontFamily="@font/a_title_gothic1"
-                                android:text="12"
+                                android:text="0"
                                 android:textSize="10sp"
                                 tools:ignore="SmallSp" />
 

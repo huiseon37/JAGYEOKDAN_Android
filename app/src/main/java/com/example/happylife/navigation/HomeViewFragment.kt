@@ -41,6 +41,12 @@ class HomeViewFragment : Fragment() {
         rv_recommend_certificate?.layoutManager = LinearLayoutManager(context)
         rv_recommend_certificate?.setHasFixedSize(true) // recyclerview 크기 고정
 
+        // 필터 클릭
+        imv_filter_home.setOnClickListener {
+            val filterSheet = BottomFilterSheetDialog()
+            filterSheet.show(this.parentFragmentManager, filterSheet.tag)
+        }
+
         // 더보기 버튼 클릭
         look_more.setOnClickListener {
             val params: ViewGroup.LayoutParams = rv_recommend_certificate.layoutParams
