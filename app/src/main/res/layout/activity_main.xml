@@ -15,12 +15,12 @@
 
         <Button
             android:id="@+id/hidden_btn"
-            android:layout_width="30dp"
+            android:layout_width="70dp"
             android:layout_height="30dp"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_marginTop="140dp"
-            android:layout_marginEnd="55dp"
-            android:background="@color/main_color" />
+            android:layout_marginEnd="35dp"
+            android:background="#00000000" />
     </FrameLayout>
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
@@ -29,14 +29,14 @@
         android:layout_height="56dp"
         app:abb_indicatorAppearance="square"
         app:abb_indicatorColor="@color/main_color"
-        app:abb_tabColor="@color/black"
-        app:abb_tabColorSelected="@color/main_color"
         app:abb_indicatorHeight="4dp"
         app:abb_indicatorMargin="16dp"
-        app:abb_textAppearance="@style/CustomText"
         app:abb_selectedIndex="0"
         app:abb_selectedTabType="text"
+        app:abb_tabColor="@color/black"
+        app:abb_tabColorSelected="@color/main_color"
         app:abb_tabs="@menu/bottom_navigation_main"
+        app:abb_textAppearance="@style/CustomText"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

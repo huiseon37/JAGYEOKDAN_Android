@@ -114,6 +114,7 @@ class LicenseDetailInfo : AppCompatActivity() {
         binding.tvCommentLicenseDetail.visibility = View.INVISIBLE
         binding.tvComment2LicenseDetail.visibility = View.INVISIBLE
         binding.usePoint.visibility = View.INVISIBLE
+        binding.imvShadeView.visibility = View.INVISIBLE
     }
 
     // 자격증 정보

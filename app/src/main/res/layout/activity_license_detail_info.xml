@@ -1072,11 +1072,10 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
                                             android:layout_marginTop="10dp"
                                             android:fontFamily="@font/a_title_gothic2"
                                             android:lineSpacingExtra="8dp"
-                                            android:text="시나공과 수제비의 도움을 많이 받았습니다. 시나공은 3회독을 했고 매일매일 문제를 풀었습니다.\n오답노트를 만드시는걸 추천합니다. "
+                                            android:text="시나공과 수제비의 도움을 많이 받았습니다."
                                             android:textColor="#767676"
                                             android:textSize="12sp" />
 
@@ -1096,6 +1095,14 @@
                                 <FrameLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imv_shade_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="320dp"
+                                        android:layout_marginTop="-25dp"
+                                        android:layout_marginHorizontal="30dp"
+                                        android:src="@drawable/review_background"/>
 
                                     <TextView
                                         android:id="@+id/tv_comment_license_detail"
